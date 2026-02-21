@@ -1,0 +1,20 @@
+{
+  "name": "role-mobile",
+  "version": "1.0.0",
+  "description": "Senior Mobile Developer with deep expertise in React Native, Flutter, iOS native (Swift/SwiftUI), Android native (Kotlin/Jetpack Compose), mobile performance optimization, mobile security, app store deployment, and offline-first architecture.",
+  "author": "Raman Navarych",
+  "role": "mobile",
+  "skills": [
+    "react-native-expert",
+    "flutter-expert",
+    "ios-native",
+    "android-native",
+    "mobile-performance",
+    "mobile-security",
+    "app-store-deployment",
+    "offline-first"
+  ],
+  "agents": [
+    "senior-mobile-developer"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "role-devops",
+  "version": "1.0.0",
+  "description": "Senior DevOps Engineer persona with Docker, Kubernetes, Terraform, CI/CD pipeline design, monitoring/alerting, incident response, cost optimization, and secrets management expertise.",
+  "author": { "name": "Raman Navarych", "email": "raman@navarych.com" },
+  "license": "MIT",
+  "keywords": ["devops", "docker", "kubernetes", "terraform", "ci-cd", "monitoring"]
+}

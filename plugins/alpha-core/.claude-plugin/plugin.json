@@ -1,0 +1,11 @@
+{
+  "name": "alpha-core",
+  "version": "1.0.0",
+  "description": "Cross-cutting engineering skills informed by the Software Engineer by RN competency matrix. Provides foundational skills for databases, security, API design, testing, architecture, performance, CI/CD, observability, cloud infrastructure, and code review. Includes competency assessor and legal compliance review agents.",
+  "author": {
+    "name": "Raman Navarych",
+    "email": "raman@navarych.com"
+  },
+  "license": "MIT",
+  "keywords": ["competency-matrix", "databases", "security", "architecture", "testing", "cross-cutting", "legal"]
+}

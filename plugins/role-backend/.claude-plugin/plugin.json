@@ -1,0 +1,20 @@
+{
+  "name": "role-backend",
+  "version": "1.0.0",
+  "description": "Senior Backend Developer with deep expertise in API implementation, database design, microservices architecture, message queues, caching strategies, authentication/authorization, background job processing, and data validation.",
+  "author": "Raman Navarych",
+  "role": "backend",
+  "skills": [
+    "api-implementation",
+    "database-implementation",
+    "microservices",
+    "message-queues",
+    "auth-implementation",
+    "caching-strategies",
+    "background-jobs",
+    "data-validation"
+  ],
+  "agents": [
+    "senior-backend-developer"
+  ]
+}

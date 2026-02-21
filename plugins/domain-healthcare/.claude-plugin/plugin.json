@@ -1,0 +1,8 @@
+{
+  "name": "domain-healthcare",
+  "version": "1.0.0",
+  "description": "HealthCare domain specialization with HIPAA compliance, HL7 FHIR interoperability, PHI data handling, clinical data modeling, EHR system integration, medical device software (IEC 62304), telehealth architecture, and healthcare analytics.",
+  "author": { "name": "Raman Navarych", "email": "raman@navarych.com" },
+  "license": "MIT",
+  "keywords": ["healthcare", "hipaa", "hl7", "fhir", "medical-device"]
+}

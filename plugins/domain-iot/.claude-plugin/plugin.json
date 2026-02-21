@@ -1,0 +1,8 @@
+{
+  "name": "domain-iot",
+  "version": "1.0.0",
+  "description": "IoT domain specialization with MQTT messaging, device management, edge computing, IoT-specific security, time-series databases, protocol advisory, cloud platform integration, and digital twin patterns.",
+  "author": { "name": "Raman Navarych", "email": "raman@navarych.com" },
+  "license": "MIT",
+  "keywords": ["iot", "mqtt", "edge-computing", "embedded", "time-series"]
+}

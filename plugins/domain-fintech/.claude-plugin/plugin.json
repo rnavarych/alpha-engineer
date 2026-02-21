@@ -1,0 +1,8 @@
+{
+  "name": "domain-fintech",
+  "version": "1.0.0",
+  "description": "Fintech domain specialization with financial data modeling, transaction processing, double-entry ledger design, regulatory compliance (SOX, PSD2, KYC/AML), fraud detection, trading systems, banking APIs, and financial-grade security.",
+  "author": { "name": "Raman Navarych", "email": "raman@navarych.com" },
+  "license": "MIT",
+  "keywords": ["fintech", "banking", "trading", "compliance", "ledger"]
+}

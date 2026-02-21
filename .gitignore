@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+firebase-debug.log
+
+# Node (if used for testing)
+node_modules/

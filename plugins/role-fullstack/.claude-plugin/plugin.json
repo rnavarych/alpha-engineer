@@ -1,0 +1,8 @@
+{
+  "name": "role-fullstack",
+  "version": "1.0.0",
+  "description": "Senior Fullstack Engineer persona combining frontend and backend expertise for end-to-end development: scaffolding, API-frontend integration, auth flows, real-time features, and deployment workflows.",
+  "author": { "name": "Raman Navarych", "email": "raman@navarych.com" },
+  "license": "MIT",
+  "keywords": ["fullstack", "end-to-end", "integration", "scaffolding"]
+}

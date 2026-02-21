@@ -1,0 +1,11 @@
+{
+  "name": "alpha-engineer",
+  "version": "1.0.0",
+  "description": "A comprehensive Claude Code plugin marketplace providing specialized skills, agents, and commands for 4 industry domains (IoT, E-Commerce, Fintech, HealthCare) and 7 developer roles, informed by the Software Engineer by RN competency matrix.",
+  "author": {
+    "name": "Raman Navarych",
+    "email": "raman@navarych.com"
+  },
+  "license": "MIT",
+  "keywords": ["marketplace", "skills", "agents", "competency-matrix", "domains", "roles"]
+}

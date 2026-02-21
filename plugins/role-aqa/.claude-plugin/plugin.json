@@ -1,0 +1,22 @@
+{
+  "name": "role-aqa",
+  "version": "1.0.0",
+  "description": "Senior AQA Engineer persona with test strategy, E2E automation (Playwright, Cypress), API testing, performance testing (k6, JMeter), security testing, mobile testing, and CI integration expertise.",
+  "author": { "name": "Raman Navarych", "email": "raman@navarych.com" },
+  "license": "MIT",
+  "keywords": ["qa", "testing", "automation", "playwright", "cypress", "performance"],
+  "role": "aqa",
+  "skills": [
+    "test-strategy",
+    "e2e-testing",
+    "api-testing",
+    "performance-testing",
+    "security-testing",
+    "mobile-testing",
+    "test-data-management",
+    "ci-test-integration"
+  ],
+  "agents": [
+    "senior-aqa-engineer"
+  ]
+}

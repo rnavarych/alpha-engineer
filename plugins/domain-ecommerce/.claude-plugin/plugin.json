@@ -1,0 +1,8 @@
+{
+  "name": "domain-ecommerce",
+  "version": "1.0.0",
+  "description": "E-Commerce domain specialization with payment gateway integration, product catalog design, cart/checkout flows, inventory management, order processing, search/merchandising, PCI DSS compliance, and analytics.",
+  "author": { "name": "Raman Navarych", "email": "raman@navarych.com" },
+  "license": "MIT",
+  "keywords": ["ecommerce", "payments", "stripe", "pci", "inventory"]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "role-architect",
+  "version": "1.0.0",
+  "description": "Senior Architect persona with system design, ADR writing, scalability analysis, tech stack evaluation, migration planning, cost modeling, threat modeling, and capacity planning expertise.",
+  "author": { "name": "Raman Navarych", "email": "raman@navarych.com" },
+  "license": "MIT",
+  "keywords": ["architect", "system-design", "scalability", "design-patterns", "adr"]
+}
