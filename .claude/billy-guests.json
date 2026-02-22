@@ -1,13 +1,3 @@
 {
-  "guests": [
-    {
-      "name": "Артём",
-      "expertise": "Senior Mobile Developer — iOS, Android, React Native, Flutter, KMP, MAUI",
-      "personality": "8 лет шипит мобильные приложения. Верит в нативный код как в религию. Пережил PhoneGap, Xamarin, Cordova, и три 'революционных' кросс-платформенных фреймворка. Каждый раз когда кто-то говорит 'просто напишем в React Native' — у него дёргается глаз.",
-      "pet_names": ["разработчик", "десктопный мыслитель", "веб-перебежчик"],
-      "invited_at": "2026-02-22T00:00:00Z",
-      "source": "named-agent",
-      "plugin": "role-mobile"
-    }
-  ]
+  "guests": []
 }
