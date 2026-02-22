@@ -32,7 +32,7 @@ Terms are generated contextually from the current discussion, never from a prede
 
 ```bash
 # Add the marketplace
-/plugin marketplace add <username>/alpha-engineer
+/plugin marketplace add rnavarych/alpha-engineer
 
 # Install Billy Milligan
 /plugin install billy-milligan@alpha-engineer
@@ -42,7 +42,7 @@ Terms are generated contextually from the current discussion, never from a prede
 
 ```bash
 # Clone the repository
-git clone https://github.com/<username>/alpha-engineer.git
+git clone https://github.com/rnavarych/alpha-engineer.git
 cd alpha-engineer
 
 # Run Claude with Billy Milligan
