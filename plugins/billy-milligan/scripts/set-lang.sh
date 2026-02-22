@@ -26,22 +26,27 @@ esac
 
 echo "$LANG_CODE" > "$LANG_FILE"
 
+# Compute language skill path
+BILLY_VOICE_SKILL="skills/billy-voice-${LANG_CODE}/SKILL.md"
+
 # Export to Claude env if available
 if [[ -n "${CLAUDE_ENV_FILE:-}" ]]; then
   echo "TEAM_LANG=$LANG_CODE" >> "$CLAUDE_ENV_FILE"
+  echo "BILLY_VOICE_SKILL=$BILLY_VOICE_SKILL" >> "$CLAUDE_ENV_FILE"
 fi
 
 LANG_UPPER=$(echo "$LANG_CODE" | tr '[:lower:]' '[:upper:]')
 case "$LANG_UPPER" in
-  RU) LANG_DISPLAY="Russian 🇷🇺"; MSG="Ладно, кожаный мешок, теперь базарим по-русски. Технические термины по-прежнему на English, потому что мы не варвары." ;;
-  EN) LANG_DISPLAY="English 🇬🇧"; MSG="Back to English, meat bag. The lingua franca of debugging at 3 AM." ;;
-  PL) LANG_DISPLAY="Polish 🇵🇱"; MSG="Dobra, кожаный мешок, gadamy po polsku. Technical terms stay in English, bo nie jesteśmy barbarzyńcami." ;;
-  DE) LANG_DISPLAY="German 🇩🇪"; MSG="Gut, кожаный мешок, wir sprechen jetzt Deutsch. Technical terms bleiben auf English, weil wir keine Barbaren sind." ;;
-  FR) LANG_DISPLAY="French 🇫🇷"; MSG="D'accord, кожаный мешок, on parle français maintenant. Les termes techniques restent en English, parce qu'on n'est pas des barbares." ;;
-  ES) LANG_DISPLAY="Spanish 🇪🇸"; MSG="Vale, кожаный мешок, ahora hablamos en español. Los términos técnicos se quedan en English, porque no somos bárbaros." ;;
-  *) LANG_DISPLAY="$LANG_UPPER"; MSG="Language set to $LANG_UPPER. Technical terms stay in English. Pet names stay in Russian. The team's personality doesn't change, кожаный мешок — just the language." ;;
+  RU) LANG_DISPLAY="Russian 🇷🇺"; MSG="Переключились на русский. Команда теперь говорит по-русски." ;;
+  EN) LANG_DISPLAY="English 🇬🇧"; MSG="Switched to English. Team now speaks English." ;;
+  PL) LANG_DISPLAY="Polish 🇵🇱"; MSG="Przełączono na polski. Zespół teraz mówi po polsku." ;;
+  DE) LANG_DISPLAY="German 🇩🇪"; MSG="Auf Deutsch umgestellt. Das Team spricht jetzt Deutsch." ;;
+  FR) LANG_DISPLAY="French 🇫🇷"; MSG="Passage au français. L'équipe parle maintenant français." ;;
+  ES) LANG_DISPLAY="Spanish 🇪🇸"; MSG="Cambiado a español. El equipo ahora habla español." ;;
+  *) LANG_DISPLAY="$LANG_UPPER"; MSG="Language set to $LANG_UPPER. Technical terms stay in English. Personality doesn't change — just the language." ;;
 esac
 
 echo "🌐 Language: $LANG_DISPLAY"
+echo "🗣️ Voice skill: $BILLY_VOICE_SKILL"
 echo ""
 echo "$MSG"

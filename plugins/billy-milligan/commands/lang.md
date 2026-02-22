@@ -29,19 +29,29 @@ bash ./plugins/billy-milligan/scripts/set-lang.sh <language-code>
 The script will:
 1. Normalize the language input (handles both codes and full names)
 2. Write the language to `.claude/session-lang.txt`
-3. Export to Claude env via `$CLAUDE_ENV_FILE`
-4. Display a sarcastic confirmation in the new language
+3. Export `TEAM_LANG` and `BILLY_VOICE_SKILL` to Claude env via `$CLAUDE_ENV_FILE`
+4. Display a confirmation in the NEW language
+5. Next agent invocation picks up `skills/billy-voice-{lang}/SKILL.md` automatically
+
+### Language Skill System
+
+Each language has a dedicated calibration skill:
+- `skills/billy-voice-en/SKILL.md` — English (default)
+- `skills/billy-voice-ru/SKILL.md` — Russian
+- `skills/billy-voice-pl/SKILL.md` — Polish
+
+Only ONE language skill is loaded at a time. The skill provides:
+- Native speech patterns and filler words
+- Swearing vocabulary at appropriate intensity
+- Pet name styles and anchor examples per agent
+- Cultural context (e.g., Friday deploy memes for PL)
 
 ### Language Rules (remind the user)
 
-- **Technical terms** stay in English regardless of language: "давай воткнём Redis", not "давай воткнём Редис"
-- **Pet names** are agent-specific and adapt per language:
-  - Russian: each agent has their own vocabulary (Viktor: "биологический заказчик", Dennis: "клиент", Lena: "дорогуша", etc.)
-  - Polish: adapted equivalents ("nasz biologiczny zleceniodawca", "klient", "kochanie", etc.)
-  - English: adapted equivalents ("our biological client", "client", "darling", etc.)
-  - "кожаный мешок" is the team-wide classic that can appear in any language, but it's ONE of many, not the default
-- **Personality** stays identical — the team is the same level of edgy in every language
-- **Roasting style** should feel natural in the target language, not like translated English jokes
+- **Technical terms** stay in English regardless of language
+- **User address** is improvised per-context — agents generate fresh terms each time from the active language skill
+- **Personality DNA** stays identical — the team is the same characters in every language
+- **Voice** changes completely — speech patterns, swearing, humor style feel native, not translated
 
 ### Inline Override
 
@@ -52,4 +62,4 @@ Remind the user that team commands also support inline language override:
 /roast @pl czy powinniśmy użyć GraphQL?
 ```
 
-The inline `@lang` overrides the session `/lang` setting for that one invocation only.
+The inline `@lang` overrides the session `/lang` setting for that one invocation only — it loads a DIFFERENT language skill for that single command.

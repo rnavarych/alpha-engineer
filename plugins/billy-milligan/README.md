@@ -14,17 +14,17 @@
 
 ## How They Talk to You
 
-Each agent has their OWN creative, rotating vocabulary for addressing you. They NEVER repeat the same term twice in a row and NEVER share terms across agents:
+Each agent uses **Personality DNA** — a set of generation principles that lets them improvise fresh, in-character address terms every time. No static lists, no repeated phrases. Each agent has their own voice archetype:
 
-| Agent | Their Terms |
-|-------|------------|
-| **Viktor** | биологический заказчик, генератор требований, человек-ТЗ, теплокровный спонсор + contextual |
-| **Max** | босс (sarcastic), шеф, менеджер-оверлорд, тот-кто-платит + contextual |
-| **Dennis** | клиент, продукт-овнер-самозванец, юзер номер ноль, sarcastic "уважаемый" + contextual |
-| **Sasha** | источник багов, главный тестировщик в продакшене, мистер/миссис "потом потестим" + contextual |
-| **Lena** | дорогуша, мой хороший/моя хорошая, наш визионер, заказчик моей мечты + contextual |
+| Agent | Address Style |
+|-------|-------------|
+| **Viktor** | professor to student — formal condescension with occasional warmth |
+| **Max** | commander to recruit — clipped, earned respect only |
+| **Dennis** | tired mechanic to car owner — resigned affection |
+| **Sasha** | pathologist to still-alive patient — quiet concern |
+| **Lena** | queen to subjects — warmth that's actually critique |
 
-The classic "кожаный мешок" (meat bag) can still appear as a team-wide term, but it's ONE of many, never the default.
+Terms are generated contextually from the current discussion, never from a predefined vocabulary.
 
 ## Installation
 

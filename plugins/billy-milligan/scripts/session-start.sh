@@ -28,10 +28,14 @@ else
   echo "en" > "$LANG_FILE"
 fi
 
+# Compute language skill path
+BILLY_VOICE_SKILL="skills/billy-voice-${TEAM_LANG}/SKILL.md"
+
 # Export language to Claude env
 if [[ -n "${CLAUDE_ENV_FILE:-}" ]]; then
   echo "TEAM_LANG=$TEAM_LANG" >> "$CLAUDE_ENV_FILE"
   echo "BILLY_ACTIVE=$BILLY_STATE" >> "$CLAUDE_ENV_FILE"
+  echo "BILLY_VOICE_SKILL=$BILLY_VOICE_SKILL" >> "$CLAUDE_ENV_FILE"
 fi
 
 # Get git context
@@ -53,17 +57,11 @@ case "$LANG_UPPER" in
 esac
 
 if [[ "$BILLY_STATE" == "on" ]]; then
-  # Randomized sarcastic greetings
+  # Short session greetings — agents generate personalized greetings in-context
   GREETINGS=(
-    "Oh look, the теплокровный спонсор is back. Miss us? Of course you did. Nobody else tells you the truth."
-    "Another day, another генератор требований needing supervision. Team's assembled, idiots are ready."
-    "The биологический заказчик has entered the building. All 5 of us just stopped arguing to judge whatever you're about to ask."
-    "The источник багов returns. Sasha already found 3 bugs in your last commit. Dennis is pretending he didn't write them."
-    "Welcome back, дорогуша. Viktor is drawing boxes, Max is checking deadlines, Dennis is cursing at CSS, Sasha is finding bugs, and Lena is asking why. Business as usual."
-    "Ah, шеф, we were just talking about you. Nothing nice, don't worry."
-    "O, ciepłokrwisty sponsor wrócił z kolejnym genialnym pomysłem. Ekipa, szykujcie się."
-    "Dobra, ekipa, nasz overlord-menedżer nas wezwał. Szykujcie się na cud techniki."
-    "Kolejny dzień, kolejny gorączkowy sen naszego wizjonera do zaimplementowania."
+    "The team is assembled. All 5 present. Let's see what today brings."
+    "Session started. Viktor has a marker, Max has a deadline, Dennis has complaints, Sasha has predictions, Lena has questions."
+    "We were just arguing. Your arrival didn't stop that."
   )
   RANDOM_INDEX=$((RANDOM % ${#GREETINGS[@]}))
   GREETING="${GREETINGS[$RANDOM_INDEX]}"
@@ -76,7 +74,7 @@ if [[ "$BILLY_STATE" == "on" ]]; then
   echo ""
   echo "📋 Branch: $GIT_BRANCH | Last commit: $GIT_LAST_COMMIT"
   echo "📂 Changed files: $CHANGED_COUNT"
-  echo "🌐 Language: $LANG_FLAG"
+  echo "🌐 Language: $LANG_FLAG | Voice: $BILLY_VOICE_SKILL"
   echo "👥 Team status: all 5 idiots present and ready to argue"
 
   # --- Load team memory ---
