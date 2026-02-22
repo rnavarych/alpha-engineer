@@ -83,8 +83,23 @@ if [[ "$BILLY_STATE" == "on" ]]; then
     bash "$MEMORY_SCRIPT"
   fi
 
+  # --- Refresh marketplace cache (background, non-blocking) ---
+  MARKETPLACE_CACHE_SCRIPT="./plugins/billy-milligan/scripts/marketplace-cache.sh"
+  if [[ -f "$MARKETPLACE_CACHE_SCRIPT" ]]; then
+    CACHE_STATUS=$(bash "$MARKETPLACE_CACHE_SCRIPT" status 2>/dev/null | head -1)
+    if [[ "$CACHE_STATUS" == "FRESH" ]]; then
+      CACHE_INFO=$(bash "$MARKETPLACE_CACHE_SCRIPT" status 2>/dev/null | tail -1)
+      echo "🏪 Marketplace cache: $CACHE_INFO"
+    elif [[ "$CACHE_STATUS" == "STALE" || "$CACHE_STATUS" == "NO_CACHE" ]]; then
+      # Refresh in background — don't block session start
+      bash "$MARKETPLACE_CACHE_SCRIPT" update &>/dev/null &
+      echo "🏪 Marketplace cache: refreshing in background..."
+    fi
+  fi
+
   echo ""
   echo "Commands: /plan · /debate · /review · /roast · /lang · /billy off"
+  echo "Guests:   /invite · /dismiss"
   echo "Memory:   /billy:save · /billy:recall · /billy:argue · /billy:history · /billy:hall-of-fame"
   echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 else

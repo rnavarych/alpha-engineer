@@ -4,9 +4,10 @@ description: |
   Remove a guest from the current team discussion. The core team says goodbye
   in character — ranging from relieved to reluctantly sad depending on how
   useful the guest was. Cleans up session state.
+  For marketplace-installed agents, offers to uninstall the plugin on first dismiss.
 argument-hint: "<guest-name>"
 user-invocable: true
-allowed-tools: Read, Bash
+allowed-tools: Read, Bash, AskUserQuestion
 ---
 
 # /dismiss — Remove a Guest from the Team Discussion
@@ -55,12 +56,67 @@ The core team says goodbye in character. The farewell tone depends on how the gu
 - **Viktor**: "Ушёл? Я даже не заметил. Я был занят диаграммой."
 - **Sasha**: "Был гость? Я думал это новый баг в системе."
 
-### Step 3: Clean Up State
+#### Special Farewell for Marketplace Agents:
+
+If the guest has `"source": "marketplace"`, the farewell includes an extra layer of "contractor leaving" energy:
+
+- **Max**: "Контрактор уходит. ROI пока не считал, но спасибо за визит."
+- **Viktor**: "Надеюсь следующий плагин придёт с документацией."
+- **Dennis**: "Один плагин меньше — один potential conflict меньше."
+
+### Step 3: Marketplace Plugin Uninstall Prompt
+
+**ONLY for marketplace-sourced guests** (check `"source": "marketplace"` in billy-guests.json).
+
+**ONLY on FIRST dismiss of a marketplace agent** (check `"marketplace_first_dismiss": true`).
+
+After the farewell scene, show the plugin uninstall prompt:
+
+Read the current session language from `.claude/session-lang.txt`.
+
+**EN:**
+```
+👋 {agent-name} is leaving the discussion.
+
+Plugin {plugin-name} remains installed.
+Remove the plugin entirely? (y/n)
+```
+
+**RU:**
+```
+👋 {agent-name} покидает обсуждение.
+
+Плагин {plugin-name} остаётся установленным.
+Удалить плагин полностью? (y/n)
+```
+
+**PL:**
+```
+👋 {agent-name} opuszcza dyskusję.
+
+Plugin {plugin-name} pozostaje zainstalowany.
+Usunąć plugin całkowicie? (y/n)
+```
+
+Use `AskUserQuestion` with two options:
+- Keep plugin installed (other agents in it remain available)
+- Remove plugin entirely
+
+**If user confirms removal:**
+```bash
+claude plugin uninstall {plugin-name}
+```
+
+**If user declines:** Plugin stays installed. Other agents from the same plugin remain available for future `/invite` calls without reinstalling.
+
+**Important:** This prompt is shown ONLY on the first dismiss of a marketplace agent. After the first time, subsequent dismisses of agents from the same plugin (or any marketplace agent) just do the standard farewell without the uninstall prompt. Track this by setting `"marketplace_first_dismiss": false` after the prompt is shown (or by removing the field).
+
+### Step 4: Clean Up State
 
 - Remove the guest from `.claude/billy-guests.json`
 - If this was the last guest, the file can remain with an empty guests array
 
-### Step 4: Confirm
+### Step 5: Confirm
 
 ```markdown
 # 👋 Guest Departed: [Name]
@@ -69,6 +125,8 @@ The core team says goodbye in character. The farewell tone depends on how the gu
 
 ---
 
+**Source:** [Local | Marketplace ({plugin-name}) | Ad-hoc]
+**Plugin status:** [Remains installed | Removed | N/A]
 **Remaining guests:** [list or "None — core team only"]
 ```
 
@@ -79,8 +137,15 @@ When dismissing all guests at once:
 - Each guest gets a one-line farewell from the team member who interacted with them most
 - End with: "Команда снова в полном составе. Пять идиотов, один юзер. Как и задумано."
 
+If any of the dismissed guests were from marketplace:
+- Show the plugin uninstall prompt ONCE for all marketplace plugins (not per-agent)
+- List all plugins that can be removed: "Plugins remaining: {list}. Remove any? (y/n)"
+- Only on first `/dismiss all` that includes marketplace agents
+
 ### Tone
 
 The farewell should match the energy of the guest's participation. If they earned respect, the team gives grudging warmth. If they were annoying, the team shows undisguised relief. Either way, the core team closes ranks — they're family, the guest was a visitor.
 
 Dennis being relieved that Lena's flirting target is gone is a REQUIRED element if the guest was male.
+
+For marketplace agents: add a subtle "contractor leaving" undertone. They were hired, they did their job (or didn't), and now they're leaving. The team is slightly more formal in saying goodbye to marketplace agents than to locally-found or ad-hoc ones.

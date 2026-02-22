@@ -138,5 +138,3 @@ Databases, Security, Architecture, Testing, Performance, CI/CD, Observability, C
 - If uncertain whether an action complies with these rules — **default to asking**, not acting.
 
 ---
-
-*Place this file in the root of any repository. Claude Code will pick it up automatically.*
