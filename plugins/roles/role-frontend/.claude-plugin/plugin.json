@@ -3,18 +3,5 @@
   "version": "1.0.0",
   "description": "Senior Frontend Developer with deep expertise in React, Vue, Angular, modern CSS architecture, accessibility (WCAG), frontend performance optimization, state management, and build tooling.",
   "author": "Raman Navarych",
-  "role": "frontend",
-  "skills": [
-    "react-expert",
-    "vue-expert",
-    "angular-expert",
-    "css-architecture",
-    "accessibility-expert",
-    "frontend-performance",
-    "state-management",
-    "build-tooling"
-  ],
-  "agents": [
-    "senior-frontend-developer"
-  ]
+  "keywords": ["react", "vue", "angular", "css", "accessibility", "frontend", "performance"]
 }

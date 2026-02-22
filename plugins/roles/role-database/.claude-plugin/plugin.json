@@ -3,36 +3,5 @@
   "version": "1.0.0",
   "description": "Senior Database Engineer with deep expertise across 230+ databases: relational, document, key-value, columnar, graph, time-series, NewSQL, vector, streaming, OLAP, embedded, multi-model, serverless, and search engines. Covers schema design, query optimization, replication/HA, backup/recovery, migration, monitoring, security hardening, capacity planning, data modeling, connection management, performance diagnostics, and database DevOps.",
   "author": "Raman Navarych",
-  "role": "database-engineer",
-  "skills": [
-    "relational-databases",
-    "document-databases",
-    "key-value-stores",
-    "columnar-databases",
-    "graph-databases",
-    "time-series-databases",
-    "newsql-distributed",
-    "vector-databases",
-    "streaming-databases",
-    "data-warehouse-olap",
-    "embedded-databases",
-    "multi-model-databases",
-    "serverless-databases",
-    "search-engines",
-    "schema-design",
-    "query-optimization",
-    "replication-ha",
-    "backup-recovery",
-    "database-migration",
-    "database-monitoring",
-    "database-security",
-    "capacity-planning",
-    "data-modeling",
-    "connection-management",
-    "performance-diagnostics",
-    "database-devops"
-  ],
-  "agents": [
-    "senior-database-engineer"
-  ]
+  "keywords": ["database", "postgresql", "mysql", "mongodb", "redis", "cassandra", "elasticsearch", "neo4j", "vector-database", "time-series"]
 }

@@ -3,18 +3,5 @@
   "version": "1.0.0",
   "description": "Senior Algorithms Engineer with deep expertise in algorithm design and analysis, data structures, dynamic programming, graph algorithms, computational complexity, mathematical optimization, sorting and searching, and numerical methods.",
   "author": "Raman Navarych",
-  "role": "algorithms",
-  "skills": [
-    "algorithm-design",
-    "data-structures",
-    "dynamic-programming",
-    "graph-algorithms",
-    "computational-complexity",
-    "mathematical-optimization",
-    "sorting-and-searching",
-    "numerical-methods"
-  ],
-  "agents": [
-    "senior-algorithms-engineer"
-  ]
+  "keywords": ["algorithms", "data-structures", "dynamic-programming", "graph-theory", "optimization", "complexity", "numerical-methods"]
 }
