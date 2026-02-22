@@ -1,13 +1,14 @@
 # Alpha-Engineer Plugin Marketplace
 
-A comprehensive Claude Code plugin marketplace providing 17 agents, 106 skills across 4 industry domains and 7 developer roles.
+A comprehensive Claude Code plugin marketplace providing 24 agents, 189 skills, and 20 commands across 4 industry domains, 9 developer roles, and 1 team plugin.
 
 ## Architecture
 
-Three-layer composition model:
+Four-layer composition model:
 - **alpha-core**: Cross-cutting foundation skills (databases, security, APIs, architecture, testing, etc.)
-- **Role plugins** (7): Developer persona agents + role-specific skills
+- **Role plugins** (9): Developer persona agents + role-specific skills
 - **Domain plugins** (4): Domain expert agents + domain-specific skills
+- **billy-milligan**: 5-agent team with 50 skills, 20 commands, and dual memory system
 
 ## Conventions
 
@@ -22,4 +23,4 @@ Three-layer composition model:
 ## Competency Matrix
 
 Skills are informed by the "Software Engineer by RN" competency matrix covering:
-Databases, Security, Architecture, Testing, Performance, CI/CD, Observability, Cloud Infrastructure
+Databases, Security, Architecture, Testing, Performance, CI/CD, Observability, Cloud Infrastructure, AI/ML Engineering

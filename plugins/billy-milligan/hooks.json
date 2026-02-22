@@ -1,0 +1,33 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "bash ./plugins/billy-milligan/scripts/session-start.sh",
+        "description": "Billy Milligan session greeting — initialize team, show context, inject voice, load team memory"
+      }
+    ],
+    "SubagentStart": [
+      {
+        "type": "command",
+        "command": "bash ./plugins/billy-milligan/scripts/infect-subagent.sh",
+        "matcher": "*",
+        "description": "Style infection — inject Billy voice into ALL subagents (built-in, external, and Billy's own)"
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "type": "command",
+        "command": "bash ./plugins/billy-milligan/scripts/enrich-prompt.sh",
+        "description": "Maintain Billy voice — append protocol reminder to every user prompt"
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "bash ./plugins/billy-milligan/scripts/memory-save.sh session-entry",
+        "description": "Billy Milligan memory — ensure today's session file exists for auto-save tracking"
+      }
+    ]
+  }
+}

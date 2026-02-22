@@ -3,89 +3,144 @@
 ## Graph Databases
 
 ### Neo4j
-- **Cypher query language**: `MATCH (a:Person)-[:KNOWS]->(b:Person) RETURN a, b`
-- Native graph storage with index-free adjacency
-- APOC procedures for import/export, algorithms, utilities
-- Graph Data Science library: PageRank, community detection, pathfinding
-- Use cases: social networks, recommendation engines, knowledge graphs, fraud detection
+- **Cypher**: `MATCH (a:Person)-[:KNOWS]->(b:Person) RETURN a, b`
+- Index-free adjacency, APOC procedures
+- Graph Data Science: PageRank, community detection, pathfinding, embeddings, link prediction
+- GenAI: vector indexes, knowledge graph from LLMs
+- Aura managed (AuraDB, AuraDS)
+- Use cases: social networks, recommendations, knowledge graphs, fraud detection, identity graphs
 
-### Selection Criteria
-- Use graph DB when relationships are first-class citizens
-- Queries involving multiple hops/traversals (>3 JOINs in SQL)
-- Dynamic/evolving schemas with complex relationships
+### Amazon Neptune
+- Managed. Gremlin + SPARQL. Neptune Analytics. Neptune ML. Serverless.
+
+### Dgraph
+- GraphQL native. DQL. Distributed. Badger KV. Dgraph Cloud.
+
+### JanusGraph
+- Open-source. Pluggable storage (Cassandra, HBase, Bigtable). Gremlin.
+
+### TigerGraph
+- Enterprise analytics. GSQL. Deep link analytics (10+ hops). In-DB ML.
 
 ## Columnar Databases
 
 ### Apache Cassandra
-- Consistent hashing with virtual nodes (vnodes)
-- Tunable consistency (ONE, QUORUM, ALL)
-- CQL (Cassandra Query Language) — SQL-like syntax
-- Compaction strategies: SizeTiered, Leveled, TimeWindow
+- Consistent hashing, vnodes, tunable consistency (ONE, QUORUM, ALL, LOCAL_QUORUM)
+- CQL. Compaction: SizeTiered, Leveled, TimeWindow, Unified (5.0)
+- Cassandra 5.0: SAI, vector search, Trie-based indexes
 - Best for: high write throughput, time-series at scale, geo-distributed
-- Avoid: complex queries, JOINs, aggregations, frequent schema changes
+
+### ScyllaDB
+- C++ Cassandra rewrite, shard-per-core, 10x performance/node
+- CQL-compatible. Workload prioritization. CDC.
+- Alternator: DynamoDB-compatible API. ScyllaDB Cloud.
 
 ### HBase
-- Hadoop ecosystem (HDFS storage, ZooKeeper coordination)
-- Column families for physical storage grouping
-- Row key design is critical for performance
-- Best for: Hadoop integration, batch + real-time, large-scale random R/W
+- Hadoop ecosystem (HDFS, ZooKeeper). Column families. Phoenix SQL layer.
+
+### ClickHouse
+- Columnar OLAP. MergeTree family (Replacing, Aggregating, Collapsing)
+- Vectorized execution. Approximate processing. Materialized views.
+- ClickHouse Cloud. Best for: analytics, log analysis, BI dashboards.
 
 ## Key-Value Stores
 
-### Redis Patterns
-- **Caching**: SET/GET with TTL, cache-aside pattern
-- **Session storage**: Hash per session, EXPIRE for timeout
-- **Rate limiting**: INCR + EXPIRE or sliding window with sorted sets
-- **Pub/Sub**: PUBLISH/SUBSCRIBE for real-time messaging
-- **Sorted sets**: Leaderboards, priority queues
-- **Streams**: Event sourcing, message queues (consumer groups)
-- **Cluster mode**: Hash slots (16384), automatic sharding
-- **Sentinel**: Automatic failover for standalone setups
+### Redis / Valkey
+- Caching (SET/GET+TTL), sessions, rate limiting (INCR+EXPIRE, sliding window)
+- Pub/Sub, sorted sets (leaderboards), streams (event sourcing, consumer groups)
+- Cluster mode (16384 hash slots), Sentinel (failover)
+- **Redis Stack**: RediSearch (FTS), RedisJSON, RedisTimeSeries, RedisBloom (probabilistic)
+- **Valkey**: Linux Foundation fork. Full Redis compatibility.
 
 ### DynamoDB
-- Partition key + optional sort key
-- Global/Local secondary indexes
-- On-demand vs provisioned capacity
-- DynamoDB Streams for CDC
-- DAX for microsecond latency caching
-- Single-table design for efficient queries
+- Partition key + sort key. GSI/LSI. On-demand vs provisioned.
+- Streams CDC. DAX caching. Single-table design. PartiQL.
+- Global Tables (multi-region). PITR. Export/Import S3.
+- Zero-ETL with Redshift and OpenSearch.
+
+### etcd
+- Raft consensus. Watch API. Leases. Kubernetes backing store.
+
+### FoundationDB
+- Multi-model foundation. Strong ACID. Apple/Snowflake. Record Layer. Open-source.
 
 ## Time Series Databases
 
 ### InfluxDB
-- Measurement → tags (indexed) → fields (not indexed) → timestamp
-- Retention policies for auto-expiry
-- Continuous queries for downsampling
-- Flux language for transformations
-- Best for: IoT sensor data, application metrics, real-time analytics
+- Measurement → tags → fields → timestamp. Retention policies.
+- Flux language. InfluxDB 3.0 (DataFusion, Arrow, Parquet). Cloud Serverless.
 
 ### Prometheus
-- Pull-based model (scrapes targets)
-- PromQL for querying
-- Alertmanager for alert routing
-- Federation for scaling
-- Best for: infrastructure monitoring, Kubernetes metrics
+- Pull-based. PromQL. Alertmanager. Federation.
+- Long-term: Thanos, Cortex, Mimir, VictoriaMetrics.
 
 ### TimescaleDB
-- PostgreSQL extension — full SQL support
-- Hypertables auto-partition by time
-- Continuous aggregates (materialized views auto-refresh)
-- Compression for storage efficiency
-- Best for: when you need SQL + time-series
+- PostgreSQL extension. Hypertables. Continuous aggregates. 90%+ compression.
+- Promscale for Prometheus in PostgreSQL.
 
-## Hybrid / Multi-Model
+### QuestDB
+- High-performance columnar. SQL-native. SIMD-optimized. InfluxDB Line Protocol. PG wire protocol.
 
-### ArangoDB
-- Document + Graph + Key-Value in one engine
-- AQL (ArangoDB Query Language)
-- SmartGraphs for enterprise sharding
-- Foxx microservices framework
-- Best for: projects needing multiple data models without multiple databases
+### VictoriaMetrics
+- MetricsQL (PromQL superset). High compression. VMAgent, VMAlert. Single-node + cluster.
+
+## Vector Databases
+
+### Pinecone
+- Managed. Serverless + pod. Metadata filtering. Sparse-dense hybrid. Inference API.
+
+### Weaviate
+- Open-source. GraphQL + REST. Built-in vectorizers (OpenAI, Cohere, HuggingFace, Ollama).
+- Hybrid search (vector + BM25). Multi-tenancy. Generative search. Reranking.
+
+### Milvus / Zilliz
+- GPU-accelerated. IVF_FLAT, HNSW, DiskANN, SCANN. Attribute filtering. Zilliz Cloud.
+
+### pgvector
+- PostgreSQL extension. HNSW + IVFFlat. Cosine, L2, inner product. halfvec for memory.
+
+## NewSQL / Distributed SQL
+
+### CockroachDB
+- PostgreSQL-compatible. Raft. Serializable isolation. Geo-partitioning.
+- Multi-region survival goals. Changefeeds CDC. Serverless + Dedicated.
+
+### YugabyteDB
+- YSQL (PostgreSQL) + YCQL (Cassandra). DocDB (Raft + LSM).
+- xCluster replication. Colocated tables. YugabyteDB Managed.
+
+### TiDB
+- MySQL-compatible. TiKV + TiFlash (HTAP). TiSpark. TiCDC. TiDB Cloud.
+
+### Google Spanner
+- Globally consistent. TrueTime. PostgreSQL interface. 99.999% SLA.
+
+## Multi-Model
+
+### SurrealDB
+- Document + graph + relational. SurrealQL. LIVE SELECT. Built-in auth. Rust-based.
+
+### FaunaDB
+- Serverless. Document-relational. Distributed ACID. FQL. GraphQL API. Temporal queries.
+
+## Streaming / Event Store
+
+### Apache Kafka
+- Topics, partitions, consumer groups. EOS. KRaft (no ZooKeeper).
+- Kafka Streams, Connect (200+ connectors), Schema Registry. Tiered storage.
+- Confluent Cloud, Amazon MSK, Redpanda (compatible).
+
+### Redpanda
+- Kafka-compatible C++. No JVM/ZooKeeper. Lower latency. Built-in Schema Registry. Console UI.
+
+### Materialize
+- Streaming SQL. PostgreSQL wire-compatible. Incremental materialized views.
+- Sources: Kafka, PostgreSQL CDC, webhooks. Sinks: Kafka.
+
+### RisingWave
+- Distributed streaming SQL. PostgreSQL-compatible. Cloud-native. Materialized views on streams.
 
 ## Decentralized
-
-### BigchainDB
-- Blockchain-like properties on top of MongoDB
-- Immutable, append-only records
-- Asset creation and transfer
-- Best for: supply chain tracking, digital asset management, audit trails
+- **BigchainDB**: Blockchain-like on MongoDB. Immutable, append-only.
+- **GunDB**: P2P graph DB. Real-time sync. Offline-first. SEA layer.
+- **OrbitDB**: P2P on IPFS. Event log, KV, documents.

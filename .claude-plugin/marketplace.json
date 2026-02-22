@@ -5,7 +5,7 @@
     "email": "raman@navarych.com"
   },
   "metadata": {
-    "description": "A comprehensive Claude Code plugin marketplace providing specialized skills, agents, and commands for 4 industry domains and 7 developer roles, informed by the Software Engineer by RN competency matrix.",
+    "description": "A comprehensive Claude Code plugin marketplace providing specialized skills, agents, and commands for 4 industry domains and 8 developer roles, informed by the Software Engineer by RN competency matrix.",
     "version": "1.0.0",
     "pluginRoot": "./plugins"
   },
@@ -13,14 +13,14 @@
     {
       "name": "alpha-core",
       "source": "alpha-core",
-      "description": "Cross-cutting engineering skills: databases, security, API design, testing patterns, architecture, performance, CI/CD, observability, cloud infrastructure, and code review. Foundation skills used by all roles and domains.",
+      "description": "Cross-cutting engineering skills: databases, security, API design, testing patterns, architecture, performance, CI/CD, observability, cloud infrastructure, code review, and AI/ML engineering. Foundation skills used by all roles and domains.",
       "version": "1.0.0",
       "category": "foundation",
-      "tags": ["databases", "security", "architecture", "testing", "performance", "observability", "ci-cd", "cloud", "api-design", "legal"]
+      "tags": ["databases", "security", "architecture", "testing", "performance", "observability", "ci-cd", "cloud", "api-design", "legal", "ai-ml"]
     },
     {
       "name": "role-frontend",
-      "source": "role-frontend",
+      "source": "roles/role-frontend",
       "description": "Senior Frontend Developer role plugin. React, Vue, Angular expertise with accessibility, CSS architecture, state management, and frontend performance optimization.",
       "version": "1.0.0",
       "category": "role",
@@ -28,7 +28,7 @@
     },
     {
       "name": "role-backend",
-      "source": "role-backend",
+      "source": "roles/role-backend",
       "description": "Senior Backend Developer role plugin. API implementation, database design, microservices, message queues, caching, authentication, and background job processing.",
       "version": "1.0.0",
       "category": "role",
@@ -36,7 +36,7 @@
     },
     {
       "name": "role-mobile",
-      "source": "role-mobile",
+      "source": "roles/role-mobile",
       "description": "Senior Mobile Developer role plugin. React Native, Flutter, iOS native (Swift), Android native (Kotlin), mobile performance, security, and offline-first patterns.",
       "version": "1.0.0",
       "category": "role",
@@ -44,7 +44,7 @@
     },
     {
       "name": "role-devops",
-      "source": "role-devops",
+      "source": "roles/role-devops",
       "description": "Senior DevOps Engineer role plugin. Docker, Kubernetes, Terraform, CI/CD pipelines, monitoring, incident response, cost optimization, and secrets management.",
       "version": "1.0.0",
       "category": "role",
@@ -52,7 +52,7 @@
     },
     {
       "name": "role-aqa",
-      "source": "role-aqa",
+      "source": "roles/role-aqa",
       "description": "Senior AQA Engineer role plugin. Test strategy design, E2E testing, API testing, performance testing, security testing, mobile testing, and CI test integration.",
       "version": "1.0.0",
       "category": "role",
@@ -60,7 +60,7 @@
     },
     {
       "name": "role-architect",
-      "source": "role-architect",
+      "source": "roles/role-architect",
       "description": "Senior Architect role plugin. System design, ADR writing, scalability analysis, tech stack advisory, migration planning, cost modeling, threat modeling, and capacity planning.",
       "version": "1.0.0",
       "category": "role",
@@ -68,15 +68,23 @@
     },
     {
       "name": "role-fullstack",
-      "source": "role-fullstack",
+      "source": "roles/role-fullstack",
       "description": "Senior Fullstack Engineer role plugin. End-to-end scaffolding, API-frontend integration, auth flows, real-time features, file uploads, search, deployment workflows, and monorepo management.",
       "version": "1.0.0",
       "category": "role",
       "tags": ["fullstack", "end-to-end", "integration", "scaffolding"]
     },
     {
+      "name": "role-algorithms",
+      "source": "roles/role-algorithms",
+      "description": "Senior Algorithms Engineer role plugin. Algorithm design and complexity analysis, data structures, dynamic programming, graph algorithms, computational complexity theory, mathematical optimization, sorting and searching, and numerical methods.",
+      "version": "1.0.0",
+      "category": "role",
+      "tags": ["algorithms", "data-structures", "dynamic-programming", "graph-theory", "optimization", "complexity", "numerical-methods", "competitive-programming"]
+    },
+    {
       "name": "domain-iot",
-      "source": "domain-iot",
+      "source": "domains/domain-iot",
       "description": "IoT domain plugin. MQTT patterns, device management, edge computing, IoT security, time-series data handling, protocol advisory, cloud integration, and digital twin architecture.",
       "version": "1.0.0",
       "category": "domain",
@@ -84,7 +92,7 @@
     },
     {
       "name": "domain-ecommerce",
-      "source": "domain-ecommerce",
+      "source": "domains/domain-ecommerce",
       "description": "E-Commerce domain plugin. Payment integration (Stripe, PayPal, Adyen), product catalogs, cart/checkout flows, inventory management, order processing, PCI DSS compliance, and analytics.",
       "version": "1.0.0",
       "category": "domain",
@@ -92,7 +100,7 @@
     },
     {
       "name": "domain-fintech",
-      "source": "domain-fintech",
+      "source": "domains/domain-fintech",
       "description": "Fintech domain plugin. Financial data modeling, transaction processing, double-entry ledger design, regulatory compliance (SOX, PSD2, KYC/AML), fraud detection, trading systems, and banking APIs.",
       "version": "1.0.0",
       "category": "domain",
@@ -100,11 +108,27 @@
     },
     {
       "name": "domain-healthcare",
-      "source": "domain-healthcare",
+      "source": "domains/domain-healthcare",
       "description": "HealthCare domain plugin. HIPAA compliance, HL7 FHIR interoperability, PHI data handling, clinical data modeling, EHR integration, medical device software, telehealth architecture, and healthcare analytics.",
       "version": "1.0.0",
       "category": "domain",
       "tags": ["healthcare", "hipaa", "hl7", "fhir", "ehr", "telehealth"]
+    },
+    {
+      "name": "role-database",
+      "source": "roles/role-database",
+      "description": "Senior Database Engineer role plugin. 230+ databases across relational, document, key-value, columnar, graph, time-series, NewSQL, vector, streaming, OLAP, embedded, multi-model, serverless, and search categories. Schema design, query optimization, replication/HA, backup/recovery, migration, monitoring, security, capacity planning, data modeling, performance diagnostics, and database DevOps.",
+      "version": "1.0.0",
+      "category": "role",
+      "tags": ["database", "postgresql", "mysql", "mongodb", "redis", "cassandra", "elasticsearch", "neo4j", "kafka", "snowflake", "dba", "replication", "backup", "migration", "query-optimization", "schema-design", "vector-database", "time-series"]
+    },
+    {
+      "name": "billy-milligan",
+      "source": "billy-milligan",
+      "description": "5 toxic senior engineers trapped in one plugin. They argue, roast each other, call you a meat bag, and somehow deliver excellent technical decisions. Multiplied personality disorder as a development methodology.",
+      "version": "1.0.0",
+      "category": "team",
+      "tags": ["team", "agents", "architect", "tech-lead", "fullstack", "aqa", "business-analyst", "code-review", "planning", "debate", "roast", "toxic-friends"]
     }
   ]
 }

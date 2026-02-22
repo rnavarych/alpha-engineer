@@ -14,3 +14,10 @@ firebase-debug.log
 
 # Node (if used for testing)
 node_modules/
+
+# Billy Milligan state files (ephemeral, machine-specific)
+# NOTE: Billy memory itself lives in ~/.claude/billy-memory/ — never in this repo.
+# These files are just runtime flags.
+.claude/billy-active.txt
+.claude/session-lang.txt
+.claude/billy-memory/

@@ -2,7 +2,7 @@
 
 Cross-cutting engineering skills informed by the Software Engineer by RN competency matrix.
 
-## Skills (10)
+## Skills (11)
 
 | Skill | Description |
 |-------|-------------|
@@ -16,6 +16,7 @@ Cross-cutting engineering skills informed by the Software Engineer by RN compete
 | `observability` | Logging, metrics, tracing, alerting |
 | `cloud-infrastructure` | AWS, GCP, Azure service selection |
 | `code-review` | Code review checklist and best practices |
+| `ai-ml-engineering` | AI system design, MLOps, AI SaaS platforms, LLM architecture |
 
 ## Agents (2)
 
@@ -30,4 +31,5 @@ Cross-cutting engineering skills informed by the Software Engineer by RN compete
 /alpha-core:database-advisor
 /alpha-core:security-advisor
 /alpha-core:code-review
+/alpha-core:ai-ml-engineering
 ```
