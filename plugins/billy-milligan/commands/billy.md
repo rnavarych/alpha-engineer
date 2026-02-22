@@ -53,6 +53,7 @@ bash ./plugins/billy-milligan/scripts/billy-toggle.sh <on|off|status>
 
 ### Important
 
-- Default state is ON (if `.claude/billy-active.txt` doesn't exist, Billy is active)
+- Default state is OFF (if `.claude/billy-active.txt` doesn't exist, Billy is INACTIVE)
+- The user must explicitly run `/billy on` to activate the Billy Milligan experience
 - The toggle is per-session — persists in the `.claude/` directory
 - The `/billy` command itself always uses Billy-style responses (even when turning off — it's the farewell)

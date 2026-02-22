@@ -12,12 +12,12 @@ LANG_FILE=".claude/session-lang.txt"
 # Ensure .claude directory exists
 mkdir -p .claude
 
-# Read Billy state (default: on)
+# Read Billy state (default: off — must be explicitly enabled with /billy on)
 if [[ -f "$BILLY_STATE_FILE" ]]; then
   BILLY_STATE=$(cat "$BILLY_STATE_FILE" | tr -d '[:space:]')
 else
-  BILLY_STATE="on"
-  echo "on" > "$BILLY_STATE_FILE"
+  BILLY_STATE="off"
+  echo "off" > "$BILLY_STATE_FILE"
 fi
 
 # Read language (default: EN)

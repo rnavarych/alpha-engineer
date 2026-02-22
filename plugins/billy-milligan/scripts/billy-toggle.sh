@@ -14,7 +14,7 @@ ACTION="${1:-status}"
 if [[ -f "$BILLY_STATE_FILE" ]]; then
   CURRENT_STATE=$(cat "$BILLY_STATE_FILE" | tr -d '[:space:]')
 else
-  CURRENT_STATE="on"
+  CURRENT_STATE="off"
 fi
 
 # Read language
