@@ -60,7 +60,7 @@ See [plugins/billy-milligan/README.md](plugins/billy-milligan/README.md) for ful
 
 ### Install the entire marketplace
 ```bash
-claude plugin marketplace add <your-github-username>/alpha-engineer
+claude plugin marketplace add rnavarych/alpha-engineer
 ```
 
 ### Install individual plugins
