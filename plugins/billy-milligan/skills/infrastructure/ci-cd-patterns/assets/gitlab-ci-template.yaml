@@ -1,0 +1,79 @@
+stages:
+  - lint
+  - test
+  - build
+  - deploy
+
+default:
+  image: node:20-alpine
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+    policy: pull
+
+variables:
+  NPM_CONFIG_CACHE: "$CI_PROJECT_DIR/.npm"
+
+install:
+  stage: .pre
+  script:
+    - npm ci
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+    policy: push
+
+lint:
+  stage: lint
+  needs: [install]
+  script:
+    - npm run lint
+
+test:
+  stage: test
+  needs: [install]
+  parallel: 2
+  script:
+    - npm test -- --shard=$CI_NODE_INDEX/$CI_NODE_TOTAL
+  coverage: '/Statements\s*:\s*(\d+\.?\d*)%/'
+  artifacts:
+    reports:
+      junit: junit.xml
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage/cobertura-coverage.xml
+
+build:
+  stage: build
+  needs: [test]
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 day
+
+deploy-staging:
+  stage: deploy
+  needs: [build]
+  environment:
+    name: staging
+    url: https://staging.example.com
+  script:
+    - echo "Deploy to staging"
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+deploy-production:
+  stage: deploy
+  needs: [deploy-staging]
+  environment:
+    name: production
+    url: https://example.com
+  script:
+    - echo "Deploy to production"
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: manual

@@ -1,0 +1,171 @@
+openapi: 3.1.0
+info:
+  title: Service API
+  version: 1.0.0
+  description: |
+    Replace with your service description.
+
+    ## Authentication
+    All endpoints require Bearer token authentication.
+
+    ## Rate Limiting
+    Default: 100 requests/minute per API key.
+    Headers: X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset
+
+servers:
+  - url: https://api.example.com/v1
+    description: Production
+  - url: https://api.staging.example.com/v1
+    description: Staging
+
+security:
+  - bearerAuth: []
+
+paths:
+  /orders:
+    get:
+      operationId: listOrders
+      summary: List orders with cursor pagination
+      parameters:
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 20
+        - name: cursor
+          in: query
+          schema:
+            type: string
+          description: Opaque cursor from previous response
+        - name: status
+          in: query
+          schema:
+            $ref: '#/components/schemas/OrderStatus'
+      responses:
+        '200':
+          description: Paginated list of orders
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [data, pagination]
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Order'
+                  pagination:
+                    $ref: '#/components/schemas/Pagination'
+    post:
+      operationId: createOrder
+      summary: Create a new order
+      parameters:
+        - name: Idempotency-Key
+          in: header
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateOrderInput'
+      responses:
+        '201':
+          description: Order created
+        '409':
+          description: Duplicate idempotency key
+        '422':
+          $ref: '#/components/responses/ValidationError'
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    Order:
+      type: object
+      required: [id, status, total, created_at]
+      properties:
+        id:
+          type: string
+          example: ord_abc123
+        status:
+          $ref: '#/components/schemas/OrderStatus'
+        total:
+          type: integer
+          description: Amount in cents
+        created_at:
+          type: string
+          format: date-time
+
+    OrderStatus:
+      type: string
+      enum: [pending, confirmed, shipped, delivered, cancelled]
+
+    CreateOrderInput:
+      type: object
+      required: [customer_id, items]
+      properties:
+        customer_id:
+          type: string
+        items:
+          type: array
+          minItems: 1
+          items:
+            type: object
+            required: [product_id, quantity]
+            properties:
+              product_id:
+                type: string
+              quantity:
+                type: integer
+                minimum: 1
+
+    Pagination:
+      type: object
+      required: [has_more]
+      properties:
+        next_cursor:
+          type: string
+        has_more:
+          type: boolean
+
+    ApiError:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: object
+          required: [code, message, request_id]
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            request_id:
+              type: string
+            details:
+              type: array
+              items:
+                type: object
+                properties:
+                  field:
+                    type: string
+                  message:
+                    type: string
+
+  responses:
+    ValidationError:
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ApiError'

@@ -1,0 +1,124 @@
+{
+  "dashboard": {
+    "title": "Service RED Metrics",
+    "description": "Rate, Errors, Duration dashboard for a service",
+    "tags": ["service", "red", "template"],
+    "timezone": "browser",
+    "refresh": "30s",
+    "time": {
+      "from": "now-1h",
+      "to": "now"
+    },
+    "templating": {
+      "list": [
+        {
+          "name": "service",
+          "type": "query",
+          "query": "label_values(http_requests_total, service)",
+          "refresh": 2
+        }
+      ]
+    },
+    "panels": [
+      {
+        "title": "Request Rate (req/s)",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 8, "x": 0, "y": 0 },
+        "targets": [
+          {
+            "expr": "sum(rate(http_requests_total{service=\"$service\"}[5m]))",
+            "legendFormat": "total"
+          },
+          {
+            "expr": "sum(rate(http_requests_total{service=\"$service\"}[5m])) by (status_code)",
+            "legendFormat": "{{status_code}}"
+          }
+        ]
+      },
+      {
+        "title": "Error Rate (%)",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 8, "x": 8, "y": 0 },
+        "targets": [
+          {
+            "expr": "sum(rate(http_requests_total{service=\"$service\",status_code=~\"5..\"}[5m])) / sum(rate(http_requests_total{service=\"$service\"}[5m])) * 100",
+            "legendFormat": "error %"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "steps": [
+                { "color": "green", "value": null },
+                { "color": "yellow", "value": 0.1 },
+                { "color": "red", "value": 1 }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "title": "Latency (P50 / P95 / P99)",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 8, "x": 16, "y": 0 },
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.50, sum(rate(http_request_duration_seconds_bucket{service=\"$service\"}[5m])) by (le))",
+            "legendFormat": "p50"
+          },
+          {
+            "expr": "histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket{service=\"$service\"}[5m])) by (le))",
+            "legendFormat": "p95"
+          },
+          {
+            "expr": "histogram_quantile(0.99, sum(rate(http_request_duration_seconds_bucket{service=\"$service\"}[5m])) by (le))",
+            "legendFormat": "p99"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "s"
+          }
+        }
+      },
+      {
+        "title": "CPU Usage",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 8, "x": 0, "y": 8 },
+        "targets": [
+          {
+            "expr": "rate(process_cpu_seconds_total{service=\"$service\"}[5m])",
+            "legendFormat": "{{instance}}"
+          }
+        ]
+      },
+      {
+        "title": "Memory Usage",
+        "type": "timeseries",
+        "gridPos": { "h": 8, "w": 8, "x": 8, "y": 8 },
+        "targets": [
+          {
+            "expr": "process_resident_memory_bytes{service=\"$service\"}",
+            "legendFormat": "{{instance}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "title": "Active Instances",
+        "type": "stat",
+        "gridPos": { "h": 8, "w": 8, "x": 16, "y": 8 },
+        "targets": [
+          {
+            "expr": "count(up{service=\"$service\"} == 1)",
+            "legendFormat": "healthy"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,11 +1,11 @@
 ---
 name: ai-system-design
 description: |
-  AI system architecture patterns: ML pipeline design, model serving infrastructure,
-  feature store architecture, A/B testing for models, evaluation frameworks, RAG system
-  design, AI agent architecture, responsible AI guardrails, GPU infrastructure planning.
-  Viktor's AI domain. Use when designing AI/ML systems, choosing model serving strategy,
-  building RAG pipelines, designing evaluation frameworks, planning AI infrastructure.
+  DEPRECATED — merged into shared/ai-llm-patterns.
+  AI system design patterns are now in:
+  - shared/ai-llm-patterns/references/rag-architecture.md
+  - shared/ai-llm-patterns/references/prompt-engineering.md
+  - shared/ai-llm-patterns/references/llm-ops.md
 allowed-tools: Read, Grep, Glob
 ---
 

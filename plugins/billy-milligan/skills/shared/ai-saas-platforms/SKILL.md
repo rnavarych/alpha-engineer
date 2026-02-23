@@ -1,11 +1,11 @@
 ---
 name: ai-saas-platforms
 description: |
-  AI SaaS platform practical guide: when to use OpenAI vs Anthropic vs Google vs AWS Bedrock
-  vs Azure OpenAI vs Hugging Face vs open models. Integration patterns, cost comparison with
-  real numbers, migration between providers, provider abstraction layer, multi-model strategy.
-  Use when choosing AI providers, integrating AI APIs, optimizing AI costs, or migrating
-  between AI platforms.
+  DEPRECATED — merged into shared/ai-llm-patterns.
+  AI platform patterns are now in:
+  - shared/ai-llm-patterns/references/llm-ops.md (model routing, cost, observability)
+  - shared/ai-llm-patterns/references/prompt-engineering.md (prompting, structured output)
+  - shared/ai-llm-patterns/references/rag-architecture.md (RAG, embeddings, vector DB)
 allowed-tools: Read, Grep, Glob
 ---
 

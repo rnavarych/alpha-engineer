@@ -1,0 +1,92 @@
+# Prometheus Alert Rules for SLO Burn Rate
+# Adjust service label and SLO target (0.001 = 99.9%) to match your setup
+
+groups:
+  - name: slo-availability
+    rules:
+      # Fast burn: 14.4x rate over 1h (2% budget in 1h)
+      # Page immediately
+      - alert: ErrorBudgetFastBurn
+        expr: |
+          (
+            rate(http_requests_total{status_code=~"5.."}[1h])
+            / rate(http_requests_total[1h])
+          ) > (14.4 * 0.001)
+        for: 2m
+        labels:
+          severity: critical
+          team: "{{ $labels.team }}"
+        annotations:
+          summary: "Fast error budget burn on {{ $labels.service }}"
+          description: "Error rate {{ $value | humanizePercentage }} exceeds 14.4x burn rate. 2% of monthly budget consumed in 1h."
+          runbook_url: "https://wiki.example.com/runbooks/error-budget-fast-burn"
+
+      # Slow burn: 6x rate over 6h (5% budget in 6h)
+      # Warning, investigate during business hours
+      - alert: ErrorBudgetSlowBurn
+        expr: |
+          (
+            rate(http_requests_total{status_code=~"5.."}[6h])
+            / rate(http_requests_total[6h])
+          ) > (6 * 0.001)
+        for: 15m
+        labels:
+          severity: warning
+          team: "{{ $labels.team }}"
+        annotations:
+          summary: "Slow error budget burn on {{ $labels.service }}"
+          description: "Error rate {{ $value | humanizePercentage }} exceeds 6x burn rate. Investigate during business hours."
+          runbook_url: "https://wiki.example.com/runbooks/error-budget-slow-burn"
+
+  - name: slo-latency
+    rules:
+      # P99 latency exceeds 1s for 5+ minutes
+      - alert: LatencyP99High
+        expr: |
+          histogram_quantile(0.99,
+            sum(rate(http_request_duration_seconds_bucket[5m])) by (le, service)
+          ) > 1.0
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "P99 latency above 1s on {{ $labels.service }}"
+          description: "P99 latency is {{ $value | humanizeDuration }}. Check for slow queries or upstream timeouts."
+          runbook_url: "https://wiki.example.com/runbooks/high-latency"
+
+      # P50 latency exceeds 500ms (broad impact)
+      - alert: LatencyP50High
+        expr: |
+          histogram_quantile(0.50,
+            sum(rate(http_request_duration_seconds_bucket[5m])) by (le, service)
+          ) > 0.5
+        for: 10m
+        labels:
+          severity: critical
+        annotations:
+          summary: "P50 latency above 500ms on {{ $labels.service }}"
+          description: "Median latency is {{ $value | humanizeDuration }}. Majority of requests are slow."
+
+  - name: infrastructure
+    rules:
+      # Pod restarts (potential crash loop)
+      - alert: PodCrashLooping
+        expr: |
+          increase(kube_pod_container_status_restarts_total[1h]) > 5
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Pod {{ $labels.pod }} crash looping"
+          description: "{{ $value }} restarts in the last hour."
+
+      # High memory usage (approaching OOM)
+      - alert: HighMemoryUsage
+        expr: |
+          container_memory_usage_bytes / container_spec_memory_limit_bytes > 0.9
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Container {{ $labels.container }} using >90% memory limit"
+          description: "Memory at {{ $value | humanizePercentage }} of limit. OOM kill risk."
