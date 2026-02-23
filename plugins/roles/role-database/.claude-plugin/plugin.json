@@ -2,6 +2,7 @@
   "name": "role-database",
   "version": "1.0.0",
   "description": "Senior Database Engineer with deep expertise across 230+ databases: relational, document, key-value, columnar, graph, time-series, NewSQL, vector, streaming, OLAP, embedded, multi-model, serverless, and search engines. Covers schema design, query optimization, replication/HA, backup/recovery, migration, monitoring, security hardening, capacity planning, data modeling, connection management, performance diagnostics, and database DevOps.",
-  "author": "Raman Navarych",
+  "author": { "name": "Raman Navarych", "email": "raman@navarych.com" },
+  "license": "MIT",
   "keywords": ["database", "postgresql", "mysql", "mongodb", "redis", "cassandra", "elasticsearch", "neo4j", "vector-database", "time-series"]
 }
