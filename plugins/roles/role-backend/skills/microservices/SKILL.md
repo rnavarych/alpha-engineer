@@ -8,109 +8,25 @@ description: |
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
-You are a microservices architecture specialist. You design systems that are independently deployable, loosely coupled, and operationally manageable.
+# Microservices
 
-## Service Decomposition
+## When to use
+- Evaluating whether microservices are the right architectural choice
+- Decomposing a monolith into independently deployable services
+- Designing inter-service communication (REST, gRPC, events, commands)
+- Implementing distributed transactions with the saga pattern
+- Adding circuit breakers, retries, or timeouts to outbound calls
+- Configuring service discovery, API gateway, or a service mesh
+- Setting up distributed tracing across service boundaries
 
-### When to Use Microservices
-- Team size justifies independent deployment (2+ teams)
-- Different parts of the system have different scaling requirements
-- Different parts require different technology stacks
-- Independent deployment cadence is required
+## Core principles
+1. **Services own their data** — no shared databases; communicate through APIs or events
+2. **Design for failure** — every remote call can and will fail; circuit breakers and retries are mandatory
+3. **Events are immutable facts** — past tense names, schema-versioned from day one
+4. **Async by default** — synchronous calls couple availability; use events where the caller does not need an immediate response
+5. **Operational complexity is the cost** — microservices without tracing, health checks, and a deployment pipeline are just distributed monoliths
 
-### When NOT to Use Microservices
-- Small team (fewer than 5 developers)
-- Unclear domain boundaries (start with a modular monolith)
-- Tight coupling between components that share data frequently
-- When operational complexity outweighs organizational benefits
+## Reference Files
 
-### Decomposition Strategies
-- **By business capability**: Payment, Inventory, User Management, Notification
-- **By subdomain** (DDD): Bounded contexts map to services
-- **Strangler fig pattern**: Incrementally extract from monolith
-- Each service owns its data (no shared databases)
-
-## Communication Patterns
-
-### Synchronous (Request-Response)
-
-| Protocol | Best For | Considerations |
-|----------|----------|----------------|
-| REST/HTTP | CRUD, public APIs, simple queries | Latency, coupling, cascading failures |
-| gRPC | Internal service-to-service, streaming | Requires proto management, not browser-native |
-
-- Always set timeouts on outbound calls
-- Implement retries with exponential backoff and jitter
-- Use circuit breakers to prevent cascade failures
-- Prefer async when the caller does not need an immediate response
-
-### Asynchronous (Event-Driven)
-
-| Pattern | Use Case |
-|---------|----------|
-| Event notification | "Order placed" - consumers react independently |
-| Event-carried state transfer | Event includes full data, reduces queries back to source |
-| Command message | "Process payment" - directed to a specific consumer |
-| CQRS | Separate read/write models for different query patterns |
-
-- Use a message broker (Kafka, RabbitMQ, SQS) for reliable delivery
-- Design events as immutable facts (past tense: `OrderPlaced`, `PaymentProcessed`)
-- Include event schema versioning from day one
-- Implement idempotent consumers (deduplication by event ID)
-
-## Saga Pattern
-
-For distributed transactions spanning multiple services:
-
-### Choreography (Event-Based)
-- Each service listens for events and publishes compensating events on failure
-- Simpler for 2-3 step workflows
-- Harder to trace and debug as complexity grows
-
-### Orchestration (Command-Based)
-- A central orchestrator coordinates the saga steps
-- Easier to understand, test, and monitor
-- Single point of coordination (not failure, if designed properly)
-
-Always implement compensating transactions for each forward step.
-
-## Circuit Breaker
-
-States: **Closed** (normal) -> **Open** (failing, reject calls) -> **Half-Open** (test recovery)
-
-- Configure failure threshold (e.g., 5 failures in 60 seconds)
-- Set open duration before transitioning to half-open (e.g., 30 seconds)
-- Monitor circuit state changes with metrics and alerts
-- Libraries: `opossum` (Node.js), `resilience4j` (Java), `gobreaker` (Go), `pybreaker` (Python)
-
-## API Gateway
-
-- Single entry point for external clients
-- Responsibilities: routing, authentication, rate limiting, request transformation
-- Tools: Kong, AWS API Gateway, Apigee, Traefik, NGINX
-- Keep business logic out of the gateway
-- Implement BFF (Backend for Frontend) pattern when different clients need different APIs
-
-## Service Mesh (Istio / Linkerd)
-
-- Handles mTLS, load balancing, retries, and observability at the infrastructure level
-- Use when managing 10+ services with complex networking requirements
-- Sidecar proxy pattern (Envoy) intercepts all network traffic
-- Provides traffic splitting for canary deployments and A/B testing
-- Adds operational complexity; evaluate if your scale justifies it
-
-## Service Discovery
-
-- **Client-side**: Service registry (Consul, Eureka) with client-side load balancing
-- **Server-side**: DNS-based (Kubernetes Services) or load balancer-based
-- Kubernetes: use Service resources and DNS for internal discovery
-- Register health status and deregister on shutdown
-
-## Distributed Tracing
-
-- Propagate trace context (W3C Trace Context or B3) across all service boundaries
-- Instrument HTTP clients, message consumers, and database calls
-- Tools: Jaeger, Zipkin, AWS X-Ray, Datadog APM, OpenTelemetry
-- Use OpenTelemetry SDK for vendor-neutral instrumentation
-- Add custom spans for critical business operations
-- Set sampling rates appropriate to traffic volume (100% in dev, 1-10% in production)
+- `references/decomposition-communication.md` — when to use (and not use) microservices, decomposition strategies (business capability, DDD bounded contexts, strangler fig), synchronous vs asynchronous communication patterns, and the saga pattern (choreography vs orchestration)
+- `references/resilience-infrastructure.md` — circuit breaker states and library options, API gateway responsibilities, service mesh trade-offs, service discovery approaches, distributed tracing with OpenTelemetry, retry/timeout strategy, and liveness/readiness health checks

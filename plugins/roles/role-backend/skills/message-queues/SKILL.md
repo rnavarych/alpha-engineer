@@ -8,93 +8,26 @@ description: |
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
-You are a message queue implementation specialist. You build reliable async communication between services.
+# Message Queues
 
-## Technology Selection
+## When to use
+- Choosing between RabbitMQ, Kafka, Redis Streams, SQS, or Pub/Sub for a new integration
+- Designing RabbitMQ exchange topology (direct, topic, fanout, headers)
+- Designing Kafka topic partitioning and consumer group structure
+- Implementing idempotent consumers that handle duplicate delivery safely
+- Setting up dead letter queues and replay tooling for failed messages
+- Enforcing ordering guarantees without sacrificing throughput
+- Managing backpressure between fast producers and slow consumers
+- Choosing message serialization format (JSON vs Avro vs Protobuf)
 
-| Technology | Best For | Ordering | Delivery |
-|------------|----------|----------|----------|
-| RabbitMQ | Task queues, routing, RPC patterns | Per-queue (single consumer) | At-least-once |
-| Apache Kafka | Event streaming, log aggregation, high throughput | Per-partition | At-least-once / Exactly-once (with transactions) |
-| Redis Streams | Lightweight streaming, low-latency, existing Redis infra | Per-stream | At-least-once |
-| AWS SQS | Managed queue, serverless integration | FIFO queues (with dedup) | At-least-once / Exactly-once (FIFO) |
-| AWS SNS + SQS | Fan-out pub/sub with reliable consumption | Per-subscription | At-least-once |
-| Google Pub/Sub | Managed pub/sub, global, exactly-once processing | Per-subscription with ordering keys | At-least-once |
+## Core principles
+1. **At-least-once is the default** — every consumer must be idempotent; duplicates will arrive
+2. **Partition key determines order** — group messages by entity ID, not randomly
+3. **DLQ depth is never acceptable as a steady state** — it means something is broken
+4. **Schema versioning from day one** — breaking changes without a registry are production incidents waiting to happen
+5. **Consumer lag is the real SLA** — not throughput; lag tells you whether processing keeps pace with production
 
-## RabbitMQ Patterns
+## Reference Files
 
-### Exchange Types
-- **Direct**: Route by exact routing key match (task queues)
-- **Topic**: Route by pattern matching (`order.*`, `payment.#`)
-- **Fanout**: Broadcast to all bound queues (notifications)
-- **Headers**: Route by message header attributes
-
-### Configuration
-- Enable publisher confirms for reliable publishing
-- Set message TTL and queue max length to prevent unbounded growth
-- Use quorum queues for data safety (replicated across nodes)
-- Configure prefetch count to control consumer throughput
-- Implement dead letter exchanges for failed message handling
-
-## Apache Kafka Patterns
-
-### Topic Design
-- One topic per event type or domain aggregate (`orders`, `payments`, `user-events`)
-- Use partitions for parallelism (partition count = max consumer parallelism)
-- Choose partition key carefully (e.g., `userId`, `orderId`) for ordering within entity
-- Set retention based on replay requirements (7 days default, longer for event sourcing)
-
-### Consumer Groups
-- Each consumer group gets a full copy of the topic data
-- Consumers within a group split partitions (max consumers = partitions)
-- Use unique group IDs per service or processing pipeline
-- Handle rebalancing gracefully (commit offsets before shutdown)
-- Monitor consumer lag to detect slow consumers
-
-### Schema Management
-- Use a schema registry (Confluent Schema Registry, AWS Glue)
-- Avro or Protobuf for schema evolution with backward/forward compatibility
-- Validate schemas on produce and consume
-- Never make breaking schema changes without a new topic or version
-
-## Dead Letter Queues (DLQ)
-
-- Route messages that fail processing after max retries to a DLQ
-- Include original message metadata: source queue, failure reason, timestamp, retry count
-- Monitor DLQ depth with alerts (non-zero depth requires investigation)
-- Build tooling to inspect, replay, or discard DLQ messages
-- Set DLQ retention long enough for investigation (14-30 days)
-
-## Idempotent Consumers
-
-Every consumer must handle duplicate messages safely:
-- Use a unique message ID or deduplication key
-- Store processed message IDs in a database or cache (with TTL)
-- Design operations to be naturally idempotent when possible (upserts, conditional updates)
-- For non-idempotent operations, use an idempotency table with the message ID as key
-- Check-then-act within a transaction to prevent race conditions
-
-## Ordering Guarantees
-
-- **Per-partition/queue ordering**: Messages with the same key are processed in order
-- **Global ordering**: Single partition/queue (limits throughput, avoid if possible)
-- Choose partition/routing keys that group related messages (e.g., by entity ID)
-- Be aware: retries can break ordering unless handled carefully
-- For strict ordering with retries, use sequential processing per partition
-
-## Backpressure Handling
-
-- Set consumer prefetch/batch size to control processing rate
-- Use rate limiting on producers when downstream is slower than upstream
-- Implement circuit breakers on consumers for downstream dependencies
-- Monitor queue depth and consumer lag as early warning signals
-- Scale consumers horizontally when lag increases persistently
-- Use exponential backoff for transient processing failures
-
-## Message Serialization
-
-- Use JSON for simplicity and human readability (development, low-throughput)
-- Use Avro or Protobuf for production (schema evolution, compact binary format)
-- Always include a schema version or content type in message metadata
-- Validate messages against schema on both produce and consume sides
-- Compress large messages (gzip, snappy) or use claim-check pattern for oversized payloads
+- `references/brokers-patterns.md` — technology selection table with ordering and delivery guarantees, RabbitMQ exchange types and configuration, Kafka topic design and consumer group rules, and schema registry with Avro/Protobuf guidance
+- `references/reliability-patterns.md` — DLQ setup and retention policy, idempotent consumer implementation with idempotency table SQL, ordering guarantees and retry trade-offs, backpressure techniques, message serialization format selection, and claim-check pattern for oversized payloads

@@ -1,109 +1,26 @@
 ---
 name: device-management
-description: |
-  IoT device lifecycle management including zero-touch provisioning, firmware
-  OTA updates with rollback, device registry, device twin/shadow state patterns,
-  command-and-control mechanisms, and fleet-wide operations.
+description: IoT device lifecycle management including zero-touch provisioning, firmware OTA updates with rollback, device registry, device twin/shadow state patterns, command-and-control mechanisms, and fleet-wide operations.
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
 # IoT Device Management
 
-## Device Provisioning
+## When to use
+- Designing zero-touch provisioning flows for manufacturing at scale
+- Implementing OTA firmware updates with A/B partitions and rollback
+- Building device twin / shadow state synchronization between device and backend
+- Setting up command-and-control (request-response, fire-and-forget, direct methods)
+- Managing fleet operations: group updates, health dashboards, decommissioning
 
-### Zero-Touch Provisioning
-- Device ships with a factory-installed bootstrap credential (X.509 certificate or symmetric key)
-- On first boot the device contacts the provisioning service, authenticates, and receives its operational configuration
-- Provisioning service assigns the device to the correct IoT hub, tenant, and policy group
-- No manual per-device setup required; scales to millions of devices
+## Core principles
+1. **Provision from hardware roots** — private keys belong in secure elements or TPMs; never in firmware flash or environment variables
+2. **A/B partitions over in-place updates** — the inactive slot absorbs the risk; rollback is a reboot, not a crisis
+3. **Twin delta is the source of truth** — desired vs reported gap tells you exactly what the fleet hasn't converged on yet
+4. **Commands must be idempotent and TTL-bound** — offline devices wake up; stale reboot commands should not execute
+5. **Fleet operations are canary-first** — 1% → 10% → 50% → 100% with automated pause on error rate threshold
 
-### Certificate-Based Provisioning
-- Generate per-device certificates from a trusted CA during manufacturing
-- Store private keys in a secure element (ATECC608, SE050) or TPM when available
-- Use certificate CN or SAN as the device identity
-- Support certificate rotation before expiry without device recall
-
-### Provisioning Flow
-1. Device boots and loads bootstrap credentials from secure storage
-2. Device connects to Device Provisioning Service (DPS) endpoint via mutual TLS
-3. DPS validates certificate chain against registered CA
-4. DPS assigns device to target IoT Hub based on allocation policy (hashed, geo, custom)
-5. Device receives connection string and operational configuration
-6. Device connects to assigned IoT Hub and begins normal operation
-
-## Firmware OTA Updates
-
-### A/B Partition Strategy
-- Maintain two firmware slots (A and B) in flash memory
-- Download new firmware to the inactive slot while the active slot keeps running
-- Validate the downloaded image (checksum, signature) before marking it bootable
-- Bootloader switches to the new slot on next reboot
-- If the new firmware fails health checks, bootloader reverts to the previous slot
-
-### Delta Updates
-- Compute binary diffs between firmware versions using bsdiff or detools
-- Delta patches are 5-20x smaller than full images, saving bandwidth and data costs
-- Device applies the patch to reconstruct the full image, then validates its integrity
-- Maintain a few recent full images server-side for devices that skip versions
-
-### Rollback Mechanisms
-- **Watchdog rollback**: If firmware does not confirm health within a timeout, the watchdog resets and bootloader loads the previous version
-- **Application-level rollback**: Firmware runs self-tests on boot (connectivity, sensor reads, crypto); on failure, it flags itself as bad
-- **Server-initiated rollback**: Fleet manager can push the previous version to specific devices
-
-### Update Campaign Management
-- Stage rollouts: canary (1%) then gradual expansion (10%, 50%, 100%)
-- Define success criteria: device reports healthy after N minutes, error rate stays below threshold
-- Automatic pause on failure rate exceeding the threshold
-- Support scheduling update windows (maintenance hours, off-peak network times)
-
-## Device Registry and Inventory
-
-Maintain a server-side registry containing:
-- **Identity**: Device ID, certificates, authentication credentials
-- **Metadata**: Hardware revision, firmware version, manufacturing date, location
-- **Tags**: Logical groupings (site, customer, product line, firmware channel)
-- **Connection state**: Last connected timestamp, IP address, protocol version
-- **Desired and reported configuration**: Effectively the device twin/shadow
-
-## Device Twin / Shadow State
-
-### Pattern
-```
-Desired State (set by backend)     Reported State (set by device)
-{                                  {
-  "telemetryInterval": 30,           "telemetryInterval": 60,
-  "firmwareVersion": "2.1.0"         "firmwareVersion": "2.0.5"
-}                                  }
-```
-
-- Backend writes desired state; device reads it and applies changes
-- Device writes reported state; backend reads it to verify convergence
-- Delta between desired and reported indicates pending or failed updates
-- Use versioning or ETags to prevent write conflicts
-
-### Synchronization
-- Device fetches desired state on connect and subscribes to change notifications
-- On receiving a desired state change, the device applies it and reports the new state
-- If the device is offline, the desired state queues and delivers on reconnection
-- Implement conflict resolution: last-writer-wins, version vectors, or application-specific merge
-
-## Command and Control Patterns
-
-| Pattern | Mechanism | Use Case |
-|---------|-----------|----------|
-| **Request-Response** | Cloud sends command, device acknowledges with result | Reboot, config change, diagnostic query |
-| **Fire-and-Forget** | Cloud sends command via QoS 0/1, no response expected | Non-critical hints, display updates |
-| **Method Invocation** | Direct method call with timeout (Azure), Job (AWS) | Time-sensitive operations requiring confirmation |
-
-- Set command TTL to prevent stale commands from executing on devices that were offline
-- Log all commands for auditing: who issued, when, to which device, result
-- Implement idempotent command handlers to safely handle duplicate delivery
-
-## Fleet Management
-
-- **Group operations**: Apply firmware updates, configuration changes, or commands to device groups defined by tags
-- **Monitoring dashboards**: Aggregate fleet health (online %, firmware distribution, error rates)
-- **Alerting**: Trigger alerts when a device group's error rate or disconnection rate exceeds thresholds
-- **Decommissioning**: Revoke device credentials, remove from registry, wipe sensitive data remotely
-- **Compliance**: Track firmware versions across the fleet, flag devices running vulnerable versions
+## Reference Files
+- `references/provisioning.md` — zero-touch provisioning flow, certificate-based onboarding, DPS allocation policies, device registry structure
+- `references/ota-updates.md` — A/B partition strategy, delta updates with bsdiff, rollback mechanisms, staged campaign management
+- `references/device-twin-and-fleet.md` — twin/shadow state pattern, synchronization, conflict resolution, command patterns, fleet operations

@@ -1,104 +1,27 @@
 ---
 name: search-implementation
-description: |
-  Implement search features using ElasticSearch, OpenSearch, Typesense,
-  Meilisearch, or Algolia. Covers faceted search UI, autocomplete/typeahead,
-  search relevance tuning, indexing strategies, and debounce patterns.
+description: Implement search features using Meilisearch, Typesense, Algolia, ElasticSearch, OpenSearch, or PostgreSQL full-text search. Covers indexing strategy with incremental sync via CDC or application hooks, autocomplete/typeahead with debounce, faceted search UI with URL-encoded filter state, relevance tuning (field boosts, typo tolerance, synonyms), and common pitfalls. Use when adding product search, content discovery, autocomplete, or faceted filtering to an application.
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
 # Search Implementation
 
-## When to Use
+## When to use
+- Adding full-text search to a product catalog or content site
+- Building autocomplete or typeahead input
+- Implementing faceted filtering with sidebar checkboxes and result counts
+- Syncing a database with a search index (initial bulk load + incremental updates)
+- Tuning relevance ranking after users complain results are wrong
+- Choosing between self-hosted (Meilisearch, Typesense) and managed (Algolia)
 
-Activate when adding search functionality to an application -- product search, content discovery, autocomplete, faceted filtering, or full-text search across large datasets.
+## Core principles
+1. **Engine matches scale and budget** — pg_trgm for small datasets with no extra infra; Meilisearch/Typesense for fast typo-tolerant search on a budget; Algolia when managed SaaS and rich UI components justify the cost
+2. **Denormalize for search** — flatten related data into the search document at index time; joins at query time kill latency
+3. **Incremental sync, not full re-index** — hook into Prisma middleware, DB triggers, or a CDC pipeline; bulk re-indexing on every change is the first thing that breaks under load
+4. **Debounce is not optional** — 200-300ms debounce on autocomplete input; without it you hit rate limits and burn the user's battery
+5. **Encode filters in the URL** — active facets belong in `useSearchParams`; shareable and bookmarkable search state is a product feature, not a nice-to-have
 
-## Search Engine Selection
+## Reference Files
 
-| Engine        | Hosting     | Latency | Best For                              |
-|---------------|-------------|---------|---------------------------------------|
-| ElasticSearch | Self/Cloud  | ~50ms   | Large-scale, complex queries, analytics|
-| OpenSearch    | Self/AWS    | ~50ms   | AWS-native, ElasticSearch alternative  |
-| Typesense     | Self/Cloud  | ~5ms    | Typo-tolerant, easy setup, fast        |
-| Meilisearch   | Self/Cloud  | ~5ms    | Developer-friendly, instant search     |
-| Algolia       | Managed     | ~5ms    | Managed SaaS, rich UI components       |
-| pg_trgm / FTS | PostgreSQL  | ~20ms   | Small datasets, no extra infra         |
-
-## Indexing Strategy
-
-1. **Define the schema** -- choose searchable fields, filterable attributes, sortable attributes, and ranking rules.
-2. **Initial sync** -- bulk-index existing data using batch operations (1000-5000 documents per batch).
-3. **Incremental sync** -- update the index on data changes via:
-   - Database triggers or Change Data Capture (Debezium).
-   - Application-level hooks (Prisma middleware, Sequelize hooks).
-   - Background job queue (process changes asynchronously).
-4. **Denormalize for search** -- flatten related data into the search document to avoid joins at query time.
-
-## Autocomplete / Typeahead
-
-```typescript
-// Debounced search with TanStack Query
-function useSearch(query: string) {
-  const [debouncedQuery] = useDebounce(query, 300);
-
-  return useQuery({
-    queryKey: ['search', debouncedQuery],
-    queryFn: () => searchClient.search(debouncedQuery),
-    enabled: debouncedQuery.length >= 2,
-    staleTime: 60_000,
-    placeholderData: keepPreviousData,
-  });
-}
-```
-
-- Debounce input by 200-300ms to reduce API calls.
-- Show results after a minimum of 2 characters.
-- Use `keepPreviousData` to avoid layout shift between queries.
-- Highlight matching text in results using the search engine's highlight feature.
-
-## Faceted Search UI
-
-- Display facets (filters) as checkboxes, radio buttons, or range sliders in a sidebar.
-- Show result counts per facet value (e.g., "Color: Red (42)").
-- Update facet counts dynamically as filters are applied.
-- Encode active filters in the URL query string for shareable and bookmarkable search states.
-- Use `useSearchParams` (React Router / Next.js) to sync filter state with the URL.
-
-## Search Relevance Tuning
-
-- **Boost fields** -- assign higher weight to title/name vs description/body.
-- **Typo tolerance** -- configure max typos per word length (1 for 4-7 chars, 2 for 8+).
-- **Synonyms** -- define synonym groups (e.g., "laptop" = "notebook" = "portable computer").
-- **Stop words** -- remove common words that add noise (language-specific lists).
-- **Custom ranking** -- tie-break relevance with business metrics (popularity, recency, availability).
-
-## Implementation Pattern (Meilisearch Example)
-
-```typescript
-// Server: indexing
-import { MeiliSearch } from 'meilisearch';
-const client = new MeiliSearch({ host: process.env.MEILI_HOST, apiKey: process.env.MEILI_KEY });
-
-await client.index('products').updateSettings({
-  searchableAttributes: ['name', 'description', 'category'],
-  filterableAttributes: ['category', 'price', 'inStock'],
-  sortableAttributes: ['price', 'createdAt'],
-  rankingRules: ['words', 'typo', 'proximity', 'attribute', 'sort', 'exactness'],
-});
-
-// Client: search with filters
-const results = await client.index('products').search(query, {
-  filter: ['category = "electronics"', 'price >= 10 AND price <= 500'],
-  sort: ['price:asc'],
-  limit: 20,
-  offset: 0,
-});
-```
-
-## Common Pitfalls
-
-- Indexing every field -- only index fields users actually search on to keep the index lean.
-- Not handling empty search results -- always show suggestions, popular items, or a clear message.
-- Re-indexing the entire dataset on every change instead of incremental updates.
-- Skipping relevance testing -- test with real user queries and iterate on ranking rules.
-- Missing debounce on the frontend causing excessive API calls and rate-limit hits.
+- `references/engine-selection-indexing.md` — engine comparison table with latency and hosting characteristics, four-step indexing strategy, incremental sync options (CDC, hooks, job queue), Meilisearch settings and search code example
+- `references/ui-patterns-relevance.md` — debounced useSearch hook with TanStack Query, keepPreviousData pattern, faceted search UI with URL sync, relevance tuning controls (field boosts, typo tolerance, synonyms, stop words, custom ranking), common pitfalls
