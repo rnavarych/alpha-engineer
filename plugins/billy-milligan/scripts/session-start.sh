@@ -97,10 +97,21 @@ if [[ "$BILLY_STATE" == "on" ]]; then
     fi
   fi
 
+  # --- Show skill gaps count if any exist ---
+  GAPS_SCRIPT="./plugins/billy-milligan/scripts/skill-gaps.sh"
+  if [[ -f "$GAPS_SCRIPT" ]]; then
+    GAPS_SUMMARY=$(bash "$GAPS_SCRIPT" summary 2>/dev/null || echo "")
+    if [[ -n "$GAPS_SUMMARY" && "$GAPS_SUMMARY" != "No skill gaps recorded." ]]; then
+      echo ""
+      echo "📊 $GAPS_SUMMARY"
+    fi
+  fi
+
   echo ""
   echo "Commands: /plan · /debate · /review · /roast · /lang · /billy off"
   echo "Guests:   /invite · /dismiss"
   echo "Memory:   /billy:save · /billy:recall · /billy:argue · /billy:history · /billy:hall-of-fame"
+  echo "Skills:   /skills:gaps · /skills:create"
   echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 else
   echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"

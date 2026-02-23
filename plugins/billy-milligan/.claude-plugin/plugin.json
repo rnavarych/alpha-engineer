@@ -24,7 +24,10 @@
     "agent-teams",
     "memory",
     "decisions",
-    "adr"
+    "adr",
+    "knowledge-resolution",
+    "skill-gaps",
+    "fallback-chain"
   ],
   "hooks": "./hooks.json"
 }
