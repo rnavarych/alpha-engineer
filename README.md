@@ -12,6 +12,20 @@ claude plugin marketplace add rnavarych/alpha-engineer
 
 > 5 toxic senior engineers trapped in one plugin. They argue, roast your ideas, and somehow deliver excellent technical decisions. Multiplied personality disorder as a development methodology.
 
+```bash
+claude plugin install billy-milligan@alpha-engineer
+```
+
+
+#### `/billy <on|off|status>` — Toggle Protocol
+Control the Billy Milligan experience.
+
+```
+/billy off     → Professional mode (for client demos)
+/billy on      → Bring the idiots back
+/billy status  → Show current state
+```
+
 ### `/roast` — Quick sanity check before you waste time
 
 <p align="center">
