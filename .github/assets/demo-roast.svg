@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="580" viewBox="0 0 820 580">
+  <style>
+    @keyframes typing { from { width: 0 } to { width: 100% } }
+    @keyframes blink { 0%,100% { opacity: 1 } 50% { opacity: 0 } }
+    @keyframes fadeIn1 { 0%,15% { opacity: 0 } 20%,100% { opacity: 1 } }
+    @keyframes fadeIn2 { 0%,30% { opacity: 0 } 35%,100% { opacity: 1 } }
+    @keyframes fadeIn3 { 0%,45% { opacity: 0 } 50%,100% { opacity: 1 } }
+    @keyframes fadeIn4 { 0%,60% { opacity: 0 } 65%,100% { opacity: 1 } }
+    @keyframes fadeIn5 { 0%,75% { opacity: 0 } 80%,100% { opacity: 1 } }
+    .t { font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', Menlo, monospace; font-size: 13px; }
+    .prompt { fill: #7ee787; }
+    .cmd { fill: #79c0ff; }
+    .dim { fill: #8b949e; }
+    .name-viktor { fill: #d2a8ff; font-weight: bold; }
+    .name-max { fill: #ff7b72; font-weight: bold; }
+    .name-dennis { fill: #79c0ff; font-weight: bold; }
+    .name-sasha { fill: #ffa657; font-weight: bold; }
+    .name-lena { fill: #f778ba; font-weight: bold; }
+    .text { fill: #e6edf3; }
+    .verdict { fill: #ffa657; font-weight: bold; }
+    .cursor { animation: blink 1s step-end infinite; fill: #e6edf3; }
+    .agent1 { animation: fadeIn1 8s ease-in-out infinite; }
+    .agent2 { animation: fadeIn2 8s ease-in-out infinite; }
+    .agent3 { animation: fadeIn3 8s ease-in-out infinite; }
+    .agent4 { animation: fadeIn4 8s ease-in-out infinite; }
+    .agent5 { animation: fadeIn5 8s ease-in-out infinite; }
+  </style>
+
+  <!-- Terminal window -->
+  <rect width="820" height="580" rx="10" fill="#0d1117"/>
+  <rect width="820" height="36" rx="10" fill="#161b22"/>
+  <rect y="26" width="820" height="10" fill="#161b22"/>
+
+  <!-- Traffic lights -->
+  <circle cx="20" cy="18" r="6" fill="#ff5f57"/>
+  <circle cx="40" cy="18" r="6" fill="#febc2e"/>
+  <circle cx="60" cy="18" r="6" fill="#28c840"/>
+
+  <!-- Title -->
+  <text x="410" y="22" text-anchor="middle" class="t dim" font-size="12">billy-milligan ~ /roast</text>
+
+  <!-- Command line -->
+  <text y="65" class="t">
+    <tspan x="16" class="prompt">$</tspan>
+    <tspan class="cmd"> /roast should we use GraphQL?</tspan>
+  </text>
+
+  <!-- Viktor -->
+  <g class="agent1">
+    <text y="100" class="t">
+      <tspan x="16" class="name-viktor">Viktor</tspan>
+      <tspan class="dim"> (Architect):</tspan>
+    </text>
+    <text y="118" x="16" class="t text">Ah, GraphQL. The "I want a buffet but call it fine dining" of API</text>
+    <text y="136" x="16" class="t text">design. You'll spend 3 weeks on the schema, 2 weeks on the</text>
+    <text y="154" x="16" class="t text">resolver architecture, and then realize REST did the job in a day.</text>
+  </g>
+
+  <!-- Max -->
+  <g class="agent2">
+    <text y="186" class="t">
+      <tspan x="16" class="name-max">Max</tspan>
+      <tspan class="dim"> (Tech Lead):</tspan>
+    </text>
+    <text y="204" x="16" class="t text">How many entities do you have? Under 10? Congratulations, you just</text>
+    <text y="222" x="16" class="t text">added a query language nobody asked for. Ship REST, revisit when</text>
+    <text y="240" x="16" class="t text">you actually have a problem to solve.</text>
+  </g>
+
+  <!-- Dennis -->
+  <g class="agent3">
+    <text y="272" class="t">
+      <tspan x="16" class="name-dennis">Dennis</tspan>
+      <tspan class="dim"> (Fullstack Dev):</tspan>
+    </text>
+    <text y="290" x="16" class="t text">Oh great, another N+1 query factory. I'll be the one debugging</text>
+    <text y="308" x="16" class="t text">the DataLoader at 2 AM while Viktor draws "elegant resolver</text>
+    <text y="326" x="16" class="t text">chains" on his whiteboard. Hard pass.</text>
+  </g>
+
+  <!-- Sasha -->
+  <g class="agent4">
+    <text y="358" class="t">
+      <tspan x="16" class="name-sasha">Sasha</tspan>
+      <tspan class="dim"> (AQA Engineer):</tspan>
+    </text>
+    <text y="376" x="16" class="t text">Have you tried testing a GraphQL API? Every query is a unique</text>
+    <text y="394" x="16" class="t text">snowflake. My test matrix just went from 40 cases to infinity.</text>
+    <text y="412" x="16" class="t text">But sure, "flexibility." I'll be here when it breaks.</text>
+  </g>
+
+  <!-- Lena -->
+  <g class="agent5">
+    <text y="444" class="t">
+      <tspan x="16" class="name-lena">Lena</tspan>
+      <tspan class="dim"> (Business Analyst):</tspan>
+    </text>
+    <text y="462" x="16" class="t text">The spec says we have 3 consumers with fixed data needs. THREE.</text>
+    <text y="480" x="16" class="t text">GraphQL solves "I have 50 clients each wanting different shapes."</text>
+    <text y="498" x="16" class="t text">Read. The. Requirements. First.</text>
+  </g>
+
+  <!-- Verdict -->
+  <text y="540" class="t">
+    <tspan x="16" class="verdict">Verdict:</tspan>
+    <tspan class="text"> REST wins 5-0. GraphQL is a solution looking for your problem.</tspan>
+  </text>
+
+  <!-- Cursor -->
+  <rect x="16" y="556" width="8" height="16" class="cursor"/>
+</svg>

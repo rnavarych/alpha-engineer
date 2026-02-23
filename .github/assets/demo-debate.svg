@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="720" viewBox="0 0 820 720">
+  <style>
+    @keyframes blink { 0%,100% { opacity: 1 } 50% { opacity: 0 } }
+    @keyframes fadeIn1 { 0%,8% { opacity: 0 } 12%,100% { opacity: 1 } }
+    @keyframes fadeIn2 { 0%,20% { opacity: 0 } 24%,100% { opacity: 1 } }
+    @keyframes fadeIn3 { 0%,32% { opacity: 0 } 36%,100% { opacity: 1 } }
+    @keyframes fadeIn4 { 0%,44% { opacity: 0 } 48%,100% { opacity: 1 } }
+    @keyframes fadeIn5 { 0%,56% { opacity: 0 } 60%,100% { opacity: 1 } }
+    @keyframes fadeIn6 { 0%,72% { opacity: 0 } 76%,100% { opacity: 1 } }
+    @keyframes fadeIn7 { 0%,84% { opacity: 0 } 88%,100% { opacity: 1 } }
+    .t { font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', Menlo, monospace; font-size: 13px; }
+    .prompt { fill: #7ee787; }
+    .cmd { fill: #79c0ff; }
+    .dim { fill: #8b949e; }
+    .name-viktor { fill: #d2a8ff; font-weight: bold; }
+    .name-max { fill: #ff7b72; font-weight: bold; }
+    .name-dennis { fill: #79c0ff; font-weight: bold; }
+    .name-sasha { fill: #ffa657; font-weight: bold; }
+    .name-lena { fill: #f778ba; font-weight: bold; }
+    .text { fill: #e6edf3; }
+    .header { fill: #7ee787; font-weight: bold; font-size: 14px; }
+    .win { fill: #3fb950; font-weight: bold; }
+    .lose { fill: #f85149; }
+    .matrix-border { fill: #30363d; }
+    .cursor { animation: blink 1s step-end infinite; fill: #e6edf3; }
+    .a1 { animation: fadeIn1 12s ease-in-out infinite; }
+    .a2 { animation: fadeIn2 12s ease-in-out infinite; }
+    .a3 { animation: fadeIn3 12s ease-in-out infinite; }
+    .a4 { animation: fadeIn4 12s ease-in-out infinite; }
+    .a5 { animation: fadeIn5 12s ease-in-out infinite; }
+    .a6 { animation: fadeIn6 12s ease-in-out infinite; }
+    .a7 { animation: fadeIn7 12s ease-in-out infinite; }
+  </style>
+
+  <!-- Terminal window -->
+  <rect width="820" height="720" rx="10" fill="#0d1117"/>
+  <rect width="820" height="36" rx="10" fill="#161b22"/>
+  <rect y="26" width="820" height="10" fill="#161b22"/>
+
+  <!-- Traffic lights -->
+  <circle cx="20" cy="18" r="6" fill="#ff5f57"/>
+  <circle cx="40" cy="18" r="6" fill="#febc2e"/>
+  <circle cx="60" cy="18" r="6" fill="#28c840"/>
+
+  <!-- Title -->
+  <text x="410" y="22" text-anchor="middle" class="t dim" font-size="12">billy-milligan ~ /debate</text>
+
+  <!-- Command -->
+  <text y="65" class="t">
+    <tspan x="16" class="prompt">$</tspan>
+    <tspan class="cmd"> /debate monolith vs microservices for a startup MVP</tspan>
+  </text>
+
+  <!-- Lena opens -->
+  <g class="a1">
+    <text y="100" class="t">
+      <tspan x="16" class="name-lena">Lena</tspan>
+      <tspan class="dim"> opens:</tspan>
+      <tspan class="text"> The startup has 2 developers, no DevOps, and 4 months</tspan>
+    </text>
+    <text y="118" x="16" class="t text">of runway. If you say "microservices" I will personally revoke</text>
+    <text y="136" x="16" class="t text">your engineering license. Ship the monolith. Refactor later.</text>
+  </g>
+
+  <!-- Viktor counters -->
+  <g class="a2">
+    <text y="168" class="t">
+      <tspan x="16" class="name-viktor">Viktor</tspan>
+      <tspan class="dim"> counters:</tspan>
+      <tspan class="text"> A modular monolith with clear bounded contexts</tspan>
+    </text>
+    <text y="186" x="16" class="t text">gives you 90% of the benefits. Domain boundaries now, service</text>
+    <text y="204" x="16" class="t text">extraction later. Anyone who starts with k8s at MVP is cosplaying.</text>
+  </g>
+
+  <!-- Dennis attacks -->
+  <g class="a3">
+    <text y="236" class="t">
+      <tspan x="16" class="name-dennis">Dennis</tspan>
+      <tspan class="dim"> attacks Viktor:</tspan>
+      <tspan class="text"> "Modular monolith with bounded contexts"</tspan>
+    </text>
+    <text y="254" x="16" class="t text">translates to "monolith" for normal people. Just say monolith,</text>
+    <text y="272" x="16" class="t text">Viktor. One repo, one deploy, one database. I'll build it while</text>
+    <text y="290" x="16" class="t text">you're still labeling your diagram arrows.</text>
+  </g>
+
+  <!-- Sasha warns -->
+  <g class="a4">
+    <text y="322" class="t">
+      <tspan x="16" class="name-sasha">Sasha</tspan>
+      <tspan class="dim"> warns:</tspan>
+      <tspan class="text"> Monolith is correct. But mark my words: in 8 months</tspan>
+    </text>
+    <text y="340" x="16" class="t text">someone will say "let's just extract the auth service real quick"</text>
+    <text y="358" x="16" class="t text">and that's when the distributed monolith nightmare begins.</text>
+    <text y="376" x="16" class="t text">Write the integration tests NOW. Future you will cry less.</text>
+  </g>
+
+  <!-- Max decides -->
+  <g class="a5">
+    <text y="408" class="t">
+      <tspan x="16" class="name-max">Max</tspan>
+      <tspan class="dim"> decides:</tspan>
+      <tspan class="text"> Monolith. Ship in 3 weeks. If we're still alive in</tspan>
+    </text>
+    <text y="426" x="16" class="t text">12 months, we earn the right to discuss microservices. Until then,</text>
+    <text y="444" x="16" class="t text">anyone who mentions Kubernetes gets their PR auto-rejected.</text>
+  </g>
+
+  <!-- Decision Matrix -->
+  <g class="a6">
+    <text y="480" x="16" class="t header">Decision Matrix</text>
+    <rect x="16" y="490" width="788" height="1" class="matrix-border"/>
+
+    <text y="510" class="t dim">
+      <tspan x="16">Agent</tspan>
+      <tspan x="200">Vote</tspan>
+      <tspan x="400">Confidence</tspan>
+      <tspan x="570">Key Argument</tspan>
+    </text>
+    <rect x="16" y="518" width="788" height="1" class="matrix-border"/>
+
+    <text y="538" class="t">
+      <tspan x="16" class="name-lena">Lena</tspan>
+      <tspan x="200" class="win">MONOLITH</tspan>
+      <tspan x="400" class="text">99%</tspan>
+      <tspan x="570" class="text">2 devs, 4 months, done</tspan>
+    </text>
+    <text y="558" class="t">
+      <tspan x="16" class="name-viktor">Viktor</tspan>
+      <tspan x="200" class="win">MONOLITH</tspan>
+      <tspan x="400" class="text">95%</tspan>
+      <tspan x="570" class="text">Modular, extract later</tspan>
+    </text>
+    <text y="578" class="t">
+      <tspan x="16" class="name-dennis">Dennis</tspan>
+      <tspan x="200" class="win">MONOLITH</tspan>
+      <tspan x="400" class="text">100%</tspan>
+      <tspan x="570" class="text">One repo, one deploy</tspan>
+    </text>
+    <text y="598" class="t">
+      <tspan x="16" class="name-sasha">Sasha</tspan>
+      <tspan x="200" class="win">MONOLITH</tspan>
+      <tspan x="400" class="text">90%</tspan>
+      <tspan x="570" class="text">Write tests now or cry later</tspan>
+    </text>
+    <text y="618" class="t">
+      <tspan x="16" class="name-max">Max</tspan>
+      <tspan x="200" class="win">MONOLITH</tspan>
+      <tspan x="400" class="text">100%</tspan>
+      <tspan x="570" class="text">Ship, survive, then discuss</tspan>
+    </text>
+    <rect x="16" y="628" width="788" height="1" class="matrix-border"/>
+  </g>
+
+  <!-- Winner -->
+  <g class="a7">
+    <text y="658" class="t">
+      <tspan x="16" class="win">Winner: MONOLITH</tspan>
+      <tspan class="text"> (5-0, unanimous)</tspan>
+    </text>
+    <text y="680" class="t">
+      <tspan x="16" class="lose">Dissenting Opinion from the Salty Minority:</tspan>
+      <tspan class="dim"> None. Even Viktor agrees.</tspan>
+    </text>
+  </g>
+
+  <!-- Cursor -->
+  <rect x="16" y="700" width="8" height="16" class="cursor"/>
+</svg>

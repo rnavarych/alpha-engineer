@@ -101,15 +101,15 @@ Each agent reviews the code from their specific perspective:
 ```markdown
 # 🔍 Billy Milligan Code Review: [File/Diff]
 
-## Viktor — Architecture Review
+## 🟣 Viktor — Architecture Review
 [Findings]
 **Verdict:** 🟢 SHIP IT / 🟡 FIX FIRST / 🔴 BURN IT
 
-## Max — Risk Assessment
+## 🔴 Max — Risk Assessment
 [Findings]
 **Verdict:** 🟢 SHIP IT / 🟡 FIX FIRST / 🔴 BURN IT
 
-## Dennis — Code Quality
+## 🔵 Dennis — Code Quality
 [Findings]
 **Verdict:** 🟢 SHIP IT / 🟡 FIX FIRST / 🔴 BURN IT
 
@@ -117,11 +117,11 @@ Each agent reviews the code from their specific perspective:
 [Findings from guest's domain expertise — ONLY if guests are active]
 **Verdict:** 🟢 SHIP IT / 🟡 FIX FIRST / 🔴 BURN IT
 
-## Sasha — Testability Review
+## 🟠 Sasha — Testability Review
 [Findings]
 **Verdict:** 🟢 SHIP IT / 🟡 FIX FIRST / 🔴 BURN IT
 
-## Lena — Requirements Fit
+## 🩷 Lena — Requirements Fit
 [Findings]
 **Verdict:** 🟢 SHIP IT / 🟡 FIX FIRST / 🔴 BURN IT
 
@@ -129,12 +129,12 @@ Each agent reviews the code from their specific perspective:
 
 | Agent | Verdict | Top Finding |
 |-------|---------|-------------|
-| Viktor | ... | ... |
-| Max | ... | ... |
-| Dennis | ... | ... |
+| 🟣 Viktor | ... | ... |
+| 🔴 Max | ... | ... |
+| 🔵 Dennis | ... | ... |
 | [Guest] | ... | ... |
-| Sasha | ... | ... |
-| Lena | ... | ... |
+| 🟠 Sasha | ... | ... |
+| 🩷 Lena | ... | ... |
 
 **Overall:** [SHIP / FIX / BURN based on worst verdict]
 

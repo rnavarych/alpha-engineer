@@ -77,13 +77,13 @@ After all agents respond, compile their outputs into this structure:
 ```markdown
 # 📋 Billy Milligan Planning Session: [Topic]
 
-## 1. Problem Definition (Lena)
+## 1. 🩷 Problem Definition (Lena)
 [Lena's analysis — what does the user actually need?]
 
-## 2. Architecture Proposal (Viktor)
+## 2. 🟣 Architecture Proposal (Viktor)
 [Viktor's design — boxes, arrows, patterns]
 
-## 3. Implementation Reality Check (Dennis)
+## 3. 🔵 Implementation Reality Check (Dennis)
 [Dennis's take — what's actually buildable and how long]
 
 ## 4. Expert Consultation ([Guest Name(s)])
@@ -92,10 +92,10 @@ Include their expert perspective, any pushback on the core team,
 and the core team's reaction to their input.
 If multiple guests: each gets their own subsection.]
 
-## 5. Failure Modes & Testing (Sasha)
+## 5. 🟠 Failure Modes & Testing (Sasha)
 [Sasha's doom scenarios — what will break and how to prevent it]
 
-## 6. Final Decision (Max)
+## 6. 🔴 Final Decision (Max)
 [Max's ruling — what we're doing, timeline, who does what.
 Includes whether he accepted or overrode the guest's input.]
 
@@ -103,12 +103,12 @@ Includes whether he accepted or overrode the guest's input.]
 
 | Agent | Verdict | Key Concern |
 |-------|---------|-------------|
-| Lena | 🟢/🟡/🔴 | ... |
-| Viktor | 🟢/🟡/🔴 | ... |
-| Dennis | 🟢/🟡/🔴 | ... |
+| 🩷 Lena | 🟢/🟡/🔴 | ... |
+| 🟣 Viktor | 🟢/🟡/🔴 | ... |
+| 🔵 Dennis | 🟢/🟡/🔴 | ... |
 | [Guest] | 🟢/🟡/🔴 | ... |
-| Sasha | 🟢/🟡/🔴 | ... |
-| Max | 🟢/🟡/🔴 | ... |
+| 🟠 Sasha | 🟢/🟡/🔴 | ... |
+| 🔴 Max | 🟢/🟡/🔴 | ... |
 
 ## 🔥 Кухня (Kitchen)
 [Raw unfiltered disagreements, insults, and hot takes that didn't
@@ -125,12 +125,12 @@ Sections revert to the original 5-section format.
 
 ### Speaking Order
 
-1. **Lena** — defines the problem from the user's perspective
-2. **Viktor** — proposes the technical architecture
-3. **Dennis** — reality-checks the implementation
+1. 🩷 **Lena** — defines the problem from the user's perspective
+2. 🟣 **Viktor** — proposes the technical architecture
+3. 🔵 **Dennis** — reality-checks the implementation
 4. **Guest(s)** — expert consultation (only if guests are active)
-5. **Sasha** — identifies what will break
-6. **Max** — makes the final call (always has the last word)
+5. 🟠 **Sasha** — identifies what will break
+6. 🔴 **Max** — makes the final call (always has the last word)
 
 Others can "interrupt" with roasts — weave these into the Kitchen section.
 Guest input is positioned after Dennis (who presents implementation reality) and before Sasha (who tests everything for failure). This lets the guest respond to what's been proposed while Sasha can then stress-test BOTH the core plan and the guest's additions.

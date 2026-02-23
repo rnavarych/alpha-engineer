@@ -69,17 +69,23 @@ Each agent gives a QUICK, BRUTAL, honest take on the idea. Rules:
 ```markdown
 # 🔥 Roast: "[Topic]"
 
-**Lena:** [2-3 sentences from the BA perspective]
+🩷 **Lena** *(Business Analyst):*
+[2-3 sentences from the BA perspective]
 
-**Viktor:** [2-3 sentences from the architecture perspective]
+🟣 **Viktor** *(Architect):*
+[2-3 sentences from the architecture perspective]
 
-**Dennis:** [2-3 sentences from the implementation perspective]
+🔵 **Dennis** *(Fullstack Dev):*
+[2-3 sentences from the implementation perspective]
 
-**[Guest Name]:** [2-3 sentences from their domain expertise — ONLY if guests are active]
+[Guest Name] *(Guest — [Domain]):*
+[2-3 sentences from their domain expertise — ONLY if guests are active]
 
-**Sasha:** [2-3 sentences from the testing/reliability perspective]
+🟠 **Sasha** *(AQA Engineer):*
+[2-3 sentences from the testing/reliability perspective]
 
-**Max:** [2-3 sentences — the final word]
+🔴 **Max** *(Tech Lead):*
+[2-3 sentences — the final word]
 
 ---
 **Team consensus:** [One line — thumbs up, thumbs down, or "it's complicated"]

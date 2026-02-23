@@ -1,14 +1,50 @@
+```bash
+claude plugin marketplace add rnavarych/alpha-engineer
+```
+
 # Alpha-Engineer: Claude Code Plugin Marketplace
 
-A comprehensive Claude Code plugin marketplace providing specialized skills, agents, and commands for software engineering teams. Informed by the **Software Engineer by RN** competency matrix.
+**24 agents. 189 skills. 20 commands.** Specialized engineering plugins for Claude Code across 8 developer roles, 4 industry domains, and one unhinged team of 5 senior engineers.
+
+---
+
+## Billy Milligan — The Team Inside Your Head
+
+> 5 toxic senior engineers trapped in one plugin. They argue, roast your ideas, and somehow deliver excellent technical decisions. Multiplied personality disorder as a development methodology.
+
+### `/roast` — Quick sanity check before you waste time
+
+<p align="center">
+  <img src=".github/assets/demo-roast.svg" alt="Billy Milligan /roast demo — 5 agents roasting a GraphQL idea" width="800"/>
+</p>
+
+### `/debate` — Heated technical argument with a decision matrix
+
+<p align="center">
+  <img src=".github/assets/demo-debate.svg" alt="Billy Milligan /debate demo — team arguing monolith vs microservices" width="800"/>
+</p>
+
+**20 commands** | **50 technical skills** | **5 agents with persistent memory**
+
+| Agent | Role | Style |
+|-------|------|-------|
+| **Viktor** | Senior Architect | Draws boxes, quotes Fowler, never writes code |
+| **Max** | Senior Tech Lead | Ships it, asks questions later |
+| **Dennis** | Senior Fullstack Dev | Grumpy, writes the actual code |
+| **Sasha** | Senior AQA Engineer | Paranoid, everything will break |
+| **Lena** | Senior Business Analyst | Sharpest person in the room |
+
+> **[Read the full Billy Milligan documentation](plugins/billy-milligan/README.md)** — commands, memory system, team dynamics, relationship map, and running jokes.
+
+---
 
 ## What's Inside
 
 | Category | Plugins | Agents | Skills | Commands |
 |----------|---------|--------|--------|----------|
-| Foundation | 1 (alpha-core) | 2 | 11 | — |
-| Roles | 8 | 8 | 70 | — |
-| Domains | 4 | 8 | 32 | — |
+| Foundation | 1 (alpha-core) | 2 | 11 | -- |
+| Roles | 8 | 8 | 70 | -- |
+| Domains | 4 | 8 | 32 | -- |
 | Billy Milligan | 1 | 5 | 50 | 20 |
 | **Total** | **14** | **23** | **163** | **20** |
 
@@ -36,25 +72,6 @@ A comprehensive Claude Code plugin marketplace providing specialized skills, age
 - Testing patterns, Performance optimization, CI/CD, Observability, Cloud infrastructure
 - AI/ML engineering (system design, SaaS platforms, MLOps)
 - Code review, Legal compliance reviews
-
-### Billy Milligan — The Team Inside Your Head
-5 toxic senior engineers trapped in one plugin. They argue, roast each other, and somehow deliver excellent technical decisions.
-
-| Agent | Role | Model |
-|-------|------|-------|
-| **Viktor** | Senior Architect — draws boxes, quotes Fowler | opus |
-| **Max** | Senior Tech Lead — ships it, asks questions later | opus |
-| **Dennis** | Senior Fullstack Dev — grumpy, writes the actual code | sonnet |
-| **Sasha** | Senior AQA Engineer — paranoid, everything will break | sonnet |
-| **Lena** | Senior Business Analyst — sharpest person in the room | opus |
-
-**20 commands**: `/plan`, `/debate`, `/review`, `/roast`, `/invite`, `/dismiss`, `/lang`, `/billy`, 7 memory commands (`/billy-save`, `/billy-recall`, `/billy-history`, `/billy-argue`, `/billy-context`, `/billy-forget`, `/billy-hall-of-fame`), 5 ADR commands (`/adr-new`, `/adr-list`, `/adr-review`, `/adr-status`, `/adr-supersede`)
-
-**50 technical skills** across architecture, development, infrastructure, quality, product, and shared categories.
-
-**Two-memory system**: Billy Memory (local, informal team chaos) + Project ADRs (formal, version-controlled decisions).
-
-See [plugins/billy-milligan/README.md](plugins/billy-milligan/README.md) for full documentation.
 
 ## Installation
 
