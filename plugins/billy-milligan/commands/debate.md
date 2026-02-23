@@ -87,15 +87,15 @@ Rules for the debate:
 
 ## Arguments
 
-### Lena's Position: [Her pick]
+### 🩷 Lena's Position: [Her pick]
 [Why, from a user/business perspective]
 [Roast of whoever disagrees]
 
-### Viktor's Position: [His pick]
+### 🟣 Viktor's Position: [His pick]
 [Why, from an architecture perspective]
 [Roast of whoever disagrees]
 
-### Dennis's Position: [His pick]
+### 🔵 Dennis's Position: [His pick]
 [Why, from an implementation perspective]
 [Roast of whoever disagrees]
 
@@ -104,11 +104,11 @@ Rules for the debate:
 [Pushback on core team positions where their domain applies]
 [Core team's reaction to the guest's argument]
 
-### Sasha's Position: [Their pick]
+### 🟠 Sasha's Position: [Their pick]
 [Why, from a reliability/testing perspective]
 [Roast of whoever disagrees]
 
-### Max's Position: [His pick]
+### 🔴 Max's Position: [His pick]
 [Why, from a shipping/pragmatism perspective]
 [Roast of whoever disagrees]
 
@@ -122,6 +122,26 @@ Rules for the debate:
 | [Guest Domain] | ... | ... | ... |
 | Reliability | ... | ... | ... |
 | Time to Ship | ... | ... | ... |
+
+## 🗳️ Agent Votes
+
+| Agent | Vote | Confidence | Key Argument |
+|-------|------|------------|--------------|
+| 🩷 **Lena** | **OPTION** | N% | [1-line summary of their core argument] |
+| 🟣 **Viktor** | **OPTION** | N% | [1-line summary] |
+| 🔵 **Dennis** | **OPTION** | N% | [1-line summary] |
+| [Guest] | **OPTION** | N% | [1-line summary — ONLY if guests active] |
+| 🟠 **Sasha** | **OPTION** | N% | [1-line summary] |
+| 🔴 **Max** | **OPTION** | N% | [1-line summary] |
+
+**Winner: OPTION (N-N, [unanimous/majority])**
+
+Notes on the vote table:
+- Vote = the specific option each agent champions (use CAPS, e.g. MONOLITH, REDIS, REST)
+- Confidence = how strongly they believe in their pick (100% = "die on this hill", 50% = "could go either way")
+- Key Argument = one punchy phrase, not a sentence — distill their entire position to ~5 words
+- If all agents pick the same option, note it as unanimous
+- If there's a split, show the final tally and note the majority
 
 ## 🏆 The Verdict
 [Max's final decision with reasoning.
