@@ -2,6 +2,7 @@
   "name": "role-frontend",
   "version": "1.0.0",
   "description": "Senior Frontend Developer with deep expertise in React, Vue, Angular, modern CSS architecture, accessibility (WCAG), frontend performance optimization, state management, and build tooling.",
-  "author": "Raman Navarych",
+  "author": { "name": "Raman Navarych", "email": "raman@navarych.com" },
+  "license": "MIT",
   "keywords": ["react", "vue", "angular", "css", "accessibility", "frontend", "performance"]
 }

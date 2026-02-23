@@ -2,6 +2,7 @@
   "name": "role-algorithms",
   "version": "1.0.0",
   "description": "Senior Algorithms Engineer with deep expertise in algorithm design and analysis, data structures, dynamic programming, graph algorithms, computational complexity, mathematical optimization, sorting and searching, and numerical methods.",
-  "author": "Raman Navarych",
+  "author": { "name": "Raman Navarych", "email": "raman@navarych.com" },
+  "license": "MIT",
   "keywords": ["algorithms", "data-structures", "dynamic-programming", "graph-theory", "optimization", "complexity", "numerical-methods"]
 }

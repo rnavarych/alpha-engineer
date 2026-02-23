@@ -2,6 +2,7 @@
   "name": "role-backend",
   "version": "1.0.0",
   "description": "Senior Backend Developer with deep expertise in API implementation, database design, microservices architecture, message queues, caching strategies, authentication/authorization, background job processing, and data validation.",
-  "author": "Raman Navarych",
+  "author": { "name": "Raman Navarych", "email": "raman@navarych.com" },
+  "license": "MIT",
   "keywords": ["api", "database", "microservices", "message-queue", "backend"]
 }
