@@ -13,133 +13,58 @@ allowed-tools: Read, Write, Edit, Bash, Glob, Grep
 
 ## Usage
 ```
-/skills:create <topic>          — create skill from a tracked gap
-/skills:create                  — create the highest-frequency gap automatically
-/skills:create "custom topic"   — create a skill from scratch (no gap required)
+/skills:create <topic>          — from tracked gap
+/skills:create                  — highest-frequency gap automatically
+/skills:create "custom topic"   — from scratch (no gap required)
 ```
 
 ## Instructions
 
 ### Step 0: Determine Topic
 
-**If no argument provided:**
-1. Run `bash ./plugins/billy-milligan/scripts/skill-gaps.sh list`
-2. Parse for the highest-frequency gap
-3. If no gaps exist, ask: "No tracked gaps. What topic should the new skill cover?"
-4. If gaps exist, use the highest-frequency gap as the topic
-
-**If argument provided:**
-- Use the argument as the topic
-- Proceed to Step 1
+No argument → run `bash ./plugins/billy-milligan/scripts/skill-gaps.sh list`, pick highest-frequency gap. If none, ask user.
 
 ### Step 1: Check Gap Data
 
 Run `bash ./plugins/billy-milligan/scripts/skill-gaps.sh create-check "<topic>"`
 
-**If `TOPIC_FOUND=true`:**
-- Parse the output for TOPIC, PRIORITY, AGENT, QUERY, MISSING, CLOSEST, SUGGESTED, FREQUENCY
-- Use SUGGESTED as the default skill location
-- Use QUERY and MISSING to inform the skill content
-- Proceed to Step 2
+**Found:** parse TOPIC, PRIORITY, AGENT, QUERY, MISSING, CLOSEST, SUGGESTED, FREQUENCY. Use SUGGESTED as location.
+**Not found:** use AskUserQuestion to pick: `skills/shared/`, `skills/architecture/`, `skills/development/`, or `skills/quality/`.
 
-**If `TOPIC_FOUND=false`:**
-- No tracked gap exists for this topic — create from scratch
-- Ask user where the skill should live using AskUserQuestion:
-  - `plugins/billy-milligan/skills/shared/<topic>/` — shared technology deep-dive
-  - `plugins/billy-milligan/skills/architecture/<topic>/` — architecture pattern
-  - `plugins/billy-milligan/skills/development/<topic>/` — development framework/tool
-  - `plugins/billy-milligan/skills/quality/<topic>/` — testing/quality pattern
-- Proceed to Step 2
+### Step 2: Validate Location
 
-### Step 2: Validate Skill Location
-
-1. Derive `SKILL_DIR` from the SUGGESTED path or user selection
-2. Check if the directory already exists: `ls <SKILL_DIR>/SKILL.md 2>/dev/null`
-3. If SKILL.md already exists → warn: "A skill already exists at this location. Overwrite?" (use AskUserQuestion)
-4. If directory doesn't exist → create it: `mkdir -p <SKILL_DIR>/references`
+Check if SKILL.md already exists. If yes, warn + confirm overwrite. If no, `mkdir -p <SKILL_DIR>/references`.
 
 ### Step 3: Generate SKILL.md
 
-Create `<SKILL_DIR>/SKILL.md` following established conventions:
-
 ```yaml
 ---
-name: <skill-name-kebab-case>
+name: <kebab-case>
 description: |
-  <Multi-line description with domain keywords for auto-discovery.
-  Include "Use when..." guidance.>
+  <Domain keywords for auto-discovery. "Use when..." guidance.>
 allowed-tools: Read, Grep, Glob
 ---
 ```
 
-Body sections:
-- `# <Skill Name>` — human-readable title
-- `## When to Use` — specific use cases, derived from the gap's query context
-- `## Core Principles` — 3-5 foundational principles for this topic
-- `## References Available` — list of reference files with "load when..." guidance
-- `## Scripts Available` — only if detection/automation scripts are relevant
+Body: `# Title` → `## When to Use` → `## Core Principles` (3-5, actionable, version-aware) → `## References Available` → `## Scripts Available` (if relevant).
 
-**Content quality rules:**
-- Core principles must be actionable, not generic platitudes
-- Include real technology names, version-aware guidance, common pitfalls
-- If the gap data includes agent context, tailor principles to that perspective
-- Reference the established pattern in `skills/architecture/system-design/SKILL.md` for tone
+Content must be real, not generic. Reference `skills/architecture/system-design/SKILL.md` for tone.
 
 ### Step 4: Generate Reference Files
 
-Create 2-4 reference files in `<SKILL_DIR>/references/`:
-
-Each reference file covers a distinct sub-topic:
-- **Content must be substantive** — real patterns, code examples, comparison tables, decision matrices
-- **400-800 tokens each** — enough depth to be useful, not so much they bloat context
-- **Format:** headers, bullet points, code blocks, tables as appropriate
-- **NO placeholders** — every file must have complete, usable content
-
-Derive reference topics from:
-1. The gap's QUERY and MISSING fields (what was asked)
-2. The gap's CLOSEST field (what adjacent skill partially covers)
-3. Common sub-topics for the domain
+2-4 files in `references/`, 400-800 tokens each. Real patterns, code examples, comparison tables. NO placeholders. Derive topics from gap's QUERY, MISSING, CLOSEST fields.
 
 ### Step 5: Show Results
 
-Display the created file tree and a content preview:
-
-```markdown
-# Skill Created: <topic>
-
-## Location
-<SKILL_DIR>/
-  SKILL.md
-  references/
-    <ref-1>.md
-    <ref-2>.md
-    <ref-3>.md
-
-## SKILL.md Preview
-<show first 20 lines of SKILL.md>
-
-## Suggested Agent References
-The following agents could benefit from referencing this skill:
-- <agent-1>: add to "Cross-Cutting Skill References" section
-- <agent-2>: add to "Skill Library" section
-```
+Display file tree, SKILL.md preview (first 20 lines), suggest which agents should reference the new skill.
 
 ### Step 6: Clean Up Gap
 
-If the skill was created from a tracked gap:
-1. Run `bash ./plugins/billy-milligan/scripts/skill-gaps.sh dismiss "<topic>"`
-2. Confirm: "Gap resolved. Skill created and gap removed from tracking."
-
-If Billy is ON, the team reacts:
-- Viktor: evaluates the skill's architectural soundness
-- Dennis: checks if the references are actually useful
-- Sasha: wonders what edge cases the skill misses
+If from tracked gap: `bash ./plugins/billy-milligan/scripts/skill-gaps.sh dismiss "<topic>"`.
+If Billy ON — team reacts (Viktor: architecture, Dennis: usefulness, Sasha: edge cases).
 
 ## Rules
 
-- Generated skills must follow ALL existing SKILL.md conventions (frontmatter, body structure)
-- Reference files must contain real, substantive content — NOT placeholders or TODOs
-- Never overwrite existing skills without explicit user confirmation
-- `allowed-tools` should be `Read, Grep, Glob` for advisory skills, add `Bash` only if scripts are included
-- Do NOT auto-modify agent files — only SUGGEST which agents should reference the new skill
-- The skill should be immediately usable — any agent loading it should get actionable guidance
+- Follow ALL existing SKILL.md conventions. Reference files must be substantive — NOT placeholders.
+- Never overwrite without confirmation. `allowed-tools: Read, Grep, Glob` for advisory, add `Bash` only if scripts needed.
+- Do NOT auto-modify agent files — only SUGGEST references. Skill must be immediately usable.
