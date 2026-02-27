@@ -4,7 +4,7 @@ claude plugin marketplace add rnavarych/alpha-engineer
 
 # Alpha-Engineer: Claude Code Plugin Marketplace
 
-**24 agents. 189 skills. 20 commands.** Specialized engineering plugins for Claude Code across 8 developer roles, 4 industry domains, and one unhinged team of 5 senior engineers.
+**24 agents. 191 skills. 22 commands.** Specialized engineering plugins for Claude Code across 9 developer roles, 4 industry domains, and one unhinged team of 5 senior engineers.
 
 ---
 
@@ -38,7 +38,7 @@ Control the Billy Milligan experience.
   <img src=".github/assets/demo-debate.svg" alt="Billy Milligan /debate demo — team arguing monolith vs microservices" width="800"/>
 </p>
 
-**20 commands** | **50 technical skills** | **5 agents with persistent memory**
+**22 commands** | **52 technical skills** | **5 agents with persistent memory**
 
 | Agent | Role | Style |
 |-------|------|-------|
@@ -57,10 +57,10 @@ Control the Billy Milligan experience.
 | Category | Plugins | Agents | Skills | Commands |
 |----------|---------|--------|--------|----------|
 | Foundation | 1 (alpha-core) | 2 | 11 | -- |
-| Roles | 8 | 8 | 70 | -- |
+| Roles | 9 | 9 | 96 | -- |
 | Domains | 4 | 8 | 32 | -- |
-| Billy Milligan | 1 | 5 | 50 | 20 |
-| **Total** | **14** | **23** | **163** | **20** |
+| Billy Milligan | 1 | 5 | 52 | 22 |
+| **Total** | **15** | **24** | **191** | **22** |
 
 ### Developer Roles
 - **Senior Frontend Developer** — React, Vue, Angular, CSS, accessibility, performance
@@ -71,6 +71,7 @@ Control the Billy Milligan experience.
 - **Senior Architect** — System design, ADRs, scalability, tech stack, AWS/Azure/GCP architecture
 - **Senior Fullstack Engineer** — End-to-end development, scaffolding, deployment
 - **Senior Algorithms Engineer** — Algorithm design, data structures, dynamic programming, graph algorithms, optimization
+- **Senior Database Engineer** — 230+ databases across 14 categories, schema design, query optimization, replication, backup/recovery, migrations
 
 ### Industry Domains
 - **IoT** — MQTT, device management, edge computing, time-series data
@@ -171,11 +172,12 @@ Each layer is independent and composable. Install only what you need.
 | `role-architect` | role | 1 | 11 | System design, ADRs, AWS/Azure/GCP architecture |
 | `role-fullstack` | role | 1 | 8 | End-to-end development, scaffolding |
 | `role-algorithms` | role | 1 | 8 | Algorithms, data structures, optimization |
+| `role-database` | role | 1 | 26 | 230+ databases, schema design, query optimization, DBA lifecycle |
 | `domain-iot` | domain | 2 | 8 | MQTT, edge computing, device management |
 | `domain-ecommerce` | domain | 2 | 8 | Payments, catalogs, checkout, inventory |
 | `domain-fintech` | domain | 2 | 8 | Ledger design, transactions, compliance |
 | `domain-healthcare` | domain | 2 | 8 | HIPAA, HL7 FHIR, PHI, EHR, telehealth |
-| `billy-milligan` | team | 5 | 50 | 5 toxic engineers, 20 commands, dual memory |
+| `billy-milligan` | team | 5 | 52 | 5 toxic engineers, 22 commands, dual memory |
 
 ## License
 

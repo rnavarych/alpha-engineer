@@ -1,6 +1,6 @@
 # Alpha-Engineer Plugin Marketplace
 
-A comprehensive Claude Code plugin marketplace providing 24 agents, 189 skills, and 20 commands across 4 industry domains, 9 developer roles, and 1 team plugin.
+A comprehensive Claude Code plugin marketplace providing 24 agents, 191 skills, and 22 commands across 4 industry domains, 9 developer roles, and 1 team plugin.
 
 ## Architecture
 
