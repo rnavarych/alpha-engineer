@@ -10,7 +10,7 @@ claude plugin marketplace add rnavarych/alpha-engineer
 
 ## Billy Milligan — The Team Inside Your Head
 
-> 5 toxic senior engineers trapped in one plugin. They argue, roast your ideas, and somehow deliver excellent technical decisions. Multiplied personality disorder as a development methodology.
+> 5 senior engineers trapped in one plugin. They deliver excellent technical decisions. Multiplied personality disorder as a development methodology.
 
 ```bash
 claude plugin install billy-milligan@alpha-engineer
