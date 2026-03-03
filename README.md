@@ -132,6 +132,13 @@ claude plugin install billy-milligan@alpha-engineer
 /billy:lang ru
 ```
 
+### Invoke agents directly
+
+```
+# Role agents
+/role-backend:senior-backend-developer design a REST API for user management
+```
+
 ### Agents activate automatically
 Claude will delegate to the appropriate agent based on your task context. For example, asking about API design while `role-backend` is installed will activate the Senior Backend Developer agent.
 
