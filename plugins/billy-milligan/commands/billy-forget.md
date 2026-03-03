@@ -17,7 +17,7 @@ allowed-tools: Read, Write, Edit, Bash, Glob, Grep
 /billy:forget context "<topic>"        — remove outdated info from context.md
 ```
 
-**For formal ADR decisions, use `/adr:status <number> DEPRECATED` or `/adr:supersede` instead.**
+**For formal ADR decisions, use `/billy:adr-status <number> DEPRECATED` or `/billy:adr-supersede` instead.**
 
 ## Instructions
 
@@ -64,5 +64,5 @@ An agent should comment naturally:
 
 - NEVER actually delete content from memory files
 - Always mark with a date and reason
-- If the user tries to forget a formal decision, redirect: "Formal decisions live in docs/adr/ — use `/adr:status` or `/adr:supersede` instead."
+- If the user tries to forget a formal decision, redirect: "Formal decisions live in docs/adr/ — use `/billy:adr-status` or `/billy:adr-supersede` instead."
 - After marking, suggest `/billy:recall` to verify the change

@@ -3,7 +3,7 @@ name: billy:save
 description: |
   Save team notes, roasts, arguments, and session summaries to persistent Billy memory.
   Memory is stored locally in ~/.claude/billy-memory/<project-hash>/ — never committed to git.
-  For formal architectural decisions, use /adr:new instead.
+  For formal architectural decisions, use /billy:adr-new instead.
 user-invocable: true
 allowed-tools: Read, Write, Edit, Bash, Glob, Grep
 ---
@@ -18,7 +18,7 @@ allowed-tools: Read, Write, Edit, Bash, Glob, Grep
 /billy:save context "user prefers short TTLs"  — update team knowledge about user/project
 ```
 
-**For formal architectural decisions, use `/adr:new "<title>"` instead.**
+**For formal architectural decisions, use `/billy:adr-new "<title>"` instead.**
 Billy memory is for informal team knowledge — roasts, arguments, context, vibes.
 
 ## Instructions
@@ -61,7 +61,7 @@ If the user invokes `/billy:save` with no arguments, create a summary of the cur
    SESSION_FILE=$(bash ./plugins/billy-milligan/scripts/memory-save.sh session-entry)
    ```
 2. Analyze the current conversation for:
-   - What commands were run (/plan, /debate, /review, /roast)
+   - What commands were run (/billy:plan, /billy:debate, /billy:review, /billy:roast)
    - Key outcomes (informal — what was decided, who won, who lost)
    - Unresolved disagreements
    - Action items assigned
@@ -102,12 +102,12 @@ If the user invokes `/billy:save` with no arguments, create a summary of the cur
 
 ### Auto-Save (called by team commands)
 
-Triggered automatically at the END of `/plan`, `/debate`, `/review`, `/roast`.
+Triggered automatically at the END of `/billy:plan`, `/billy:debate`, `/billy:review`, `/billy:roast`.
 
 1. Create the session entry (same format as Mode 4)
 2. Save unresolved arguments to `arguments.md`
 3. Save the best roast to `roasts.md`
-4. If a formal decision was made → mention it and prompt: "записать ADR? (/adr:new)"
+4. If a formal decision was made → mention it and prompt: "записать ADR? (/billy:adr-new)"
 5. Do NOT ask for user confirmation — save silently
 6. Show a brief confirmation: "Session saved to memory." (no fanfare)
 
@@ -115,6 +115,6 @@ Triggered automatically at the END of `/plan`, `/debate`, `/review`, `/roast`.
 
 - Memory files are plain markdown — user can read/edit them directly
 - NEVER overwrite existing entries — always APPEND
-- NEVER save formal decisions to Billy memory — those go in `docs/adr/` via `/adr:new`
+- NEVER save formal decisions to Billy memory — those go in `docs/adr/` via `/billy:adr-new`
 - When an argument gets resolved via a formal ADR, mark it RESOLVED in `arguments.md` with a link to the ADR
 - Agents should react naturally to saves — Dennis: "великолепно, сохранили ещё один беспорядок"

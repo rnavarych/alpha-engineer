@@ -1,5 +1,5 @@
 ---
-name: plan
+name: billy:plan
 description: |
   Full team planning session — all 5 Billy Milligan agents run in parallel to produce
   a comprehensive plan. Lena defines the problem, Viktor proposes structure, Dennis
@@ -10,12 +10,12 @@ user-invocable: true
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash, Task
 ---
 
-# /plan — Full Team Planning Session
+# /billy:plan — Full Team Planning Session
 
 ## Usage
 ```
-/plan <feature or topic to plan>
-/plan @ru <topic>  /plan @en <topic>  /plan @pl <topic>
+/billy:plan <feature or topic to plan>
+/billy:plan @ru <topic>  /billy:plan @en <topic>  /billy:plan @pl <topic>
 ```
 
 ## Instructions
@@ -73,7 +73,7 @@ Skip section 4 and guest verdict row if no guests.
 ### Step 5: Auto-Save to Team Memory
 
 1. `bash ./plugins/billy-milligan/scripts/memory-save.sh session-entry` → get session file
-2. Append: `## Session HH:MM — /plan <topic>` with participants, key decisions, disagreements, action items, best roast
+2. Append: `## Session HH:MM — /billy:plan <topic>` with participants, key decisions, disagreements, action items, best roast
 3. Save Max's decision to `.claude/billy-memory/decisions.md`:
    ```markdown
    ## [YYYY-MM-DD] <Decision Title>

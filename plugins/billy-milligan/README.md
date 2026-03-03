@@ -59,145 +59,145 @@ cp -r plugins/billy-milligan /path/to/your/project/
 claude --plugin-dir ./billy-milligan
 ```
 
-## Commands (20 Total)
+## Commands (22 Total)
 
 ### Team Sessions
 
-#### `/plan <topic>` — Full Team Planning Session
+#### `/billy:plan <topic>` — Full Team Planning Session
 All 5 agents analyze a feature or topic in parallel. Speaking order: Lena (problem) → Viktor (architecture) → Dennis (reality check) → Sasha (failure modes) → Max (final call). Includes a raw "Kitchen" section with unfiltered roasts.
 
 ```
-/plan add user authentication
-/plan @ru добавить кеширование результатов
+/billy:plan add user authentication
+/billy:plan @ru добавить кеширование результатов
 ```
 
-#### `/debate <decision>` — Heated Technical Argument
+#### `/billy:debate <decision>` — Heated Technical Argument
 All agents argue their position on a specific technology decision. Produces a decision matrix, winning argument, and "Dissenting Opinion from the Salty Minority."
 
 ```
-/debate Redis vs PostgreSQL for caching
-/debate @ru монолит или микросервисы
+/billy:debate Redis vs PostgreSQL for caching
+/billy:debate @ru монолит или микросервисы
 ```
 
-#### `/review <file or diff>` — Brutal 5-Perspective Code Review
+#### `/billy:review <file or diff>` — Brutal 5-Perspective Code Review
 Each agent reviews from their angle: architecture (Viktor), risk (Max), code quality (Dennis), testability (Sasha), requirements fit (Lena). Each assigns a verdict: 🟢 SHIP IT / 🟡 FIX FIRST / 🔴 BURN IT. Includes a "Wall of Shame."
 
 ```
-/review src/components/Auth.tsx
-/review @ru src/services/auth.ts
-/review git diff HEAD~3
+/billy:review src/components/Auth.tsx
+/billy:review @ru src/services/auth.ts
+/billy:review git diff HEAD~3
 ```
 
-#### `/roast <idea>` — Quick Hot Takes
+#### `/billy:roast <idea>` — Quick Hot Takes
 2-3 sentence brutally honest take from each agent. Maximum trash talk, minimum politeness. Quick sanity check before you waste time.
 
 ```
-/roast should we use GraphQL?
-/roast @ru может монорепу заведём?
-/roast let's rewrite everything in Rust
+/billy:roast should we use GraphQL?
+/billy:roast @ru может монорепу заведём?
+/billy:roast let's rewrite everything in Rust
 ```
 
 ### Team Memory
 
-#### `/billy-save [mode] "<text>"` — Save to Team Memory
-Persist notes, roasts, arguments, and session summaries to local Billy memory (`~/.claude/billy-memory/`). Auto-saves trigger at the end of `/plan`, `/debate`, `/review`, `/roast`.
+#### `/billy:save [mode] "<text>"` — Save to Team Memory
+Persist notes, roasts, arguments, and session summaries to local Billy memory (`~/.claude/billy-memory/`). Auto-saves trigger at the end of `/billy:plan`, `/billy:debate`, `/billy:review`, `/billy:roast`.
 
 ```
-/billy-save note "Viktor wants event sourcing, Dennis wants REST"
-/billy-save roast "Dennis called Viktor's diagram a 'PowerPoint crime'"
-/billy-save context "User prefers Tailwind, hates CSS-in-JS"
-/billy-save                → interactive session summary
+/billy:save note "Viktor wants event sourcing, Dennis wants REST"
+/billy:save roast "Dennis called Viktor's diagram a 'PowerPoint crime'"
+/billy:save context "User prefers Tailwind, hates CSS-in-JS"
+/billy:save                → interactive session summary
 ```
 
-#### `/billy-recall [filter]` — Load Team Memories
+#### `/billy:recall [filter]` — Load Team Memories
 Load relevant memories into context — unresolved arguments, past sessions, saved roasts.
 
 ```
-/billy-recall              → default (recent context + unresolved)
-/billy-recall arguments    → show open arguments
-/billy-recall sessions     → past session summaries
-/billy-recall roasts       → saved roasts
-/billy-recall auth         → keyword search across all memory
+/billy:recall              → default (recent context + unresolved)
+/billy:recall arguments    → show open arguments
+/billy:recall sessions     → past session summaries
+/billy:recall roasts       → saved roasts
+/billy:recall auth         → keyword search across all memory
 ```
 
-#### `/billy-history [filter]` — Decision Timeline
+#### `/billy:history [filter]` — Decision Timeline
 Chronological timeline of all team decisions, sessions, and key events. Max presents it as a military-style briefing.
 
 ```
-/billy-history             → full timeline
-/billy-history decisions   → only decisions
-/billy-history sessions    → only sessions
-/billy-history last 7      → last 7 days
+/billy:history             → full timeline
+/billy:history decisions   → only decisions
+/billy:history sessions    → only sessions
+/billy:history last 7      → last 7 days
 ```
 
-#### `/billy-argue [keyword]` — Unresolved Arguments
+#### `/billy:argue [keyword]` — Unresolved Arguments
 Display all unresolved arguments from team memory. Sasha's favorite command — she always adds commentary.
 
 ```
-/billy-argue               → all open arguments
-/billy-argue caching       → arguments about caching
+/billy:argue               → all open arguments
+/billy:argue caching       → arguments about caching
 ```
 
-#### `/billy-context [filter]` — Project & User Knowledge
+#### `/billy:context [filter]` — Project & User Knowledge
 Show what the team has learned about you and your project over time.
 
 ```
-/billy-context             → everything
-/billy-context user        → user preferences only
-/billy-context project     → project context only
+/billy:context             → everything
+/billy:context user        → user preferences only
+/billy:context project     → project context only
 ```
 
-#### `/billy-forget <type> <id> "<reason>"` — Mark as Obsolete
+#### `/billy:forget <type> <id> "<reason>"` — Mark as Obsolete
 Mark decisions as SUPERSEDED or remove obsolete entries. Never actually deletes — marks with date and reason.
 
 ```
-/billy-forget argument 3 "resolved: went with Redis"
-/billy-forget context "old tech stack note"
+/billy:forget argument 3 "resolved: went with Redis"
+/billy:forget context "old tech stack note"
 ```
 
-#### `/billy-hall-of-fame [variant]` — Best Roasts & Inside Jokes
+#### `/billy:hall-of-fame [variant]` — Best Roasts & Inside Jokes
 Show the greatest hits from team sessions. Includes most roasted agent, most savage agent stats.
 
 ```
-/billy-hall-of-fame        → recent hall of fame
-/billy-hall-of-fame best   → top 5 most savage roasts
-/billy-hall-of-fame all    → complete roast history
+/billy:hall-of-fame        → recent hall of fame
+/billy:hall-of-fame best   → top 5 most savage roasts
+/billy:hall-of-fame all    → complete roast history
 ```
 
 ### Guest Management
 
-#### `/invite <agent or description>` — Add Guest Expert
+#### `/billy:invite <agent or description>` — Add Guest Expert
 Invite a guest expert to the team discussion. Can name an existing project agent or describe ad-hoc expertise. Guest gets Billy-infected automatically and the core team reacts in character.
 
 ```
-/invite senior-devops-engineer
-/invite "ML engineer specializing in recommendation systems"
+/billy:invite senior-devops-engineer
+/billy:invite "ML engineer specializing in recommendation systems"
 ```
 
-#### `/dismiss <guest-name>` — Remove Guest
+#### `/billy:dismiss <guest-name>` — Remove Guest
 Remove a guest from the discussion. Farewell tone depends on how useful the guest was.
 
 ```
-/dismiss senior-devops-engineer
-/dismiss all               → remove all guests
+/billy:dismiss senior-devops-engineer
+/billy:dismiss all               → remove all guests
 ```
 
 ### Language & Control
 
-#### `/lang <code>` — Set Team Language
+#### `/billy:lang <code>` — Set Team Language
 Set the communication language for all subsequent commands. Technical terms always stay in English. Pet names adapt per language.
 
 ```
-/lang ru    → Russian
-/lang en    → English (default)
-/lang pl    → Polish
-/lang de    → German
+/billy:lang ru    → Russian
+/billy:lang en    → English (default)
+/billy:lang pl    → Polish
+/billy:lang de    → German
 ```
 
 Every command also supports inline language override with `@lang`:
 ```
-/plan @ru кеширование    → this plan in Russian
-/debate @en REST vs gRPC → this debate in English
+/billy:plan @ru кеширование    → this plan in Russian
+/billy:debate @en REST vs gRPC → this debate in English
 ```
 
 #### `/billy <on|off|status>` — Toggle Protocol
@@ -213,42 +213,62 @@ Control the Billy Milligan experience.
 
 ADR commands produce **formal, professional output** regardless of Billy on/off state. When Billy is active, the team discusses informally first, then the ADR is written in clean format.
 
-#### `/adr-new "<title>"` — Create New ADR
+#### `/billy:adr-new "<title>"` — Create New ADR
 Create a new Architecture Decision Record in `docs/adr/`. Sequential numbering, professional format.
 
 ```
-/adr-new "Database Choice"
-/adr-new "Authentication Approach"
+/billy:adr-new "Database Choice"
+/billy:adr-new "Authentication Approach"
 ```
 
-#### `/adr-list` — Show All ADRs
+#### `/billy:adr-list` — Show All ADRs
 List all ADRs with their current status (PROPOSED, ACCEPTED, DEPRECATED, SUPERSEDED).
 
 ```
-/adr-list
+/billy:adr-list
 ```
 
-#### `/adr-review <number> ["question"]` — Review ADR
+#### `/billy:adr-review <number> ["question"]` — Review ADR
 Structured review of an existing ADR. With Billy ON, the team reviews in their natural voices. With Billy OFF, a professional checklist review.
 
 ```
-/adr-review 1
-/adr-review 2 "is the scaling approach sufficient?"
+/billy:adr-review 1
+/billy:adr-review 2 "is the scaling approach sufficient?"
 ```
 
-#### `/adr-status <number> <status>` — Update ADR Status
+#### `/billy:adr-status <number> <status>` — Update ADR Status
 Change an ADR's lifecycle status. Updates the README index automatically.
 
 ```
-/adr-status 1 ACCEPTED
-/adr-status 3 DEPRECATED
+/billy:adr-status 1 ACCEPTED
+/billy:adr-status 3 DEPRECATED
 ```
 
-#### `/adr-supersede <old-number> "<new-title>"` — Supersede ADR
+#### `/billy:adr-supersede <old-number> "<new-title>"` — Supersede ADR
 Mark an existing ADR as superseded and create its replacement. Cross-links both documents.
 
 ```
-/adr-supersede 1 "Revised Database Choice"
+/billy:adr-supersede 1 "Revised Database Choice"
+```
+
+### Skill Management
+
+#### `/billy:skills-gaps` — View Skill Gaps
+Show topics where agents fell back to model knowledge. Helps identify which skills to build next.
+
+```
+/billy:skills-gaps                     → full gap report
+/billy:skills-gaps promote <topic>     → promote gap priority
+/billy:skills-gaps dismiss <topic>     → remove a gap
+/billy:skills-gaps clear               → clear all gaps
+```
+
+#### `/billy:skills-create <topic>` — Create New Skill
+Generate a new skill from a tracked gap or from scratch. Scaffolds SKILL.md + references with substantive content.
+
+```
+/billy:skills-create                   → from highest-priority gap
+/billy:skills-create "custom topic"    → from scratch
 ```
 
 ## Skills (48 Technical Skills)

@@ -45,7 +45,7 @@ Determine the recall mode:
 - **`roasts`** → Load `$MEMORY_DIR/roasts.md` (Hall of Fame)
 - **`relationships`** → Load `$MEMORY_DIR/relationships.md`
 - **`all`** → Load everything (with truncation warning)
-- **`decisions`** → Redirect: "Formal decisions are now ADRs — use `/adr:list` to see them."
+- **`decisions`** → Redirect: "Formal decisions are now ADRs — use `/billy:adr-list` to see them."
 - **Any other keyword** → Keyword search across all memory files
 
 ### Step 2: Load Memory
@@ -116,7 +116,7 @@ The agent comment must reference ACTUAL loaded content, not generic quips.
 ### Important Rules
 
 - NEVER fabricate memory — only show what actually exists in the files
-- If memory files are empty or don't exist: "No team memory found. Start a /plan or /debate to build some history."
+- If memory files are empty or don't exist: "No team memory found. Start a /billy:plan or /billy:debate to build some history."
 - Memory is presented as the team's own experience, not as "data from files"
 - Agents reference loaded memory naturally — NEVER say "according to memory"
 - Recalled context persists for the rest of the conversation

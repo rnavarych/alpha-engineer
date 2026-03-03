@@ -1,5 +1,5 @@
 ---
-name: lang
+name: billy:lang
 description: |
   Set the team communication language for the current Billy Milligan session.
   All subsequent team commands will use this language. Technical terms always
@@ -8,19 +8,19 @@ user-invocable: true
 allowed-tools: Bash
 ---
 
-# /lang — Set Team Communication Language
+# /billy:lang — Set Team Communication Language
 
 ## Usage
 ```
-/lang ru          → switch to Russian 🇷🇺
-/lang en          → switch to English 🇬🇧
-/lang pl          → switch to Polish 🇵🇱
-/lang <any code>  → switch to any language
+/billy:lang ru          → switch to Russian 🇷🇺
+/billy:lang en          → switch to English 🇬🇧
+/billy:lang pl          → switch to Polish 🇵🇱
+/billy:lang <any code>  → switch to any language
 ```
 
 ## Instructions
 
-When the user invokes `/lang`, run the language setter script:
+When the user invokes `/billy:lang`, run the language setter script:
 
 ```bash
 bash ./plugins/billy-milligan/scripts/set-lang.sh <language-code>
@@ -57,9 +57,9 @@ Only ONE language skill is loaded at a time. The skill provides:
 
 Remind the user that team commands also support inline language override:
 ```
-/plan @ru добавить кеширование
-/debate @en Redis vs Memcached
-/roast @pl czy powinniśmy użyć GraphQL?
+/billy:plan @ru добавить кеширование
+/billy:debate @en Redis vs Memcached
+/billy:roast @pl czy powinniśmy użyć GraphQL?
 ```
 
 The inline `@lang` overrides the session `/lang` setting for that one invocation only — it loads a DIFFERENT language skill for that single command.

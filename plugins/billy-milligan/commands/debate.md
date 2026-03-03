@@ -1,5 +1,5 @@
 ---
-name: debate
+name: billy:debate
 description: |
   Heated technical argument between all 5 Billy Milligan agents on a specific
   technology decision. Agents attack each other's positions aggressively with
@@ -10,13 +10,13 @@ user-invocable: true
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash, Task
 ---
 
-# /debate — Heated Technical Argument
+# /billy:debate — Heated Technical Argument
 
 ## Usage
 ```
-/debate <decision topic>
-/debate @ru Redis vs PostgreSQL для кеширования
-/debate @en monolith vs microservices
+/billy:debate <decision topic>
+/billy:debate @ru Redis vs PostgreSQL для кеширования
+/billy:debate @en monolith vs microservices
 ```
 
 ## Instructions

@@ -1,5 +1,5 @@
 ---
-name: review
+name: billy:review
 description: |
   Brutal code review from all 5 Billy Milligan perspectives — architecture (Viktor),
   risk/shippability (Max), code quality (Dennis), testability (Sasha), and
@@ -9,13 +9,13 @@ user-invocable: true
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash, Task
 ---
 
-# /review — Brutal 5-Perspective Code Review
+# /billy:review — Brutal 5-Perspective Code Review
 
 ## Usage
 ```
-/review <file path or git diff>
-/review @ru src/components/Auth.tsx
-/review git diff HEAD~3
+/billy:review <file path or git diff>
+/billy:review @ru src/components/Auth.tsx
+/billy:review git diff HEAD~3
 ```
 
 ## Instructions
@@ -65,6 +65,6 @@ Skip guest section/row if no guests.
 ### Step 5: Auto-Save to Team Memory
 
 1. `bash ./plugins/billy-milligan/scripts/memory-save.sh session-entry`
-2. Append: `## Session HH:MM — /review <file>` with verdict, key findings, action items, best Wall of Shame roast
+2. Append: `## Session HH:MM — /billy:review <file>` with verdict, key findings, action items, best Wall of Shame roast
 3. Architectural decisions → `decisions.md`. Disagreements → `arguments.md`. Best roast → `roasts.md`
 4. Show: "💾 Review logged. Session saved to memory."
