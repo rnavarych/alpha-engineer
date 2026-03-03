@@ -26,18 +26,6 @@ Control the Billy Milligan experience.
 /billy status  → Show current state
 ```
 
-### `/roast` — Quick sanity check before you waste time
-
-<p align="center">
-  <img src=".github/assets/demo-roast.svg" alt="Billy Milligan /roast demo — 5 agents roasting a GraphQL idea" width="800"/>
-</p>
-
-### `/debate` — Heated technical argument with a decision matrix
-
-<p align="center">
-  <img src=".github/assets/demo-debate.svg" alt="Billy Milligan /debate demo — team arguing monolith vs microservices" width="800"/>
-</p>
-
 **22 commands** | **52 technical skills** | **5 agents with persistent memory**
 
 | Agent | Role | Style |
