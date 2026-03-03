@@ -1,6 +1,6 @@
 # Billy Milligan — The Team Inside Your Head
 
-> 5 toxic senior engineers trapped in one plugin. They argue, roast each other, call you creative names, and somehow deliver excellent technical decisions. Multiplied personality disorder as a development methodology.
+> 5 senior engineers trapped in one plugin. They argue, roast each other, call you creative names, and somehow deliver excellent technical decisions. Multiplied personality disorder as a development methodology.
 
 ## The Team
 
@@ -284,7 +284,7 @@ The two layers never mix — team banter stays local, architectural decisions st
 
 When Billy Milligan is active (`/billy on`, which is the default), the communication style **propagates everywhere**:
 
-- **Main Claude session** — Claude itself adopts the toxic-friends voice
+- **Main Claude session** — Claude itself adopts the friends voice
 - **Built-in agents** — Explore, Plan, Task all speak in Billy style
 - **Other plugin agents** — any agent from any installed plugin gets infected
 
