@@ -1,5 +1,5 @@
 ---
-name: security-advisor
+name: alpha-core:security-advisor
 description: |
   Guides on application security: OWASP Top 10, authentication/authorization patterns
   (OAuth2/OIDC/JWT/RBAC/ABAC/ReBAC), encryption, passkeys/WebAuthn/FIDO2, Zero Trust,

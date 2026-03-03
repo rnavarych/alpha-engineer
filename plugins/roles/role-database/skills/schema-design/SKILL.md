@@ -1,5 +1,5 @@
 ---
-name: schema-design
+name: role-database:schema-design
 description: |
   Database schema design principles and patterns. Normalization (1NF through 5NF/BCNF), strategic denormalization for read performance, multi-tenancy schema patterns (shared schema, schema-per-tenant, database-per-tenant), primary key strategies (UUID v7, ULID, KSUID, Snowflake ID, BIGSERIAL, CUID2, NanoID), soft delete patterns, temporal tables (SCD Type 1/2/3/4/6), audit trails, schema evolution (expand-contract pattern), naming conventions, data type best practices, and anti-patterns to avoid (EAV, polymorphic associations, god tables). Use when designing new schemas, reviewing existing schema design, planning schema migrations, or choosing PK strategies.
 allowed-tools: Read, Grep, Glob, Bash

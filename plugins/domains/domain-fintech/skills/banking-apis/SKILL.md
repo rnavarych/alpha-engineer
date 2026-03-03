@@ -1,5 +1,5 @@
 ---
-name: banking-apis
+name: domain-fintech:banking-apis
 description: Guides banking API integration: Open Banking standards (PSD2, UK Open Banking, FDX), Plaid integration (Link, transactions, balance, identity), account aggregation, payment initiation (PISP), account information (AISP), BaaS platforms (Unit, Synapse, Column), and API security (mTLS, OAuth2, FAPI). Use when integrating with banking services.
 allowed-tools: Read, Grep, Glob, Bash
 ---

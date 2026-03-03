@@ -1,5 +1,5 @@
 ---
-name: capacity-planning
+name: role-architect:capacity-planning
 description: |
   Capacity planning expertise including traffic estimation, resource sizing,
   growth modeling, peak load planning, infrastructure runway calculation,

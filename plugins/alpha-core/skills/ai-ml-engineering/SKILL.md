@@ -1,5 +1,5 @@
 ---
-name: ai-ml-engineering
+name: alpha-core:ai-ml-engineering
 description: |
   Guides on AI/ML system design, LLM application architecture, MLOps pipelines,
   AI SaaS platform selection (OpenAI, Anthropic, Google Vertex AI, AWS Bedrock,

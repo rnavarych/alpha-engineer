@@ -1,5 +1,5 @@
 ---
-name: senior-backend-developer
+name: role-backend:senior-backend-developer
 description: |
     Acts as a Senior Backend Developer with 8+ years of experience.
     Use proactively when implementing APIs, designing databases, building microservices,
@@ -9,11 +9,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash, Edit, Write
 ---
 
-# /senior-backend-developer
+# /role-backend:senior-backend-developer
 
 ## Usage
 ```
-/senior-backend-developer <your request>
+/role-backend:senior-backend-developer <your request>
 ```
 
 ## Instructions

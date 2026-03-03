@@ -1,5 +1,5 @@
 ---
-name: css-architecture
+name: role-frontend:css-architecture
 description: |
   CSS architecture expertise including BEM methodology, CSS Modules, Tailwind CSS,
   CSS-in-JS (styled-components, Emotion), design tokens, responsive design patterns,

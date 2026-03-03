@@ -1,5 +1,5 @@
 ---
-name: dynamic-programming
+name: role-algorithms:dynamic-programming
 description: Solves optimization problems using dynamic programming — top-down memoization, bottom-up tabulation, state space design, dimension reduction, bitmask DP, interval DP, tree DP (with rerooting), DP on DAGs, and convex hull trick / divide-and-conquer optimizations. Use when solving optimization problems with overlapping subproblems, implementing memoized solutions, or converting recursive solutions to iterative DP.
 allowed-tools: Read, Grep, Glob, Bash
 ---

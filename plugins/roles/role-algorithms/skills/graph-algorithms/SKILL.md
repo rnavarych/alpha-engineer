@@ -1,5 +1,5 @@
 ---
-name: graph-algorithms
+name: role-algorithms:graph-algorithms
 description: Implements graph algorithms — BFS/DFS traversal, shortest paths (Dijkstra, Bellman-Ford, Floyd-Warshall, A*, Johnson's), minimum spanning trees (Kruskal, Prim), topological sort, strongly connected components (Tarjan, Kosaraju), maximum flow (Ford-Fulkerson, Dinic), and bipartite matching (Hopcroft-Karp, Hungarian). Use when solving traversal, shortest path, network flow, connectivity, or scheduling problems.
 allowed-tools: Read, Grep, Glob, Bash
 ---

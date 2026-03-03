@@ -1,5 +1,5 @@
 ---
-name: multi-model-databases
+name: role-database:multi-model-databases
 description: |
   Deep operational guide for 8 multi-model databases. ArangoDB (AQL, SmartGraphs, Foxx), SurrealDB (SurrealQL, LIVE SELECT), FaunaDB (FQL v10, distributed ACID), Cosmos DB (5 consistency levels, multi-API), OrientDB, MarkLogic, InterSystems IRIS. Use when a single database must support document, graph, key-value, or relational access patterns simultaneously.
 allowed-tools: Read, Grep, Glob, Bash

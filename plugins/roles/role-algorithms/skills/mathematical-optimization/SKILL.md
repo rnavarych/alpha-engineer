@@ -1,5 +1,5 @@
 ---
-name: mathematical-optimization
+name: role-algorithms:mathematical-optimization
 description: Applies mathematical optimization — linear programming (simplex, interior point, duality), integer/mixed-integer programming (branch-and-bound, cutting planes), convex optimization (gradient descent variants, Adam, L-BFGS, Newton), constraint satisfaction (backtracking, AC-3, SAT/SMT solvers), and combinatorial optimization (VRP, scheduling, assignment, bin packing). Use when formulating optimization problems, selecting solvers, or solving scheduling/allocation/routing problems.
 allowed-tools: Read, Grep, Glob, Bash
 ---

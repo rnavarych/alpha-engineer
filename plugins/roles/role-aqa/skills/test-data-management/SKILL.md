@@ -1,5 +1,5 @@
 ---
-name: test-data-management
+name: role-aqa:test-data-management
 description: |
   Test data management with factory patterns (Faker.js, Fishery, Factory Bot),
   database seeding, test data isolation (transactions, cleanup), anonymization

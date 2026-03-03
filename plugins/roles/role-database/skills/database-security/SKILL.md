@@ -1,5 +1,5 @@
 ---
-name: database-security
+name: role-database:database-security
 description: |
   Security hardening across all database engines. Authentication (SCRAM, certificate, LDAP, Kerberos), authorization (RBAC, RLS, column-level), encryption at rest and in transit (TDE, TLS/SSL), audit logging (pgAudit, MySQL audit, MongoDB audit), SQL injection prevention, network security, data masking, compliance (PCI DSS, HIPAA, GDPR, SOX). Use when hardening database security, implementing access controls, or meeting compliance requirements.
 allowed-tools: Read, Grep, Glob, Bash

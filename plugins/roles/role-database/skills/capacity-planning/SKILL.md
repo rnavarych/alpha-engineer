@@ -1,5 +1,5 @@
 ---
-name: capacity-planning
+name: role-database:capacity-planning
 description: |
   Database capacity and growth planning. Storage growth estimation, IOPS requirements, memory sizing (buffer pool, shared_buffers), connection count estimation, sharding triggers, read replica scaling, cost estimation per cloud provider. Load testing (pgbench, sysbench, YCSB, HammerDB). When to shard vs scale up vs read replicas. Use when planning database capacity, sizing infrastructure, or evaluating scaling strategies.
 allowed-tools: Read, Grep, Glob, Bash

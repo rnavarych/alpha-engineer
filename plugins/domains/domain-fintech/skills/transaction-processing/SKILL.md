@@ -1,5 +1,5 @@
 ---
-name: transaction-processing
+name: domain-fintech:transaction-processing
 description: Guides transaction processing: ACID guarantees for financial operations, idempotency (idempotency keys, deduplication), distributed transactions (saga with compensating transactions), settlement workflows, batch processing, reconciliation, and transaction lifecycle state management. Use when implementing payment flows or financial operations.
 allowed-tools: Read, Grep, Glob, Bash
 ---

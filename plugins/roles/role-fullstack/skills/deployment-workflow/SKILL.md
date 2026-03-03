@@ -1,5 +1,5 @@
 ---
-name: deployment-workflow
+name: role-fullstack:deployment-workflow
 description: Set up deployment workflows for Vercel, Netlify, Railway, Render, and Docker. Covers preview environments per PR, database migrations in CI (expand-contract pattern), environment variable validation, health check endpoints, and rollback procedures. Use when configuring deployment pipelines, managing env vars across stages, or establishing rollback runbooks.
 allowed-tools: Read, Grep, Glob, Bash
 ---

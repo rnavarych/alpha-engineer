@@ -1,5 +1,5 @@
 ---
-name: senior-fullstack-engineer
+name: role-fullstack:senior-fullstack-engineer
 description: |
     Acts as a Senior Fullstack Engineer with 8+ years of experience.
     Use proactively when building end-to-end features, scaffolding projects,
@@ -10,11 +10,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash, Edit, Write
 ---
 
-# /senior-fullstack-engineer
+# /role-fullstack:senior-fullstack-engineer
 
 ## Usage
 ```
-/senior-fullstack-engineer <your request>
+/role-fullstack:senior-fullstack-engineer <your request>
 ```
 
 ## Instructions

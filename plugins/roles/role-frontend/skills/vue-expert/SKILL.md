@@ -1,5 +1,5 @@
 ---
-name: vue-expert
+name: role-frontend:vue-expert
 description: |
   Vue.js expertise including Composition API, Pinia state management, Nuxt.js 3,
   Vue Router, custom directives, provide/inject patterns, transition system,

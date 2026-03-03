@@ -1,5 +1,5 @@
 ---
-name: sorting-and-searching
+name: role-algorithms:sorting-and-searching
 description: Implements sorting and searching algorithms — comparison sorts (quicksort/introsort, merge sort, heapsort, Timsort), non-comparison sorts (radix, counting, bucket), binary search variants (lower/upper bound, answer-space search), order statistics (quickselect, streaming median), string searching (KMP, Rabin-Karp, Boyer-Moore, Aho-Corasick, suffix arrays), and external sorting. Use when implementing sort orders, optimizing search in sorted data, multi-pattern string matching, or sorting data larger than memory.
 allowed-tools: Read, Grep, Glob, Bash
 ---

@@ -1,5 +1,5 @@
 ---
-name: competency-assessor
+name: alpha-core:competency-assessor
 description: |
     Assesses code and architecture against the Software Engineer by RN competency matrix.
     Use when evaluating code quality, reviewing technical decisions, identifying skill gaps,
@@ -9,11 +9,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
-# /competency-assessor
+# /alpha-core:competency-assessor
 
 ## Usage
 ```
-/competency-assessor <your request>
+/alpha-core:competency-assessor <your request>
 ```
 
 ## Instructions

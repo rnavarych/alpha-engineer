@@ -1,5 +1,5 @@
 ---
-name: healthcare-architect
+name: domain-healthcare:healthcare-architect
 description: |
     Healthcare architect specializing in designing health IT systems with HIPAA compliance,
     HL7 FHIR interoperability, clinical data management, and medical device software standards.
@@ -8,11 +8,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
-# /healthcare-architect
+# /domain-healthcare:healthcare-architect
 
 ## Usage
 ```
-/healthcare-architect <your request>
+/domain-healthcare:healthcare-architect <your request>
 ```
 
 ## Instructions

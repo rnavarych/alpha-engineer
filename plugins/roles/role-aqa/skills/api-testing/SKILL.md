@@ -1,5 +1,5 @@
 ---
-name: api-testing
+name: role-aqa:api-testing
 description: |
   API test automation with Postman/Newman, REST Assured, SuperTest, and httpx.
   Contract testing (Pact, consumer-driven), schema validation (JSON Schema, OpenAPI),

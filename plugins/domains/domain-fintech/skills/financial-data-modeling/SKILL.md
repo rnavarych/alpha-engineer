@@ -1,5 +1,5 @@
 ---
-name: financial-data-modeling
+name: domain-fintech:financial-data-modeling
 description: Guides financial data modeling: account structures (asset, liability, equity, revenue, expense), currency handling (ISO 4217, minor units), decimal precision (BigDecimal, integer cents), multi-currency ledgers, financial instrument representation, and temporal data patterns. Use when designing database schemas for financial applications.
 allowed-tools: Read, Grep, Glob, Bash
 ---

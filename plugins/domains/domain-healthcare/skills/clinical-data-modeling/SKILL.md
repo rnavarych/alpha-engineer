@@ -1,5 +1,5 @@
 ---
-name: clinical-data-modeling
+name: domain-healthcare:clinical-data-modeling
 description: Clinical data modeling covering healthcare terminology systems (ICD-10, SNOMED CT, LOINC, RxNorm, CPT, NDC), clinical document architecture, patient data normalization, temporal clinical data patterns, and clinical decision support data models.
 allowed-tools: Read, Grep, Glob, Bash
 ---

@@ -1,5 +1,5 @@
 ---
-name: e2e-testing
+name: role-aqa:e2e-testing
 description: |
   End-to-end test automation with Playwright (codegen, trace viewer, MCP, sharding,
   visual comparisons, fixtures, component testing), Cypress v13, Selenium 4 (BiDi),

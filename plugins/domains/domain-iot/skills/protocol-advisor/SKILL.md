@@ -1,5 +1,5 @@
 ---
-name: protocol-advisor
+name: domain-iot:protocol-advisor
 description: IoT communication protocol selection and advisory covering MQTT, CoAP, AMQP, HTTP comparison, wireless technologies (Zigbee, Z-Wave, BLE, LoRaWAN, NB-IoT, LTE-M), and protocol bridging patterns for heterogeneous IoT deployments.
 allowed-tools: Read, Grep, Glob, Bash
 ---

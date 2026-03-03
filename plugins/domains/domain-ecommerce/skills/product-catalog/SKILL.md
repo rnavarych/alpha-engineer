@@ -1,5 +1,5 @@
 ---
-name: product-catalog
+name: domain-ecommerce:product-catalog
 description: |
   Product catalog design for e-commerce: headless platforms (Shopify, Medusa, Saleor, commercetools,
   Vendure), PIM integration (Akeneo, Pimcore, Salsify), data modeling (products, variants, attributes,

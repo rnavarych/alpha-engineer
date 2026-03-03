@@ -1,5 +1,5 @@
 ---
-name: ci-cd-patterns
+name: alpha-core:ci-cd-patterns
 description: Designs CI/CD pipelines with build, test, and deploy stages, blue-green/canary/rolling deployments, feature flags, artifact management, and environment promotion strategies. Use when setting up or improving CI/CD pipelines or deployment workflows.
 allowed-tools: Read, Grep, Glob, Bash
 ---

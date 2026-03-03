@@ -1,5 +1,5 @@
 ---
-name: iot-cloud-integration
+name: domain-iot:iot-cloud-integration
 description: Cloud IoT platform integration covering AWS IoT Core, Azure IoT Hub, and Google Cloud IoT. Includes device shadow/twin patterns, rules engines, edge runtimes, data pipelines from ingestion to analytics, and multi-cloud considerations.
 allowed-tools: Read, Grep, Glob, Bash
 ---

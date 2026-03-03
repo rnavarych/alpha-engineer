@@ -1,5 +1,5 @@
 ---
-name: real-time-features
+name: role-fullstack:real-time-features
 description: Implement real-time features using WebSockets (Socket.io, ws), Server-Sent Events (SSE), Supabase Realtime, Firebase, or Pusher. Covers presence indicators, live cursors, CRDT-based collaborative editing (Yjs, Automerge), notifications with offline delivery, chat with optimistic rendering, and Redis Pub/Sub backplane for multi-node scaling. Use when adding live updates, chat, collaboration, or any server-to-client or bidirectional communication.
 allowed-tools: Read, Grep, Glob, Bash
 ---

@@ -1,5 +1,5 @@
 ---
-name: vector-databases
+name: role-database:vector-databases
 description: |
   Deep operational guide for 16 vector databases. Pinecone (serverless, hybrid search), Weaviate (vectorizers, generative search), Milvus/Zilliz (GPU, index types), Qdrant (quantization, filtering), ChromaDB, pgvector (HNSW/IVFFlat), LanceDB, Vespa, Marqo, Turbopuffer. Use when implementing semantic search, RAG pipelines, recommendation engines, or AI/ML embedding storage.
 allowed-tools: Read, Grep, Glob, Bash

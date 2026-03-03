@@ -1,5 +1,5 @@
 ---
-name: mobile-testing
+name: role-aqa:mobile-testing
 description: |
   Mobile test automation with Appium (cross-platform), Detox (React Native gray-box),
   XCUITest (iOS native), Espresso (Android native), device farms (BrowserStack,

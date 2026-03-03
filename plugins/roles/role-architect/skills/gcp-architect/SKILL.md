@@ -1,5 +1,5 @@
 ---
-name: gcp-architect
+name: role-architect:gcp-architect
 description: |
   GCP architecture expertise including Google Cloud Architecture Framework,
   project and organization structure, VPC and networking design, data and analytics

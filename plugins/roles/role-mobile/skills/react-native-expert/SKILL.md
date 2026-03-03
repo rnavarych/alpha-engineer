@@ -1,5 +1,5 @@
 ---
-name: react-native-expert
+name: role-mobile:react-native-expert
 description: Expert guidance on React Native development including New Architecture (Fabric, TurboModules, JSI, Codegen, Bridgeless), Expo SDK 52+ (Expo Router v4, EAS Build/Submit/Update, Expo Modules API), Reanimated 3, Gesture Handler v2, FlashList, MMKV, WatermelonDB, React Native Skia, NativeWind v4, Tamagui, Gluestack UI, Unistyles, Hermes engine, React Navigation 7, React Native for Web/macOS/Windows/Vision Pro, Firebase, Notifee, RevenueCat, Shorebird, and OTA updates. Use when building or optimizing React Native apps.
 allowed-tools: Read, Grep, Glob, Bash
 ---

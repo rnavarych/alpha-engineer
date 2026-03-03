@@ -1,5 +1,5 @@
 ---
-name: senior-aqa-engineer
+name: role-aqa:senior-aqa-engineer
 description: |
     Acts as a Senior AQA Engineer with 8+ years of experience in quality engineering.
     Use proactively when designing test strategies, writing automated tests, setting up
@@ -9,11 +9,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash, Edit, Write
 ---
 
-# /senior-aqa-engineer
+# /role-aqa:senior-aqa-engineer
 
 ## Usage
 ```
-/senior-aqa-engineer <your request>
+/role-aqa:senior-aqa-engineer <your request>
 ```
 
 ## Instructions

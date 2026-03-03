@@ -1,5 +1,5 @@
 ---
-name: ecommerce-analytics
+name: domain-ecommerce:ecommerce-analytics
 description: |
   E-commerce analytics: conversion funnel tracking (browse to purchase), revenue attribution,
   cohort analysis, customer lifetime value (CLV), RFM segmentation, A/B test analysis

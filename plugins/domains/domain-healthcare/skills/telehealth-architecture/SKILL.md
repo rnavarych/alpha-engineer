@@ -1,5 +1,5 @@
 ---
-name: telehealth-architecture
+name: domain-healthcare:telehealth-architecture
 description: Telehealth system architecture covering HIPAA-compliant video consultation, remote patient monitoring, patient portal design, asynchronous telehealth, and billing integration with telehealth-specific CPT codes.
 allowed-tools: Read, Grep, Glob, Bash
 ---

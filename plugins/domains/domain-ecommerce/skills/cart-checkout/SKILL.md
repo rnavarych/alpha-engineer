@@ -1,5 +1,5 @@
 ---
-name: cart-checkout
+name: domain-ecommerce:cart-checkout
 description: |
   Shopping cart and checkout flow design: cart architectures (session, DB, Redis, headless cart APIs),
   express checkout (Apple Pay, Google Pay, Shop Pay, Amazon Pay), shipping integration (ShipStation,

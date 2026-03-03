@@ -1,5 +1,5 @@
 ---
-name: monitoring-setup
+name: role-devops:monitoring-setup
 description: |
   Monitoring and observability expertise covering Prometheus/Grafana stack,
   Datadog, CloudWatch, PagerDuty integration, custom metrics, dashboard design

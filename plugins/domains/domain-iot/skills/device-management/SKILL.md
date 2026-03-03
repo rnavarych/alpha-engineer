@@ -1,5 +1,5 @@
 ---
-name: device-management
+name: domain-iot:device-management
 description: IoT device lifecycle management including zero-touch provisioning, firmware OTA updates with rollback, device registry, device twin/shadow state patterns, command-and-control mechanisms, and fleet-wide operations.
 allowed-tools: Read, Grep, Glob, Bash
 ---

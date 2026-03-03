@@ -1,5 +1,5 @@
 ---
-name: azure-expert
+name: role-devops:azure-expert
 description: |
   Deep Azure expertise covering Entra ID and RBAC, Virtual Networks, AKS,
   Azure Container Apps, App Service, Azure Functions, Azure SQL and Cosmos DB,

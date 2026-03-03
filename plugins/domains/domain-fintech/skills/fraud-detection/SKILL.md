@@ -1,5 +1,5 @@
 ---
-name: fraud-detection
+name: domain-fintech:fraud-detection
 description: Guides fraud detection implementation: rule-based detection (velocity checks, amount thresholds, geo-anomalies), ML-based anomaly detection (isolation forest, autoencoders), device fingerprinting, behavioral biometrics, 3DS2, fraud scoring pipelines, case management, and chargeback prevention. Use when building fraud prevention systems.
 allowed-tools: Read, Grep, Glob, Bash
 ---

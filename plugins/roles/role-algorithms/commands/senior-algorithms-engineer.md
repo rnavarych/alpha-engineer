@@ -1,5 +1,5 @@
 ---
-name: senior-algorithms-engineer
+name: role-algorithms:senior-algorithms-engineer
 description: |
     Acts as a Senior Algorithms Engineer with 10+ years of experience.
     Use proactively when designing algorithms, choosing data structures, analyzing
@@ -13,11 +13,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash, Edit, Write
 ---
 
-# /senior-algorithms-engineer
+# /role-algorithms:senior-algorithms-engineer
 
 ## Usage
 ```
-/senior-algorithms-engineer <your request>
+/role-algorithms:senior-algorithms-engineer <your request>
 ```
 
 ## Instructions

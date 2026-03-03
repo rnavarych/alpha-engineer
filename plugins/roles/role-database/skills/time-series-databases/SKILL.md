@@ -1,5 +1,5 @@
 ---
-name: time-series-databases
+name: role-database:time-series-databases
 description: |
   Deep operational guide for 14 time-series databases. InfluxDB (Flux, 3.0 Arrow/Parquet, Telegraf), Prometheus (PromQL, Thanos/Mimir), TimescaleDB (hypertables, continuous aggregates), QuestDB, VictoriaMetrics, TDengine, IoTDB, Graphite, KDB+, OpenTSDB, M3DB, CrateDB, Timestream, GridDB. Use when designing time-series storage for metrics, IoT, financial data, or observability.
 allowed-tools: Read, Grep, Glob, Bash

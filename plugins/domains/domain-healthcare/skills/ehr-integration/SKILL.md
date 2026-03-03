@@ -1,5 +1,5 @@
 ---
-name: ehr-integration
+name: domain-healthcare:ehr-integration
 description: EHR system integration covering Epic, Cerner/Oracle Health, and Allscripts platforms, HL7v2 messaging, interface engines, CCD/C-CDA document exchange, and integration testing with vendor sandboxes.
 allowed-tools: Read, Grep, Glob, Bash
 ---

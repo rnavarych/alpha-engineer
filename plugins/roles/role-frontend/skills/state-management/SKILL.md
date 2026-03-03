@@ -1,5 +1,5 @@
 ---
-name: state-management
+name: role-frontend:state-management
 description: |
   State management expertise including local vs global state decisions, Redux Toolkit,
   Zustand, Jotai, MobX, Context API patterns, server state (React Query, SWR) vs

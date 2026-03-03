@@ -1,5 +1,5 @@
 ---
-name: flutter-expert
+name: role-mobile:flutter-expert
 description: Expert guidance on Flutter 3.x (Impeller, Material 3, DevTools, Flame), Dart 3.x (records, patterns, sealed classes, macros), state management (Riverpod 2 with codegen, BLoC/Cubit, Signals), navigation (GoRouter, auto_route), networking (Dio, Chopper, Ferry/Artemis GraphQL), local storage (Drift, ObjectBox, Isar, Hive), testing (widget_test, golden tests, patrol, mocktail, bloc_test), Flutter for Web/Desktop/Embedded, Mason, very_good_cli, DCM, custom_lint, Flutter Hooks, freezed. Use when building or optimizing Flutter apps.
 allowed-tools: Read, Grep, Glob, Bash
 ---

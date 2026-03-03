@@ -1,5 +1,5 @@
 ---
-name: ios-native
+name: role-mobile:ios-native
 description: Expert guidance on iOS native development — Swift and SwiftUI best practices, UIKit interop, Core Data and SwiftData persistence, Combine reactive framework, structured concurrency (async/await, actors), App Clips, WidgetKit, Xcode project configuration, and Swift Package Manager. Use when building or optimizing native iOS applications.
 allowed-tools: Read, Grep, Glob, Bash
 ---

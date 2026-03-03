@@ -1,5 +1,5 @@
 ---
-name: api-implementation
+name: role-backend:api-implementation
 description: Implements production-ready APIs across Node.js (Express, NestJS, Fastify, Hono, ElysiaJS, tRPC), Go (Gin, Echo, Fiber, Chi), Rust (Axum, Actix-web), Java (Spring Boot 3, Quarkus), .NET (ASP.NET Core 8), Ruby (Rails 7, Grape), Elixir (Phoenix), and PHP (Laravel, Symfony). Covers middleware pipelines, RFC 7807 error handling, rate limiting, OpenAPI 3.1 codegen, tRPC, GraphQL servers (Apollo, Mercurius, Yoga, gqlgen, async-graphql), and API versioning. Use when building API endpoints, adding middleware, implementing error handling, or generating API docs.
 allowed-tools: Read, Grep, Glob, Bash
 ---

@@ -1,5 +1,5 @@
 ---
-name: mobile-security
+name: role-mobile:mobile-security
 description: Expert guidance on mobile application security — certificate pinning, secure storage (Keychain on iOS, KeyStore on Android), code obfuscation (ProGuard, R8), root/jailbreak detection, biometric authentication, secure inter-process communication, and App Transport Security. Use when hardening mobile apps or implementing security features.
 allowed-tools: Read, Grep, Glob, Bash
 ---

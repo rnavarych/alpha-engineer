@@ -1,5 +1,5 @@
 ---
-name: phi-data-handling
+name: domain-healthcare:phi-data-handling
 description: Protected Health Information (PHI) data handling covering the 18 HIPAA identifiers, de-identification methods (Safe Harbor, Expert Determination), minimum necessary principle, access controls, audit logging, encryption, and secure disposal.
 allowed-tools: Read, Grep, Glob, Bash
 ---

@@ -1,5 +1,5 @@
 ---
-name: migration-planner
+name: role-architect:migration-planner
 description: |
   Migration planning expertise including strangler fig pattern, parallel run strategy,
   data migration techniques, feature parity tracking, rollback plans,

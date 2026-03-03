@@ -1,5 +1,5 @@
 ---
-name: hl7-fhir
+name: domain-healthcare:hl7-fhir
 description: HL7 FHIR interoperability covering FHIR resources, RESTful API patterns, server implementation, SMART on FHIR authorization, CDS Hooks, Bulk Data Access, and US Core Implementation Guide profiles.
 allowed-tools: Read, Grep, Glob, Bash
 ---

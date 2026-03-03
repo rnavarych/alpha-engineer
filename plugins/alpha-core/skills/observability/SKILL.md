@@ -1,5 +1,5 @@
 ---
-name: observability
+name: alpha-core:observability
 description: |
   Sets up observability: structured logging, metrics collection, distributed tracing,
   alerting rules, dashboard design, SLI/SLO/SLA definition. Covers ELK, Prometheus,

@@ -1,5 +1,5 @@
 ---
-name: iot-security
+name: domain-iot:iot-security
 description: IoT security practices covering device identity with X.509 and secure elements, secure boot chains, encrypted communication (TLS/DTLS), firmware signing, network segmentation, device attestation, and vulnerability management for resource-constrained devices.
 allowed-tools: Read, Grep, Glob, Bash
 ---

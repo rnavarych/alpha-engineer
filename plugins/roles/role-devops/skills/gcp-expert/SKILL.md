@@ -1,5 +1,5 @@
 ---
-name: gcp-expert
+name: role-devops:gcp-expert
 description: |
   Deep Google Cloud Platform expertise covering IAM and Workload Identity,
   VPC networking, GKE, Cloud Run, Cloud SQL and Spanner, Bigtable, Cloud Storage,

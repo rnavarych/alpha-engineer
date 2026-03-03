@@ -1,5 +1,5 @@
 ---
-name: cost-optimization
+name: role-devops:cost-optimization
 description: |
   Cloud cost optimization expertise covering instance right-sizing, reserved and
   savings plans, spot/preemptible instances, resource tagging, cost allocation,

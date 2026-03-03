@@ -1,5 +1,5 @@
 ---
-name: database-devops
+name: role-database:database-devops
 description: |
   Infrastructure-as-code and automation for databases. Terraform modules (RDS, Cloud SQL, Atlas, Azure Database), Kubernetes operators (CloudNativePG, Percona, CrunchyData PGO, Vitess, MongoDB, Redis), Helm charts, GitOps for database config. Schema migration in CI/CD pipelines. Database testing in CI (Testcontainers, docker-compose). Chaos engineering for databases. Use when automating database provisioning, integrating databases into CI/CD, or managing database infrastructure as code.
 allowed-tools: Read, Grep, Glob, Bash

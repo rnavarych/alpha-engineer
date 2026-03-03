@@ -1,5 +1,5 @@
 ---
-name: algorithm-design
+name: role-algorithms:algorithm-design
 description: Designs algorithms with formal analysis — Big-O/Theta/Omega, amortized analysis, recurrence relations (Master theorem), correctness proofs (loop invariants, induction, reduction), and paradigm selection (greedy, divide-and-conquer, dynamic programming, backtracking). Use when analyzing efficiency, proving correctness, comparing approaches, or selecting optimal algorithms for given constraints.
 allowed-tools: Read, Grep, Glob, Bash
 ---

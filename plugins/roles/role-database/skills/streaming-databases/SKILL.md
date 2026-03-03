@@ -1,5 +1,5 @@
 ---
-name: streaming-databases
+name: role-database:streaming-databases
 description: |
   Deep operational guide for 14 streaming databases and platforms. Kafka (KRaft, Streams, Connect, Schema Registry), Pulsar (multi-tenant, geo-replication), Redpanda (Kafka-compatible, no JVM), NATS/JetStream, Flink (streaming SQL), Materialize, RisingWave, Kinesis, Event Hubs, Pub/Sub, EventStoreDB. Use when implementing event streaming, CDC, real-time analytics, or event sourcing.
 allowed-tools: Read, Grep, Glob, Bash

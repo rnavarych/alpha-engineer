@@ -1,5 +1,5 @@
 ---
-name: react-expert
+name: role-frontend:react-expert
 description: React expertise covering hooks, server components, React 19 actions and compiler, Next.js 15 App Router, Remix, TanStack Router and Query v5, Zustand, Jotai, shadcn/ui, Radix UI, Framer Motion, concurrent features, and React DevTools profiling.
 allowed-tools: Read, Grep, Glob, Bash
 ---

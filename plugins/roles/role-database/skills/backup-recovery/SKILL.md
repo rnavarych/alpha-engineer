@@ -1,5 +1,5 @@
 ---
-name: backup-recovery
+name: role-database:backup-recovery
 description: |
   Backup strategies and disaster recovery across all database engines. Full, incremental, differential backups. PITR (Point-in-Time Recovery). PostgreSQL (pg_dump, pgBackRest, Barman, WAL archiving), MySQL (mysqldump, XtraBackup, Clone Plugin), MongoDB (mongodump, Atlas backup), Redis (RDB, AOF). RPO/RTO planning, backup verification, cloud-native backup. Use when designing backup strategies, implementing disaster recovery, or troubleshooting data recovery.
 allowed-tools: Read, Grep, Glob, Bash

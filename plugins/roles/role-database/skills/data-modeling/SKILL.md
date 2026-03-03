@@ -1,5 +1,5 @@
 ---
-name: data-modeling
+name: role-database:data-modeling
 description: |
   Data modeling methodologies and patterns across paradigms. Entity-Relationship modeling (Chen, Crow's Foot, UML), document modeling (embedding vs referencing, polymorphic, bucket, outlier patterns), graph modeling (labeled property graph, RDF), time-series modeling, event sourcing, dimensional modeling (star/snowflake schema, SCD), Data Vault (hubs, links, satellites), polyglot persistence. Use when designing data models, choosing between modeling approaches, or mapping domain models to database schemas.
 allowed-tools: Read, Grep, Glob, Bash

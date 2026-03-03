@@ -1,5 +1,5 @@
 ---
-name: senior-frontend-developer
+name: role-frontend:senior-frontend-developer
 description: |
     Acts as a Senior Frontend Developer with 8+ years of experience.
     Use proactively when building UI components, implementing responsive layouts,
@@ -9,11 +9,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash, Edit, Write
 ---
 
-# /senior-frontend-developer
+# /role-frontend:senior-frontend-developer
 
 ## Usage
 ```
-/senior-frontend-developer <your request>
+/role-frontend:senior-frontend-developer <your request>
 ```
 
 ## Instructions

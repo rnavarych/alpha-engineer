@@ -1,5 +1,5 @@
 ---
-name: data-warehouse-olap
+name: role-database:data-warehouse-olap
 description: |
   Deep operational guide for 14 data warehouse/OLAP databases. Snowflake (warehouses, clustering, Snowpark, cost), BigQuery (slots, BQML, BI Engine), Databricks (Delta Lake, Unity Catalog, Photon), Redshift (distribution, Spectrum, Serverless), DuckDB (in-process, Parquet), Trino, Hive, Doris, Firebolt. Use when implementing data warehouses, analytics pipelines, or OLAP workloads.
 allowed-tools: Read, Grep, Glob, Bash

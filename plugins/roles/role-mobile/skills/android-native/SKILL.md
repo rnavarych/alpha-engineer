@@ -1,5 +1,5 @@
 ---
-name: android-native
+name: role-mobile:android-native
 description: Expert guidance on Android native development — Kotlin idioms, Jetpack Compose UI, Room database, Hilt dependency injection, Coroutines and Flow for async work, WorkManager for background tasks, Gradle build configuration (KTS), Material Design 3 theming, and Navigation Compose. Use when building or optimizing native Android applications.
 allowed-tools: Read, Grep, Glob, Bash
 ---

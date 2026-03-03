@@ -1,5 +1,5 @@
 ---
-name: payment-integration
+name: domain-ecommerce:payment-integration
 description: |
   Payment gateway integration patterns for e-commerce: Stripe, PayPal, Adyen, Square, Mollie,
   Razorpay, Checkout.com, BNPL (Klarna, Affirm, Afterpay), crypto payments (BitPay, BTCPay),

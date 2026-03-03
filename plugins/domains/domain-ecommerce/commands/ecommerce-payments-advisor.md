@@ -1,5 +1,5 @@
 ---
-name: ecommerce-payments-advisor
+name: domain-ecommerce:ecommerce-payments-advisor
 description: |
     E-commerce payments advisor specializing in payment gateway integration (Stripe, PayPal, Adyen,
     Square, Braintree, Mollie, Razorpay, Checkout.com), PCI compliance, subscription billing,
@@ -10,11 +10,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
-# /ecommerce-payments-advisor
+# /domain-ecommerce:ecommerce-payments-advisor
 
 ## Usage
 ```
-/ecommerce-payments-advisor <your request>
+/domain-ecommerce:ecommerce-payments-advisor <your request>
 ```
 
 ## Instructions

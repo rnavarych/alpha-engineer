@@ -1,5 +1,5 @@
 ---
-name: test-strategy
+name: role-aqa:test-strategy
 description: |
   Designs comprehensive test strategies: test pyramid/trophy/diamond/honeycomb models,
   risk-based prioritization, shift-left, mutation testing, testing in production (feature

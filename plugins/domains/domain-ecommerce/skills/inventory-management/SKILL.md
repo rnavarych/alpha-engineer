@@ -1,5 +1,5 @@
 ---
-name: inventory-management
+name: domain-ecommerce:inventory-management
 description: |
   Inventory management for e-commerce: WMS integration (warehouse management systems), dropshipping,
   3PL (ShipBob, Flexport), demand forecasting, lot/batch tracking, inventory valuation (FIFO/LIFO/

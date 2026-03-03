@@ -1,5 +1,5 @@
 ---
-name: newsql-distributed
+name: role-database:newsql-distributed
 description: |
   Deep operational guide for 12 NewSQL/distributed SQL databases. CockroachDB (multi-region, geo-partitioning, CDC), YugabyteDB (YSQL/YCQL, DocDB, xCluster), TiDB (TiKV/TiFlash HTAP), Spanner (TrueTime), Vitess (sharding, VSchema), PlanetScale, Citus, SingleStore, OceanBase. Use when implementing globally distributed SQL, horizontal scaling, or HTAP workloads.
 allowed-tools: Read, Grep, Glob, Bash

@@ -1,5 +1,5 @@
 ---
-name: edge-computing
+name: domain-iot:edge-computing
 description: Edge computing patterns for IoT including gateway architecture, local vs cloud processing decisions, edge ML inference, containerized edge workloads with K3s and Azure IoT Edge, edge-cloud data synchronization, and offline-resilient operation.
 allowed-tools: Read, Grep, Glob, Bash
 ---

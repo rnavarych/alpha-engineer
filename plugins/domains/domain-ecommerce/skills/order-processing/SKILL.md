@@ -1,5 +1,5 @@
 ---
-name: order-processing
+name: domain-ecommerce:order-processing
 description: |
   Order processing for e-commerce: order state machine (pending through delivered/cancelled/returned),
   fulfillment workflows, returns/exchanges (RMA), invoice/receipt generation, order event sourcing,

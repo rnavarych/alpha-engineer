@@ -1,5 +1,5 @@
 ---
-name: build-tooling
+name: role-frontend:build-tooling
 description: |
   Build tooling expertise including Vite, webpack 5, esbuild, SWC, Turbopack,
   module federation, monorepo tooling (Nx, Turborepo), ESLint/Prettier

@@ -1,5 +1,5 @@
 ---
-name: graph-databases
+name: role-database:graph-databases
 description: |
   Deep operational guide for 12 graph databases. Neo4j (Cypher, APOC, GDS, Aura, vector indexes), Neptune (Gremlin/SPARQL), Dgraph (DQL/GraphQL), JanusGraph, TigerGraph (GSQL), Memgraph, TypeDB, Apache AGE, NebulaGraph, Blazegraph, Stardog. Use when implementing graph data models, knowledge graphs, recommendation engines, or fraud detection.
 allowed-tools: Read, Grep, Glob, Bash

@@ -1,5 +1,5 @@
 ---
-name: secrets-management
+name: role-devops:secrets-management
 description: |
   Secrets management expertise covering HashiCorp Vault, AWS Secrets Manager,
   GCP Secret Manager, SOPS, Kubernetes sealed secrets, rotation policies,

@@ -1,5 +1,5 @@
 ---
-name: threat-modeling
+name: role-architect:threat-modeling
 description: |
   Threat modeling expertise including STRIDE methodology, attack trees,
   trust boundary identification, data flow analysis, risk assessment,

@@ -1,5 +1,5 @@
 ---
-name: aws-expert
+name: role-devops:aws-expert
 description: |
   Deep AWS expertise covering IAM, VPC networking, EKS, ECS, Lambda serverless,
   EC2 and Auto Scaling, RDS and Aurora, DynamoDB, S3, CloudFront, Route 53,

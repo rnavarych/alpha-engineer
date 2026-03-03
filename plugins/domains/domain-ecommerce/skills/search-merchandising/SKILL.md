@@ -1,5 +1,5 @@
 ---
-name: search-merchandising
+name: domain-ecommerce:search-merchandising
 description: |
   Search and merchandising for e-commerce: product search relevance tuning, faceted navigation,
   recommendation engine patterns (collaborative filtering, content-based), A/B testing for

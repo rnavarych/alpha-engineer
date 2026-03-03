@@ -1,5 +1,5 @@
 ---
-name: fintech-security
+name: domain-fintech:fintech-security
 description: Guides fintech security: HSM integration (key generation, signing, encryption), cryptographic key management (BYOK, rotation, key ceremony), PCI DSS for fintech, data encryption (field-level, tokenization), secure multi-party computation, zero-knowledge proofs, and SOC 2 Type II requirements. Use when implementing security controls for financial systems.
 allowed-tools: Read, Grep, Glob, Bash
 ---

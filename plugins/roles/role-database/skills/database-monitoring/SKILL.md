@@ -1,5 +1,5 @@
 ---
-name: database-monitoring
+name: role-database:database-monitoring
 description: |
   Database monitoring, alerting, and observability across all engines. PostgreSQL (pg_stat_statements, pg_stat_activity, pg_stat_user_tables), MySQL (Performance Schema, sys schema, slow query log), MongoDB (mongostat, mongotop, profiler), Redis (INFO, SLOWLOG, LATENCY). Monitoring tools (Datadog, PMM, pganalyze, Grafana). Key metrics, alert thresholds, dashboard templates. Use when setting up database monitoring, troubleshooting performance, or configuring alerting.
 allowed-tools: Read, Grep, Glob, Bash

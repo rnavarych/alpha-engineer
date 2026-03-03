@@ -1,5 +1,5 @@
 ---
-name: healthcare-analytics
+name: domain-healthcare:healthcare-analytics
 description: Healthcare analytics covering population health management, clinical decision support, quality measures (eCQM, HEDIS, MIPS), de-identified analytics, research data lakes (OMOP CDM), outcomes analysis, and social determinants of health data.
 allowed-tools: Read, Grep, Glob, Bash
 ---

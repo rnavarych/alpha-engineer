@@ -1,5 +1,5 @@
 ---
-name: pipeline-designer
+name: role-devops:pipeline-designer
 description: |
   CI/CD pipeline design expertise covering GitHub Actions, GitLab CI, Jenkins,
   CircleCI, ArgoCD, and Flux. Includes pipeline stages, deployment strategies,

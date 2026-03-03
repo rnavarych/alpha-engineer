@@ -1,5 +1,5 @@
 ---
-name: file-upload-handling
+name: role-fullstack:file-upload-handling
 description: Implement file upload flows with presigned URLs (S3, GCS, R2), multipart/tus resumable uploads, Sharp image processing, drag-and-drop UI with progress indicators, server-side MIME validation via magic bytes, virus scanning, and CDN serving. Use when adding profile pictures, document attachments, media galleries, or any user-submitted file feature.
 allowed-tools: Read, Grep, Glob, Bash
 ---

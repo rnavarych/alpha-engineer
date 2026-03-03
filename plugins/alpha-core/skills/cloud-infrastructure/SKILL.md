@@ -1,5 +1,5 @@
 ---
-name: cloud-infrastructure
+name: alpha-core:cloud-infrastructure
 description: |
   Guides on cloud services: AWS, GCP, Azure service selection, multi-cloud strategies,
   serverless vs container trade-offs, managed vs self-hosted decisions, and cost optimization.

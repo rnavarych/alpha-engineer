@@ -1,5 +1,5 @@
 ---
-name: medical-device-software
+name: domain-healthcare:medical-device-software
 description: Medical device software development covering IEC 62304 software lifecycle, ISO 14971 risk management, design controls, software verification and validation, FDA regulatory submissions, software change control, and cybersecurity for medical devices.
 allowed-tools: Read, Grep, Glob, Bash
 ---
