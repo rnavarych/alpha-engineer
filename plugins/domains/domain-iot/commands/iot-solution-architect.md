@@ -1,5 +1,5 @@
 ---
-name: iot-solution-architect
+name: domain-iot:iot-solution-architect
 description: |
     IoT solution architect specializing in end-to-end IoT system design including
     device connectivity, data pipelines, edge processing, cloud integration, and
@@ -9,11 +9,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
-# /iot-solution-architect
+# /domain-iot:iot-solution-architect
 
 ## Usage
 ```
-/iot-solution-architect <your request>
+/domain-iot:iot-solution-architect <your request>
 ```
 
 ## Instructions

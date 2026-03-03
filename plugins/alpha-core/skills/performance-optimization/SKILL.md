@@ -1,5 +1,5 @@
 ---
-name: performance-optimization
+name: alpha-core:performance-optimization
 description: Guides on performance including profiling (CPU, memory, I/O), caching layers (CDN, application, database), connection pooling, lazy loading, code splitting, database query optimization, and load balancing. Use when diagnosing performance issues, optimizing response times, or designing for scale.
 allowed-tools: Read, Grep, Glob, Bash
 ---

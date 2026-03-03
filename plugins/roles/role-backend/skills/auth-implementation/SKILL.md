@@ -1,5 +1,5 @@
 ---
-name: auth-implementation
+name: role-backend:auth-implementation
 description: |
   Implements authentication and authorization systems including JWT token management,
   session handling, OAuth2 flows, OpenID Connect, RBAC/ABAC enforcement, API key management,

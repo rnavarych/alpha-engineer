@@ -1,5 +1,5 @@
 ---
-name: data-structures
+name: role-algorithms:data-structures
 description: Implements and selects optimal data structures — hash tables (chaining, open addressing, Robin Hood, cuckoo), balanced BSTs (AVL, Red-Black, B-trees), heaps (binary, Fibonacci, pairing), tries, skip lists, segment trees, Fenwick trees, Bloom filters, Count-Min Sketch, HyperLogLog, and Union-Find. Use when choosing structures for performance constraints, implementing custom collections, or optimizing memory access patterns.
 allowed-tools: Read, Grep, Glob, Bash
 ---

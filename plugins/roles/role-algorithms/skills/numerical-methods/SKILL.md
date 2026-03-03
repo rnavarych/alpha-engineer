@@ -1,5 +1,5 @@
 ---
-name: numerical-methods
+name: role-algorithms:numerical-methods
 description: Implements numerical methods — floating-point arithmetic (IEEE 754, Kahan summation, catastrophic cancellation), matrix operations (LU/QR/SVD decomposition, sparse formats), root finding (Newton-Raphson, Brent's method), numerical integration (Simpson, Gaussian quadrature, adaptive), FFT/NTT, and cryptographic foundations (SHA-256, AES-GCM, safe implementation patterns). Use when implementing numerical computation, signal processing, matrix algebra, or cryptographic primitives.
 allowed-tools: Read, Grep, Glob, Bash
 ---

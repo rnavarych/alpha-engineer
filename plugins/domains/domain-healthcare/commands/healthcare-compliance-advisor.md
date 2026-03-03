@@ -1,5 +1,5 @@
 ---
-name: healthcare-compliance-advisor
+name: domain-healthcare:healthcare-compliance-advisor
 description: |
     Healthcare compliance advisor guiding on HIPAA technical safeguards, BAA requirements,
     PHI data handling, breach notification procedures, and risk assessment.
@@ -8,11 +8,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
-# /healthcare-compliance-advisor
+# /domain-healthcare:healthcare-compliance-advisor
 
 ## Usage
 ```
-/healthcare-compliance-advisor <your request>
+/domain-healthcare:healthcare-compliance-advisor <your request>
 ```
 
 ## Instructions

@@ -1,5 +1,5 @@
 ---
-name: digital-twin
+name: domain-iot:digital-twin
 description: Digital twin design patterns including state-based and simulation-based modeling, real-time state synchronization, predictive maintenance via simulation, what-if scenario analysis, 3D visualization, and platform guidance for Azure Digital Twins and AWS IoT TwinMaker.
 allowed-tools: Read, Grep, Glob, Bash
 ---

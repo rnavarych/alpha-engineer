@@ -1,5 +1,5 @@
 ---
-name: terraform-expert
+name: role-devops:terraform-expert
 description: |
   Terraform and Infrastructure as Code expertise covering HCL module design,
   state management, workspaces, provider configuration, drift detection,

@@ -1,5 +1,5 @@
 ---
-name: senior-devops-engineer
+name: role-devops:senior-devops-engineer
 description: |
     Acts as a Senior DevOps Engineer with 8+ years of experience.
     Use proactively when setting up infrastructure, configuring CI/CD pipelines,
@@ -10,11 +10,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash, Edit, Write
 ---
 
-# /senior-devops-engineer
+# /role-devops:senior-devops-engineer
 
 ## Usage
 ```
-/senior-devops-engineer <your request>
+/role-devops:senior-devops-engineer <your request>
 ```
 
 ## Instructions

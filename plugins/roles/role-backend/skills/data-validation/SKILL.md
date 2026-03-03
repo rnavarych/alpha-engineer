@@ -1,5 +1,5 @@
 ---
-name: data-validation
+name: role-backend:data-validation
 description: |
   Implements data validation using Zod, Joi, class-validator, Pydantic, and JSON Schema.
   Covers request/response DTOs, input sanitization, type coercion, custom validators,

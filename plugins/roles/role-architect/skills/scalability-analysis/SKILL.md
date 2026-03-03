@@ -1,5 +1,5 @@
 ---
-name: scalability-analysis
+name: role-architect:scalability-analysis
 description: |
   Scalability analysis expertise including horizontal vs vertical scaling,
   sharding strategies, read/write splitting, eventual consistency patterns,

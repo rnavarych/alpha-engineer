@@ -1,5 +1,5 @@
 ---
-name: computational-complexity
+name: role-algorithms:computational-complexity
 description: Analyzes computational complexity — P vs NP classification, NP-completeness proofs and reductions, approximation algorithms (PTAS, FPTAS) with provable guarantees, parameterized complexity (FPT, kernelization), randomized algorithms (Las Vegas, Monte Carlo), and practical heuristics for intractable problems. Use when classifying hardness, proving reductions, or selecting between exact and heuristic approaches.
 allowed-tools: Read, Grep, Glob, Bash
 ---

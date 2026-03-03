@@ -1,5 +1,5 @@
 ---
-name: api-frontend-integration
+name: role-fullstack:api-frontend-integration
 description: |
   Integrate APIs with frontend applications using type-safe patterns: tRPC for
   end-to-end type safety, REST client generation (openapi-typescript, orval),

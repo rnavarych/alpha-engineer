@@ -1,5 +1,5 @@
 ---
-name: code-review
+name: alpha-core:code-review
 description: |
   Performs code reviews against quality criteria: readability, maintainability, correctness,
   security, performance, test coverage, naming conventions, and documentation.

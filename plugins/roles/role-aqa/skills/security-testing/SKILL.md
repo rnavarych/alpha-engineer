@@ -1,5 +1,5 @@
 ---
-name: security-testing
+name: role-aqa:security-testing
 description: |
   Security test automation with OWASP ZAP (active/passive scanning), Burp Suite,
   SAST (SonarQube, CodeQL), DAST, dependency scanning (Snyk, Dependabot, npm audit),

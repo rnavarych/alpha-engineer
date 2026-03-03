@@ -1,5 +1,5 @@
 ---
-name: cost-modeling
+name: role-architect:cost-modeling
 description: |
   Cost modeling expertise including infrastructure cost estimation, TCO calculation,
   build vs buy analysis, pricing model comparison, ROI projection,

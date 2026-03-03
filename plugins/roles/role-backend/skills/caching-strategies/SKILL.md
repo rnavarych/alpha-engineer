@@ -1,5 +1,5 @@
 ---
-name: caching-strategies
+name: role-backend:caching-strategies
 description: |
   Implements caching solutions using Redis patterns (cache-aside, write-through, write-behind),
   Memcached, cache invalidation strategies, TTL design, cache stampede prevention, CDN

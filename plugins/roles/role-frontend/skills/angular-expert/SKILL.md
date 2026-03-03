@@ -1,5 +1,5 @@
 ---
-name: angular-expert
+name: role-frontend:angular-expert
 description: |
   Angular expertise including modules vs standalone components, dependency injection,
   RxJS patterns, signals, Angular Material, change detection strategies (OnPush),

@@ -1,5 +1,5 @@
 ---
-name: microservices
+name: role-backend:microservices
 description: |
   Designs and implements microservices architectures including service decomposition,
   synchronous (REST/gRPC) and asynchronous (event-driven) communication, saga pattern,

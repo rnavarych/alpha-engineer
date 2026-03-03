@@ -1,5 +1,5 @@
 ---
-name: docker-expert
+name: role-devops:docker-expert
 description: |
   Expert-level Docker guidance covering multi-stage builds, image optimization,
   Docker Compose orchestration, networking, volume management, security scanning,

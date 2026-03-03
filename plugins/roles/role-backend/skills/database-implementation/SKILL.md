@@ -1,5 +1,5 @@
 ---
-name: database-implementation
+name: role-backend:database-implementation
 description: Implements database layers using Prisma, Drizzle ORM, TypeORM, SQLAlchemy 2.0, GORM, Diesel, Entity Framework Core 8, Hibernate/Panache, ActiveRecord, Ecto, Sequelize, Kysely, and Knex. Covers migrations, connection pooling, read replicas, query optimization, transaction management, and database testing with Testcontainers and factories. Use when setting up database access, writing migrations, optimizing queries, or configuring connection pools.
 allowed-tools: Read, Grep, Glob, Bash
 ---

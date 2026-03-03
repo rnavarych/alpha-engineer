@@ -1,5 +1,5 @@
 ---
-name: performance-testing
+name: role-aqa:performance-testing
 description: |
   Performance test design and execution with k6 (JavaScript, cloud execution, thresholds),
   JMeter (GUI, distributed), Gatling (Scala DSL), and Artillery (YAML config).

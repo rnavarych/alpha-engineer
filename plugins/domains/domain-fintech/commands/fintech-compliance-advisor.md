@@ -1,5 +1,5 @@
 ---
-name: fintech-compliance-advisor
+name: domain-fintech:fintech-compliance-advisor
 description: |
     Fintech compliance advisor guiding on SOX, PSD2/PSD3, KYC/AML, GDPR for financial data,
     regulatory reporting, DORA, Basel III/IV, MiFID II/MiFIR, AMLD 5/6, MiCA, Travel Rule,
@@ -9,11 +9,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
-# /fintech-compliance-advisor
+# /domain-fintech:fintech-compliance-advisor
 
 ## Usage
 ```
-/fintech-compliance-advisor <your request>
+/domain-fintech:fintech-compliance-advisor <your request>
 ```
 
 ## Instructions

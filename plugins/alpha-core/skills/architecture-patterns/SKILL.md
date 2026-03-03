@@ -1,5 +1,5 @@
 ---
-name: architecture-patterns
+name: alpha-core:architecture-patterns
 description: |
   Advises on software architecture: SOLID, DDD, CQRS, Event Sourcing, Clean/Hexagonal
   Architecture, microservices, Data Mesh, EDA, Service Mesh, micro-frontends, Cell-based

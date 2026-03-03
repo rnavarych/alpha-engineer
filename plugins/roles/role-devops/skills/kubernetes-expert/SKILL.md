@@ -1,5 +1,5 @@
 ---
-name: kubernetes-expert
+name: role-devops:kubernetes-expert
 description: |
   Deep Kubernetes expertise covering workload management, Gateway API, Cilium eBPF
   networking, Kyverno/OPA policy enforcement, KEDA event-driven autoscaling,

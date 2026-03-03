@@ -1,5 +1,5 @@
 ---
-name: mobile-performance
+name: role-mobile:mobile-performance
 description: Expert guidance on mobile performance optimization — achieving 60fps rendering, memory management (leak detection, large image handling), battery optimization, startup time reduction (cold/warm/hot), image loading strategies (Glide, SDWebImage, cached_network_image), and profiling tools (Instruments, Android Profiler, Flipper). Use when diagnosing or improving mobile app performance.
 allowed-tools: Read, Grep, Glob, Bash
 ---

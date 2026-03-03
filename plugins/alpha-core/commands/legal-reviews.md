@@ -1,5 +1,5 @@
 ---
-name: legal-reviews
+name: alpha-core:legal-reviews
 description: |
     Reviews code, architecture, and data flows for legal and regulatory compliance.
     Use proactively when handling user data, integrating third-party services, choosing
@@ -11,11 +11,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
-# /legal-reviews
+# /alpha-core:legal-reviews
 
 ## Usage
 ```
-/legal-reviews <your request>
+/alpha-core:legal-reviews <your request>
 ```
 
 ## Instructions

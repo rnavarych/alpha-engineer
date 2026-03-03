@@ -1,5 +1,5 @@
 ---
-name: document-databases
+name: role-database:document-databases
 description: |
   Deep operational guide for 12 document databases. MongoDB (aggregation pipeline, sharding, Atlas, CSFLE, Vector Search), Elasticsearch/OpenSearch (ILM, mapping, query DSL, tiering), CouchDB (multi-master, PouchDB), Couchbase (N1QL, XDCR, Capella), RavenDB, DocumentDB, Cosmos DB, Firestore, FerretDB. Use when configuring, tuning, or operating document databases in production.
 allowed-tools: Read, Grep, Glob, Bash

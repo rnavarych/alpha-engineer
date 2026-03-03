@@ -1,5 +1,5 @@
 ---
-name: search-engines
+name: role-database:search-engines
 description: |
   Deep operational guide for 10 search engines. Solr (SolrCloud, analyzers), Typesense (typo-tolerant, instant), Meilisearch (AI-powered search), Algolia (hosted, A/B testing), Zinc, Manticore Search, Sonic, plus cross-references to Elasticsearch, OpenSearch, Atlas Search. Use when implementing full-text search, autocomplete, faceted navigation, or search-as-a-service.
 allowed-tools: Read, Grep, Glob, Bash

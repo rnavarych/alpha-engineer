@@ -1,5 +1,5 @@
 ---
-name: fullstack-scaffolding
+name: role-fullstack:fullstack-scaffolding
 description: Scaffold production-ready fullstack projects with Next.js (App Router), Remix, Nuxt 3, SvelteKit, Astro, Blitz, RedwoodJS, or Wasp. Covers framework CLI starters, headless CMS options (Payload, Directus, Strapi, Keystone), feature/layer/domain project structures, Turborepo monorepo layout, env var validation, Docker Compose for local services, and dev tooling (Turbopack, Vite, HMR). Use when bootstrapping a new project or auditing an existing one for missing foundations.
 allowed-tools: Read, Grep, Glob, Bash
 ---

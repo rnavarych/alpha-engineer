@@ -1,5 +1,5 @@
 ---
-name: connection-management
+name: role-database:connection-management
 description: |
   Connection pooling and management across all engines. PgBouncer (transaction/session/statement mode), pgcat (Rust-based, load balancing, sharding), ProxySQL (MySQL query routing, caching), HikariCP (Java), application-level pooling (Prisma, SQLAlchemy, GORM, database/sql). Serverless connection strategies (Prisma Accelerate, RDS Proxy, Neon pooler). Connection limits, pool sizing, leak detection. Use when configuring connection pools, optimizing connection usage, or troubleshooting connection issues.
 allowed-tools: Read, Grep, Glob, Bash

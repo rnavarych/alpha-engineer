@@ -1,5 +1,5 @@
 ---
-name: background-jobs
+name: role-backend:background-jobs
 description: |
   Implements background job processing using Bull/BullMQ (Node.js), Celery (Python),
   Sidekiq (Ruby), and cron scheduling. Covers job prioritization, retry strategies

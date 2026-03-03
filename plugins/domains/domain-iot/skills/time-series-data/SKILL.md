@@ -1,5 +1,5 @@
 ---
-name: time-series-data
+name: domain-iot:time-series-data
 description: Time-series data management for IoT including database selection (InfluxDB, TimescaleDB, Prometheus, QuestDB, ClickHouse), schema design with tags and fields, downsampling and retention policies, data compression, real-time vs batch processing, and Grafana visualization.
 allowed-tools: Read, Grep, Glob, Bash
 ---

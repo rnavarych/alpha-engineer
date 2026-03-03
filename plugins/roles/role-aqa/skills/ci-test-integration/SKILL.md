@@ -1,5 +1,5 @@
 ---
-name: ci-test-integration
+name: role-aqa:ci-test-integration
 description: |
   CI/CD test integration: parallel test execution (sharding), test splitting strategies,
   flaky test quarantine, test reporting (Allure, ReportPortal, JUnit XML), quality gates

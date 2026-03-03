@@ -1,5 +1,5 @@
 ---
-name: auth-flow
+name: role-fullstack:auth-flow
 description: |
   Implement complete authentication flows: login, signup, forgot-password pages,
   JWT + refresh tokens, session-based auth, social login (Google, GitHub, Apple),

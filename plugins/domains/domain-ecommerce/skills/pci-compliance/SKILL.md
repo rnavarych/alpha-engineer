@@ -1,5 +1,5 @@
 ---
-name: pci-compliance
+name: domain-ecommerce:pci-compliance
 description: |
   PCI DSS compliance for e-commerce: compliance levels (SAQ A, SAQ A-EP, SAQ D), cardholder
   data handling, tokenization (Stripe, Braintree tokens), secure payment forms (iframes,

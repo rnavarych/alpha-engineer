@@ -1,5 +1,5 @@
 ---
-name: testing-patterns
+name: alpha-core:testing-patterns
 description: Provides testing strategies including test pyramid, TDD/BDD, unit/integration/E2E patterns, mocking strategies, test data factories, snapshot testing, and mutation testing. Use when designing test strategies, writing tests, or improving test coverage.
 allowed-tools: Read, Grep, Glob, Bash
 ---

@@ -1,5 +1,5 @@
 ---
-name: ecommerce-architect
+name: domain-ecommerce:ecommerce-architect
 description: |
     E-commerce architect specializing in designing complete e-commerce platforms: headless commerce
     (Shopify Hydrogen, Medusa, Saleor, commercetools, Vendure), marketplace multi-vendor, B2B
@@ -10,11 +10,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
-# /ecommerce-architect
+# /domain-ecommerce:ecommerce-architect
 
 ## Usage
 ```
-/ecommerce-architect <your request>
+/domain-ecommerce:ecommerce-architect <your request>
 ```
 
 ## Instructions

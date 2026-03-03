@@ -1,5 +1,5 @@
 ---
-name: query-optimization
+name: role-database:query-optimization
 description: |
   Cross-engine query optimization guide. EXPLAIN/EXPLAIN ANALYZE across PostgreSQL, MySQL, MongoDB, Cassandra, ClickHouse. Index strategies (B-tree, hash, GIN, GiST, BRIN, partial, covering, composite). N+1 detection, cursor-based pagination, materialized views, query plan analysis, slow query diagnosis. Use when optimizing slow queries, designing indexes, or analyzing query performance.
 allowed-tools: Read, Grep, Glob, Bash

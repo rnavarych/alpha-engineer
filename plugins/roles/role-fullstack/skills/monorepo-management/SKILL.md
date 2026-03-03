@@ -1,5 +1,5 @@
 ---
-name: monorepo-management
+name: role-fullstack:monorepo-management
 description: Manage monorepos with Turborepo (pipelines, local/remote caching, task graph) or Nx (generators, affected commands, module boundaries). Covers pnpm workspaces setup, shared packages (ui, types, utils, config, database, validators), cross-project dependency rules, and CI optimization via change detection and parallel execution. Use when setting up or maintaining a monorepo, creating shared packages, or optimizing CI build times.
 allowed-tools: Read, Grep, Glob, Bash
 ---

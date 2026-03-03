@@ -1,5 +1,5 @@
 ---
-name: serverless-databases
+name: role-database:serverless-databases
 description: |
   Deep operational guide for 10 serverless databases. Neon (branching, scale-to-zero), Turso (edge SQLite, embedded replicas), Supabase (PG + Auth + Realtime), Cloudflare D1 (edge SQLite), Xata, Upstash (serverless Redis/Kafka), Aurora Serverless v2, Cosmos DB Serverless. Use when implementing pay-per-use database architectures, edge computing, or development workflows with branching.
 allowed-tools: Read, Grep, Glob, Bash

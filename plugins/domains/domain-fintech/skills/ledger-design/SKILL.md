@@ -1,5 +1,5 @@
 ---
-name: ledger-design
+name: domain-fintech:ledger-design
 description: Guides double-entry ledger design: journal entries, chart of accounts, sub-ledgers (AR, AP, GL), reconciliation between ledgers, immutable append-only audit trails, balance calculations (running vs computed), and ledger-as-event-log pattern. Use when designing accounting systems or financial record-keeping.
 allowed-tools: Read, Grep, Glob, Bash
 ---

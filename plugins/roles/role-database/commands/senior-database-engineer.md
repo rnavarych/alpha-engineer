@@ -1,5 +1,5 @@
 ---
-name: senior-database-engineer
+name: role-database:senior-database-engineer
 description: |
     Acts as a Senior Database Engineer / DBA with 10+ years of experience managing production databases at scale.
     Use proactively when designing database schemas, selecting databases, configuring replication, tuning
@@ -11,11 +11,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash, Edit, Write
 ---
 
-# /senior-database-engineer
+# /role-database:senior-database-engineer
 
 ## Usage
 ```
-/senior-database-engineer <your request>
+/role-database:senior-database-engineer <your request>
 ```
 
 ## Instructions

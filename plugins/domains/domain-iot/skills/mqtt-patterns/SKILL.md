@@ -1,5 +1,5 @@
 ---
-name: mqtt-patterns
+name: domain-iot:mqtt-patterns
 description: MQTT messaging patterns for IoT systems including topic hierarchy design, QoS level selection, retained messages, last will and testament, broker deployment, and MQTT 5.0 feature adoption.
 allowed-tools: Read, Grep, Glob, Bash
 ---

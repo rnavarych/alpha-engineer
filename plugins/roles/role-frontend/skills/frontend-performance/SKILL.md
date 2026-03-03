@@ -1,5 +1,5 @@
 ---
-name: frontend-performance
+name: role-frontend:frontend-performance
 description: |
   Frontend performance expertise including Core Web Vitals (LCP, INP, CLS),
   code splitting, tree shaking, image optimization (WebP, AVIF, lazy loading),

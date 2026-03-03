@@ -1,5 +1,5 @@
 ---
-name: fintech-architect
+name: domain-fintech:fintech-architect
 description: |
     Fintech architect specializing in designing financial systems with ACID guarantees,
     double-entry ledgers, regulatory compliance, and financial-grade security.
@@ -9,11 +9,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
-# /fintech-architect
+# /domain-fintech:fintech-architect
 
 ## Usage
 ```
-/fintech-architect <your request>
+/domain-fintech:fintech-architect <your request>
 ```
 
 ## Instructions

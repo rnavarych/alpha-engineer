@@ -1,5 +1,5 @@
 ---
-name: regulatory-compliance
+name: domain-fintech:regulatory-compliance
 description: Guides regulatory compliance implementation: SOX controls (segregation of duties, access controls, change management), PSD2 (SCA, open banking APIs, TPP authorization), KYC/AML (CDD, EDD, PEP screening, sanction lists), GDPR for financial data, MiFID II, Basel III, and regulatory reporting pipelines. Use when implementing compliance features or auditing financial systems.
 allowed-tools: Read, Grep, Glob, Bash
 ---

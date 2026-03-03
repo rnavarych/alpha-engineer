@@ -1,5 +1,5 @@
 ---
-name: incident-response
+name: role-devops:incident-response
 description: |
   Incident response expertise covering runbook creation, postmortem templates,
   status page management, on-call rotation design, escalation policies,

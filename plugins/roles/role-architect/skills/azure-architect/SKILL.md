@@ -1,5 +1,5 @@
 ---
-name: azure-architect
+name: role-architect:azure-architect
 description: |
   Azure architecture expertise including Azure Well-Architected Framework,
   subscription and management group strategy, virtual network and hybrid networking,

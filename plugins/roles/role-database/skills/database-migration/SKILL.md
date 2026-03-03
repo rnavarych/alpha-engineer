@@ -1,5 +1,5 @@
 ---
-name: database-migration
+name: role-database:database-migration
 description: |
   Schema and data migration patterns across all engines. Migration tools (Flyway, Liquibase, Alembic, Prisma Migrate, Atlas, golang-migrate, Knex, Ecto, EF Core, Diesel, ActiveRecord). Zero-downtime migration (expand-contract, blue-green, shadow writes). Cross-engine migration (MySQL→PG, Oracle→PG, MongoDB→PG). CDC-based migration (Debezium, DMS). Use when planning schema changes, migrating between databases, or implementing zero-downtime deployments.
 allowed-tools: Read, Grep, Glob, Bash

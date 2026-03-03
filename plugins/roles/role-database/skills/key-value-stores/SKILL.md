@@ -1,5 +1,5 @@
 ---
-name: key-value-stores
+name: role-database:key-value-stores
 description: |
   Deep operational guide for 15 key-value stores. Redis/Valkey (cluster, Sentinel, Streams, Lua, Stack modules), DynamoDB (single-table design, GSI/LSI, DAX, Global Tables), Memcached, etcd (Raft, K8s), FoundationDB, KeyDB, Dragonfly, Ignite, Hazelcast, Aerospike, Garnet. Use when configuring, tuning, or operating key-value databases in production.
 allowed-tools: Read, Grep, Glob, Bash

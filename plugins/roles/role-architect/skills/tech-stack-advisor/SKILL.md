@@ -1,5 +1,5 @@
 ---
-name: tech-stack-advisor
+name: role-architect:tech-stack-advisor
 description: |
   Tech stack evaluation expertise including comparison matrices, TCO analysis,
   team capability assessment, ecosystem maturity evaluation, migration paths,

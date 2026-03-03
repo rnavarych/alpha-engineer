@@ -1,5 +1,5 @@
 ---
-name: offline-first
+name: role-mobile:offline-first
 description: Expert guidance on offline-first mobile architecture — local database sync (WatermelonDB, Realm, Hive, SQLite), conflict resolution strategies (last-write-wins, CRDT), optimistic UI patterns, background sync (WorkManager, BGTaskScheduler), and connectivity detection. Use when designing apps that must work reliably without network connectivity.
 allowed-tools: Read, Grep, Glob, Bash
 ---

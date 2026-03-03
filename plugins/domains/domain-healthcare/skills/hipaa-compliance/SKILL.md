@@ -1,5 +1,5 @@
 ---
-name: hipaa-compliance
+name: domain-healthcare:hipaa-compliance
 description: HIPAA compliance implementation covering technical, administrative, and physical safeguards, Business Associate Agreement checklists, risk assessment methodology, and breach notification procedures. Use when building or reviewing healthcare systems that handle PHI.
 allowed-tools: Read, Grep, Glob, Bash
 ---

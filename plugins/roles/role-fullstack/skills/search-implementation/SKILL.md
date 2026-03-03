@@ -1,5 +1,5 @@
 ---
-name: search-implementation
+name: role-fullstack:search-implementation
 description: Implement search features using Meilisearch, Typesense, Algolia, ElasticSearch, OpenSearch, or PostgreSQL full-text search. Covers indexing strategy with incremental sync via CDC or application hooks, autocomplete/typeahead with debounce, faceted search UI with URL-encoded filter state, relevance tuning (field boosts, typo tolerance, synonyms), and common pitfalls. Use when adding product search, content discovery, autocomplete, or faceted filtering to an application.
 allowed-tools: Read, Grep, Glob, Bash
 ---

@@ -1,5 +1,5 @@
 ---
-name: adr-writer
+name: role-architect:adr-writer
 description: |
   Architecture Decision Record writing expertise including structured format,
   ADR numbering and indexing, status lifecycle management, lightweight ADRs,

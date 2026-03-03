@@ -1,5 +1,5 @@
 ---
-name: performance-diagnostics
+name: role-database:performance-diagnostics
 description: |
   Database performance troubleshooting across all engines. PostgreSQL (pg_stat_statements, auto_explain, pg_locks, EXPLAIN ANALYZE BUFFERS), MySQL (EXPLAIN FORMAT=TREE, Performance Schema, InnoDB status, optimizer trace), MongoDB (explain executionStats, currentOp, profiler), Redis (SLOWLOG, LATENCY, MEMORY DOCTOR, bigkeys). Lock contention, deadlocks, I/O bottlenecks, memory pressure, benchmarking (pgbench, sysbench, YCSB). Use when troubleshooting slow queries, diagnosing lock contention, or investigating database performance issues.
 allowed-tools: Read, Grep, Glob, Bash

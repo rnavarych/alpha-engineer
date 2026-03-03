@@ -1,5 +1,5 @@
 ---
-name: relational-databases
+name: role-database:relational-databases
 description: |
   Deep operational guide for 20 relational/SQL databases. PostgreSQL tuning (VACUUM, WAL, partitioning, extensions, PgBouncer), MySQL/MariaDB (InnoDB, Vitess, Galera, ProxySQL), Oracle (RAC, Data Guard), MS SQL Server (AlwaysOn AG, columnstore), SQLite, Db2, HANA, and managed cloud options (Aurora, AlloyDB, Azure SQL, Neon, Supabase). Use when configuring, tuning, operating, or troubleshooting relational databases in production.
 allowed-tools: Read, Grep, Glob, Bash

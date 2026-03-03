@@ -1,5 +1,5 @@
 ---
-name: message-queues
+name: role-backend:message-queues
 description: |
   Implements message queue systems using RabbitMQ, Apache Kafka, Redis Streams, AWS SQS/SNS,
   and Google Pub/Sub. Covers topics, exchanges, dead letter queues, idempotency, ordering

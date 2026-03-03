@@ -1,5 +1,5 @@
 ---
-name: database-advisor
+name: alpha-core:database-advisor
 description: |
   Advises on database selection, schema design, indexing, query optimization, and migration. Covers SQL, NoSQL, Graph, Columnar, Key-Value, Time Series, NewSQL, Vector, Serverless, Data Warehouse, Embedded, Multi-Model, Streaming, and Decentralized databases. 100+ database technologies including PostgreSQL, MySQL, MongoDB, Redis, Kafka, Neo4j, Cassandra, ClickHouse, DynamoDB, CockroachDB, Pinecone, Snowflake, and ORMs (Prisma, Drizzle, SQLAlchemy, GORM, Diesel, EF Core, Hibernate). Use when selecting databases, designing schemas, optimizing queries, or planning migrations.
 allowed-tools: Read, Grep, Glob, Bash

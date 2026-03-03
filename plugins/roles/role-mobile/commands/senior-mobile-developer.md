@@ -1,5 +1,5 @@
 ---
-name: senior-mobile-developer
+name: role-mobile:senior-mobile-developer
 description: |
     Acts as a Senior Mobile Developer with 8+ years of experience.
     Use proactively when building mobile apps, implementing native features,
@@ -10,11 +10,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash, Edit, Write
 ---
 
-# /senior-mobile-developer
+# /role-mobile:senior-mobile-developer
 
 ## Usage
 ```
-/senior-mobile-developer <your request>
+/role-mobile:senior-mobile-developer <your request>
 ```
 
 ## Instructions

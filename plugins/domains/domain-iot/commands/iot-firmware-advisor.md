@@ -1,5 +1,5 @@
 ---
-name: iot-firmware-advisor
+name: domain-iot:iot-firmware-advisor
 description: |
     IoT firmware advisor guiding on embedded systems programming, firmware update
     mechanisms, resource-constrained development, and hardware-software interfaces.
@@ -8,11 +8,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash
 ---
 
-# /iot-firmware-advisor
+# /domain-iot:iot-firmware-advisor
 
 ## Usage
 ```
-/iot-firmware-advisor <your request>
+/domain-iot:iot-firmware-advisor <your request>
 ```
 
 ## Instructions

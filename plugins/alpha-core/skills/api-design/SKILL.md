@@ -1,5 +1,5 @@
 ---
-name: api-design
+name: alpha-core:api-design
 description: |
   Designs REST, GraphQL, gRPC, tRPC, WebSocket, SSE, and AsyncAPI/event-driven APIs.
   Covers OpenAPI 3.1, API gateways, GraphQL Federation, BFF pattern, contract testing,

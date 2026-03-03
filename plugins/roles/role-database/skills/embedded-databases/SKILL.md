@@ -1,5 +1,5 @@
 ---
-name: embedded-databases
+name: role-database:embedded-databases
 description: |
   Deep operational guide for 12 embedded databases. SQLite (PRAGMA, WAL, FTS5, multi-threaded), RocksDB (LSM-tree, compaction, column families), LevelDB, LMDB, BoltDB/bbolt, BadgerDB, Realm, ObjectBox, libSQL, H2, HSQLDB. Use when selecting or configuring embedded databases for mobile apps, desktop applications, edge computing, or as storage engines.
 allowed-tools: Read, Grep, Glob, Bash

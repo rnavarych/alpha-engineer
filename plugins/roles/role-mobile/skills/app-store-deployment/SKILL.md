@@ -1,5 +1,5 @@
 ---
-name: app-store-deployment
+name: role-mobile:app-store-deployment
 description: Expert guidance on mobile app deployment — App Store Connect and Google Play Console configuration, code signing and provisioning profiles, Fastlane automation, app review guidelines compliance, phased rollout strategies, and crash reporting integration (Crashlytics, Sentry). Use when preparing, submitting, or managing mobile app releases.
 allowed-tools: Read, Grep, Glob, Bash
 ---

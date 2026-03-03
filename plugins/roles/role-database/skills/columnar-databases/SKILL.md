@@ -1,5 +1,5 @@
 ---
-name: columnar-databases
+name: role-database:columnar-databases
 description: |
   Deep operational guide for 12 columnar/wide-column databases. Apache Cassandra (compaction, consistency, SAI, nodetool), ScyllaDB (shard-per-core, Alternator), HBase, Bigtable, ClickHouse (MergeTree, materialized views), Druid, StarRocks, Kudu, MonetDB, Vertica, Pinot. Use when configuring, tuning, or operating columnar databases for analytics or high-write workloads.
 allowed-tools: Read, Grep, Glob, Bash

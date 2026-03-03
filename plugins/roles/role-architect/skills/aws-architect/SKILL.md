@@ -1,5 +1,5 @@
 ---
-name: aws-architect
+name: role-architect:aws-architect
 description: |
   AWS architecture expertise including Well-Architected Framework, account strategy,
   VPC and networking design, compute and serverless patterns, data architecture,

@@ -1,5 +1,5 @@
 ---
-name: trading-systems
+name: domain-fintech:trading-systems
 description: Guides trading system design: order matching engines (price-time priority, pro-rata), market data feeds (WebSocket, FIX protocol), order types (market, limit, stop, stop-limit), position management, P&L calculation, risk limits, low-latency architecture, and market microstructure. Use when building or reviewing trading platforms.
 allowed-tools: Read, Grep, Glob, Bash
 ---

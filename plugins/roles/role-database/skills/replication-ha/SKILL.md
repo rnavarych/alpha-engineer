@@ -1,5 +1,5 @@
 ---
-name: replication-ha
+name: role-database:replication-ha
 description: |
   High availability and replication topologies across all database engines. Synchronous/asynchronous/semi-synchronous replication, primary-secondary, multi-primary, quorum-based. PostgreSQL streaming/logical replication, MySQL GTID/Group Replication, MongoDB replica sets, Redis Sentinel/Cluster, Cassandra multi-DC. Consensus protocols (Raft, Paxos, Gossip). Failover automation, split-brain prevention. Use when designing HA architectures, configuring replication, or troubleshooting failover.
 allowed-tools: Read, Grep, Glob, Bash

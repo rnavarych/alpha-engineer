@@ -1,5 +1,5 @@
 ---
-name: system-design
+name: role-architect:system-design
 description: |
   System design expertise including requirements analysis, C4 model diagrams,
   sequence diagrams, data flow diagrams, trade-off documentation,

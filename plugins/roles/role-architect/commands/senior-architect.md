@@ -1,5 +1,5 @@
 ---
-name: senior-architect
+name: role-architect:senior-architect
 description: |
     Acts as a Senior Architect with 10+ years of experience.
     Use proactively when making architectural decisions, evaluating tech stacks,
@@ -11,11 +11,11 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash, Edit, Write
 ---
 
-# /senior-architect
+# /role-architect:senior-architect
 
 ## Usage
 ```
-/senior-architect <your request>
+/role-architect:senior-architect <your request>
 ```
 
 ## Instructions

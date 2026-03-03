@@ -1,5 +1,5 @@
 ---
-name: accessibility-expert
+name: role-frontend:accessibility-expert
 description: |
   Accessibility expertise including WCAG 2.1 AA/AAA compliance, ARIA roles and
   attributes, keyboard navigation, screen reader optimization, color contrast
