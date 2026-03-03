@@ -1,5 +1,5 @@
 ---
-name: adr:supersede
+name: billy:adr-supersede
 description: |
   Mark an existing ADR as superseded and create its replacement.
   Updates the old ADR's status and creates a new ADR that references the old one.
@@ -8,17 +8,17 @@ user-invocable: true
 allowed-tools: Read, Write, Edit, Bash, Glob, Grep
 ---
 
-# /adr:supersede — Supersede an Architecture Decision Record
+# /billy:adr-supersede — Supersede an Architecture Decision Record
 
 ## Usage
 ```
-/adr:supersede 002 "Authentication Approach v2 — PKCE with OAuth"
-/adr:supersede 001 "Switch to CockroachDB"
+/billy:adr-supersede 002 "Authentication Approach v2 — PKCE with OAuth"
+/billy:adr-supersede 001 "Switch to CockroachDB"
 ```
 
 ## Instructions
 
-When the user invokes `/adr:supersede <old-number> "<new-title>"`, this:
+When the user invokes `/billy:adr-supersede <old-number> "<new-title>"`, this:
 1. Marks the old ADR as SUPERSEDED
 2. Creates a new ADR that references the old one
 3. Updates the README index
@@ -29,7 +29,7 @@ Use Glob to find `docs/adr/<number>*.md`.
 
 If not found:
 ```
-ADR-<number> not found. Run /adr:list to see available ADRs.
+ADR-<number> not found. Run /billy:adr-list to see available ADRs.
 ```
 
 ### Step 2: Confirm with User

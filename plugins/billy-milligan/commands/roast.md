@@ -1,5 +1,5 @@
 ---
-name: roast
+name: billy:roast
 description: |
   Quick hot takes from all 5 Billy Milligan agents on any idea, approach, or code snippet.
   Maximum trash talk, minimum politeness. 2-3 sentences per agent. Good for quick sanity
@@ -9,13 +9,13 @@ user-invocable: true
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash, Task
 ---
 
-# /roast — Quick Hot Takes from the Whole Team
+# /billy:roast — Quick Hot Takes from the Whole Team
 
 ## Usage
 ```
-/roast <any idea, approach, or code snippet>
-/roast @ru может монорепу заведём?
-/roast let's rewrite everything in Rust
+/billy:roast <any idea, approach, or code snippet>
+/billy:roast @ru может монорепу заведём?
+/billy:roast let's rewrite everything in Rust
 ```
 
 ## Instructions
@@ -64,6 +64,6 @@ Rules:
 ### Step 5: Auto-Save
 
 1. `bash ./plugins/billy-milligan/scripts/memory-save.sh session-entry`
-2. Append brief entry: `## Session HH:MM — /roast <topic>` with consensus
+2. Append brief entry: `## Session HH:MM — /billy:roast <topic>` with consensus
 3. Best roast → `roasts.md`
 4. Show: "💾 Roast immortalized in Hall of Fame."

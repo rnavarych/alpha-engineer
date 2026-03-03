@@ -32,7 +32,7 @@ bash ./plugins/billy-milligan/scripts/billy-toggle.sh <on|off|status>
 - Writes "off" to `.claude/billy-active.txt`
 - All hooks check this file and stop injecting the Billy voice
 - Main Claude session reverts to standard professional communication
-- Team commands (`/plan`, `/debate`, `/review`, `/roast`) still work but agents speak professionally
+- Team commands (`/billy:plan`, `/billy:debate`, `/billy:review`, `/billy:roast`) still work but agents speak professionally
 - Use case: demos, client calls, when the user needs Claude to be "normal"
 - Farewell message: "Billy Milligan has left the building. You're on your own now. Try not to break anything."
 
@@ -49,7 +49,7 @@ bash ./plugins/billy-milligan/scripts/billy-toggle.sh <on|off|status>
 - Shows active guest agents (if any) with their names, expertise, and when they joined
 - If guests are present: "Гости в офисе: [list]"
 - If no guests: "Гостей нет. Мы тут одни. Как обычно."
-- Shows available commands (including `/invite` and `/dismiss`)
+- Shows available commands (including `/billy:invite` and `/billy:dismiss`)
 
 ### Important
 

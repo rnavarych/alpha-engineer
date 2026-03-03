@@ -1,5 +1,5 @@
 ---
-name: adr:list
+name: billy:adr-list
 description: |
   Show all Architecture Decision Records with their status.
   Works whether Billy is ON or OFF. Clean, professional output.
@@ -7,23 +7,23 @@ user-invocable: true
 allowed-tools: Read, Bash, Glob, Grep
 ---
 
-# /adr:list — List All Architecture Decision Records
+# /billy:adr-list — List All Architecture Decision Records
 
 ## Usage
 ```
-/adr:list
+/billy:adr-list
 ```
 
 ## Instructions
 
-When the user invokes `/adr:list`, show all ADRs from `docs/adr/`.
+When the user invokes `/billy:adr-list`, show all ADRs from `docs/adr/`.
 
 ### Step 1: Check ADR Directory
 
 If `docs/adr/` does not exist or contains no ADR files:
 ```
 No Architecture Decision Records found.
-Run /adr:new "<title>" to create the first one.
+Run /billy:adr-new "<title>" to create the first one.
 ```
 
 ### Step 2: Run List Script
@@ -62,10 +62,10 @@ that reveals informal discussion content. Keep it light and work-appropriate:
 After listing, suggest relevant next steps:
 ```
 Available commands:
-  /adr:new "<title>"          — create a new ADR
-  /adr:review <number>        — review an existing ADR
-  /adr:status <number> <status> — update ADR status
-  /adr:supersede <old> "<new title>" — supersede an ADR
+  /billy:adr-new "<title>"          — create a new ADR
+  /billy:adr-review <number>        — review an existing ADR
+  /billy:adr-status <number> <status> — update ADR status
+  /billy:adr-supersede <old> "<new title>" — supersede an ADR
 ```
 
 ### Important Rules

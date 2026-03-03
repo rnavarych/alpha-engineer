@@ -1,5 +1,5 @@
 ---
-name: skills:create
+name: billy:skills-create
 description: |
   Generate a new skill from a tracked gap or from scratch. Creates SKILL.md + references/
   structure with substantive content scaffolded from gap data and model knowledge.
@@ -9,13 +9,13 @@ user-invocable: true
 allowed-tools: Read, Write, Edit, Bash, Glob, Grep
 ---
 
-# /skills:create — Create a New Skill from Gap Data
+# /billy:skills-create — Create a New Skill from Gap Data
 
 ## Usage
 ```
-/skills:create <topic>          — from tracked gap
-/skills:create                  — highest-frequency gap automatically
-/skills:create "custom topic"   — from scratch (no gap required)
+/billy:skills-create <topic>          — from tracked gap
+/billy:skills-create                  — highest-frequency gap automatically
+/billy:skills-create "custom topic"   — from scratch (no gap required)
 ```
 
 ## Instructions

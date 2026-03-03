@@ -123,11 +123,13 @@ claude plugin install billy-milligan@alpha-engineer
 
 ### Billy Milligan commands
 ```
-/plan add user authentication
-/debate Redis vs PostgreSQL for caching
-/review src/components/Auth.tsx
-/roast should we use GraphQL?
-/adr-new "Database Choice"
+/billy:plan add user authentication
+/billy:debate Redis vs PostgreSQL for caching
+/billy:review src/components/Auth.tsx
+/billy:roast should we use GraphQL?
+/billy:adr-new "Database Choice"
+/billy:invite "security expert"
+/billy:lang ru
 ```
 
 ### Agents activate automatically

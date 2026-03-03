@@ -1,5 +1,5 @@
 ---
-name: adr:review
+name: billy:adr-review
 description: |
   Review an existing Architecture Decision Record.
   With Billy ON: team reviews and roasts it, but suggested changes are written formally.
@@ -8,17 +8,17 @@ user-invocable: true
 allowed-tools: Read, Write, Edit, Bash, Glob, Grep
 ---
 
-# /adr:review — Review an Architecture Decision Record
+# /billy:adr-review — Review an Architecture Decision Record
 
 ## Usage
 ```
-/adr:review 002
-/adr:review 002 "is the TTL decision still valid?"
+/billy:adr-review 002
+/billy:adr-review 002 "is the TTL decision still valid?"
 ```
 
 ## Instructions
 
-When the user invokes `/adr:review <number>`, read and review the specified ADR.
+When the user invokes `/billy:adr-review <number>`, read and review the specified ADR.
 
 ### Step 1: Find the ADR
 
@@ -26,7 +26,7 @@ Use Glob to find `docs/adr/<number>*.md` (e.g., `docs/adr/002-*.md`).
 
 If not found:
 ```
-ADR-<number> not found. Run /adr:list to see all available ADRs.
+ADR-<number> not found. Run /billy:adr-list to see all available ADRs.
 ```
 
 ### Step 2A: If Billy is ON — Team Review
@@ -96,5 +96,5 @@ If the user approves, use Edit to apply the suggested changes to the ADR file.
 
 - NEVER add informal content to the ADR file during review
 - Billy team commentary is verbal only — it informs the review but does not appear in the file
-- If a review reveals the ADR is fundamentally outdated, suggest `/adr:supersede` instead of patching
+- If a review reveals the ADR is fundamentally outdated, suggest `/billy:adr-supersede` instead of patching
 - Keep the ADR as the authoritative, clean document it's meant to be

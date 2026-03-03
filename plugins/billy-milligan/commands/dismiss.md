@@ -1,5 +1,5 @@
 ---
-name: dismiss
+name: billy:dismiss
 description: |
   Remove a guest from the current team discussion. The core team says goodbye
   in character — ranging from relieved to reluctantly sad depending on how
@@ -10,12 +10,12 @@ user-invocable: true
 allowed-tools: Read, Bash, AskUserQuestion
 ---
 
-# /dismiss — Remove a Guest from the Team Discussion
+# /billy:dismiss — Remove a Guest from the Team Discussion
 
 ## Usage
 ```
-/dismiss oleg       → remove Oleg
-/dismiss all        → remove all guests
+/billy:dismiss oleg       → remove Oleg
+/billy:dismiss all        → remove all guests
 ```
 
 ## Instructions
@@ -55,6 +55,6 @@ Remove guest from `.claude/billy-guests.json`.
 **Source:** [Local|Marketplace|Ad-hoc] | **Remaining guests:** [list or "core team only"]
 ```
 
-### /dismiss all
+### /billy:dismiss all
 
 Max takes charge: "совещание с гостями окончено". Each guest gets one-line farewell. Marketplace plugin uninstall prompt shown ONCE for all plugins. End with: "Команда снова в полном составе."

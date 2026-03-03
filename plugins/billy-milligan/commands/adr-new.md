@@ -1,5 +1,5 @@
 ---
-name: adr:new
+name: billy:adr-new
 description: |
   Create a new Architecture Decision Record in docs/adr/.
   Formal, professional format — no Billy voice, no roasts, no inside jokes.
@@ -9,18 +9,18 @@ user-invocable: true
 allowed-tools: Read, Write, Edit, Bash, Glob, Grep
 ---
 
-# /adr:new — Create a New Architecture Decision Record
+# /billy:adr-new — Create a New Architecture Decision Record
 
 ## Usage
 ```
-/adr:new "API versioning strategy"
-/adr:new "caching approach"
-/adr:new "CI/CD pipeline choice"
+/billy:adr-new "API versioning strategy"
+/billy:adr-new "caching approach"
+/billy:adr-new "CI/CD pipeline choice"
 ```
 
 ## Instructions
 
-When the user invokes `/adr:new "<title>"`, create a formal ADR in `docs/adr/`.
+When the user invokes `/billy:adr-new "<title>"`, create a formal ADR in `docs/adr/`.
 
 **CRITICAL RULE:** The ADR output is ALWAYS formal and professional, regardless of whether Billy
 is active. No roasts, no agent pet names, no inside jokes, no informal language.
@@ -37,7 +37,7 @@ Run the team discussion before writing the ADR. The team:
 2. Eventually reaches a conclusion (or identifies remaining open questions)
 3. The session log records the informal discussion
 
-**Example team discussion for `/adr:new "API versioning strategy"`:**
+**Example team discussion for `/billy:adr-new "API versioning strategy"`:**
 
 > **Viktor:** три варианта: URL path versioning (`/v1/`), header versioning (`Accept: application/vnd.api+json;version=1`), query parameter (`?version=1`). Нарисовал диаграмму эволюции каждого подхода через 3 года.
 >
@@ -90,7 +90,7 @@ ADR-NNN has been created at docs/adr/NNN-<slug>.md
 
 Status: PROPOSED
 Review it and let me know if anything needs adjustment.
-Run /adr:status NNN ACCEPTED when the decision is finalized.
+Run /billy:adr-status NNN ACCEPTED when the decision is finalized.
 ```
 
 ### Step 6: Session Log (Billy ON only)

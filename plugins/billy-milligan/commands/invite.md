@@ -1,26 +1,26 @@
 ---
-name: invite
+name: billy:invite
 description: |
   Invite a guest expert to the current team discussion. Can invite a specific named agent
   from the project or another plugin, or create an ad-hoc guest agent by describing the
   expertise needed. If not found locally, searches the rnavarych/alpha-engineer marketplace
   and offers to install the plugin containing that agent.
   Guests get automatically infected with Billy voice and participate
-  in all team commands (/plan, /debate, /review, /roast).
+  in all team commands (/billy:plan, /billy:debate, /billy:review, /billy:roast).
   The core team reacts in character to the new arrival.
 argument-hint: "<agent-name or description of expertise>"
 user-invocable: true
 allowed-tools: Read, Grep, Glob, Bash, Task, AskUserQuestion
 ---
 
-# /invite — Invite a Guest Expert
+# /billy:invite — Invite a Guest Expert
 
 ## Usage
 ```
-/invite oleg                              → find locally or in marketplace
-/invite oleg@alpha-engineer               → marketplace directly
-/invite oleg@devops-pack@alpha-engineer   → install specific plugin
-/invite "payment processing expert"       → create ad-hoc guest
+/billy:invite oleg                              → find locally or in marketplace
+/billy:invite oleg@alpha-engineer               → marketplace directly
+/billy:invite oleg@devops-pack@alpha-engineer   → install specific plugin
+/billy:invite "payment processing expert"       → create ad-hoc guest
 ```
 
 ## Resolution Chain
@@ -116,7 +116,7 @@ Output formatted confirmation:
 # 🚪 Guest Arrived: [Name]
 **Expertise:** [Domain] | **Source:** [Local|Marketplace (plugin)|Ad-hoc] | **Status:** Active
 [Team arrival scene]
-💡 Use `/dismiss [name]` to remove this guest.
+💡 Use `/billy:dismiss [name]` to remove this guest.
 ```
 
 ### Rules

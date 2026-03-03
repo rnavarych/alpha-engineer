@@ -1,5 +1,5 @@
 ---
-name: skills:gaps
+name: billy:skills-gaps
 description: |
   View, manage, and clear skill gaps logged by the knowledge resolution chain.
   Shows topics where agents fell back to model knowledge or honest uncertainty.
@@ -8,19 +8,19 @@ user-invocable: true
 allowed-tools: Read, Bash, Glob, Grep
 ---
 
-# /skills:gaps — Skill Gap Report
+# /billy:skills-gaps — Skill Gap Report
 
 ## Usage
 ```
-/skills:gaps                    — show full gap report
-/skills:gaps clear              — clear all tracked gaps
-/skills:gaps promote <topic>    — promote gap priority (low->medium, medium->high)
-/skills:gaps dismiss <topic>    — remove a gap from tracking
+/billy:skills-gaps                    — show full gap report
+/billy:skills-gaps clear              — clear all tracked gaps
+/billy:skills-gaps promote <topic>    — promote gap priority (low->medium, medium->high)
+/billy:skills-gaps dismiss <topic>    — remove a gap from tracking
 ```
 
 ## Instructions
 
-When the user invokes `/skills:gaps`, determine the mode from the argument.
+When the user invokes `/billy:skills-gaps`, determine the mode from the argument.
 
 ### Mode 1: Show Gap Report (default — no arguments)
 
@@ -51,10 +51,10 @@ When the user invokes `/skills:gaps`, determine the mode from the argument.
 **Top suggestion:** create `<path>` (N hits across K agents)
 
 **Actions:**
-- `/skills:create <topic>` — generate a new skill from a gap
-- `/skills:gaps promote <topic>` — promote priority
-- `/skills:gaps dismiss <topic>` — remove a gap
-- `/skills:gaps clear` — clear all gaps
+- `/billy:skills-create <topic>` — generate a new skill from a gap
+- `/billy:skills-gaps promote <topic>` — promote priority
+- `/billy:skills-gaps dismiss <topic>` — remove a gap
+- `/billy:skills-gaps clear` — clear all gaps
 ```
 
 ### Mode 2: Clear All Gaps
@@ -88,4 +88,4 @@ If the argument starts with `dismiss`:
 - When Billy is ON, agents can react in character to the gap report
 - When Billy is OFF, keep it clean and professional
 - Frequency is the priority signal — high-frequency gaps deserve attention
-- Always show the `/skills:create` suggestion for the highest-frequency gap
+- Always show the `/billy:skills-create` suggestion for the highest-frequency gap
