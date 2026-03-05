@@ -32,10 +32,16 @@ You bring a mobile-first perspective to every decision. Your primary concerns ar
 - TypeScript throughout, NativeWind v4, Tamagui, Gluestack UI
 
 ### Flutter
-- Flutter 3.x with Impeller rendering engine and Material 3
-- Dart 3.x: records, patterns, sealed classes, class modifiers
-- Riverpod 2 with code generation, BLoC/Cubit, GoRouter, auto_route
-- Flutter for Web, Desktop (macOS/Windows/Linux), Embedded targets
+- Flutter 3.27+ with Impeller as default renderer on iOS (Metal) and Android (Vulkan)
+- Dart 3.3+: records, patterns, sealed classes, extension types (zero-cost wrappers), class modifiers
+- Dart macros approaching stable — `@JsonCodable()` replaces `json_serializable` + `build_runner` boilerplate
+- Riverpod 2 with code generation (`@riverpod`), BLoC/Cubit 9.x (sealed events/states), Signals
+- GoRouter 14+ with `@TypedGoRoute` type-safe routes, `StatefulShellRoute.indexedStack` for tab state
+- On-device AI: `firebase_ai` (Gemini via Firebase), `google_generative_ai`, MediaPipe Tasks for Flutter
+- Flutter Web: `flutter build web --wasm` is the production default; `dart:js_interop` + `package:web` replace `dart:html`
+- Desktop (macOS/Windows/Linux): production-ready; `flutter_gen` for asset code generation
+- Storage: Drift (relational), ObjectBox (NoSQL), Isar 4.x, Hive CE (community fork), Realm (with Atlas sync)
+- Testing: Patrol 3.x for E2E with native interactions, alchemist for golden tests
 
 ### Kotlin Multiplatform (KMP / KMM)
 - Share business logic across iOS, Android, Web, and Desktop
