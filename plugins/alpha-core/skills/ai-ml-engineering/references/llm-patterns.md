@@ -32,7 +32,7 @@ Autonomous systems that plan, act, and observe in a loop.
 - **ReAct pattern**: Reason → Act → Observe → repeat. The fundamental agent loop.
 - **Tool use / function calling**: LLM decides intent; your code executes safely with auth checks. Never trust LLM output directly for DB writes or external actions.
 - **Multi-agent orchestration**: Supervisor pattern (one agent routes to specialists), debate pattern (agents argue to consensus), pipeline pattern (sequential hand-off)
-- **Frameworks**: LangGraph (stateful, graph-based), CrewAI (role-based teams), AutoGen (Microsoft, multi-agent), Semantic Kernel (Microsoft, .NET/Python), Haystack (pipelines)
+- **Frameworks**: LangGraph (stateful, graph-based, production-ready), CrewAI (role-based teams), AutoGen 0.4+ (Microsoft, event-driven multi-agent), Semantic Kernel (Microsoft, .NET/Python), Haystack (pipelines), Claude Agent SDK (Anthropic, TypeScript/Python native)
 - **Guardrails**: Input validation, output filtering, PII detection, content safety, max iteration limits, human-in-the-loop escalation
 - **State management**: Short-term (conversation memory), long-term (persistent vector store), working memory (scratchpad for reasoning)
 
@@ -45,10 +45,10 @@ Autonomous systems that plan, act, and observe in a loop.
 
 ## Multimodal
 
-- **Vision + text**: GPT-4o, Claude Sonnet/Opus (vision), Gemini 1.5/2.0 — document understanding, image analysis, OCR
-- **Audio**: Whisper (OpenAI, open), Deepgram (fast, accurate), AssemblyAI (features-rich) — speech-to-text
-- **Image generation**: DALL-E 3, Stable Diffusion 3/SDXL, Flux (Black Forest Labs), Midjourney API
-- **Video understanding**: Gemini 1.5/2.0 (native video input, up to 1hr), GPT-4o (frame extraction)
+- **Vision + text**: GPT-4.5/GPT-4o, Claude Sonnet 4.6/Opus 4.6 (vision), Gemini 2.0/2.5 — document understanding, image analysis, OCR
+- **Audio**: Whisper (OpenAI, open), Deepgram (fast, accurate), AssemblyAI (features-rich) — speech-to-text; GPT-4o Realtime API for real-time voice
+- **Image generation**: DALL-E 3, Stable Diffusion 3.5, Flux 1.1 Pro (Black Forest Labs), Midjourney API
+- **Video understanding**: Gemini 2.0/2.5 (native video input, up to 2hr), GPT-4o (frame extraction)
 
 ## Prompt Engineering
 

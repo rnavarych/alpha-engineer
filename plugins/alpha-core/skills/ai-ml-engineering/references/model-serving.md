@@ -9,7 +9,7 @@ Load when deploying LLM serving engines (vLLM, TGI, Triton), implementing A/B te
 
 ```bash
 python -m vllm.entrypoints.openai.api_server \
-  --model meta-llama/Llama-3.1-70B-Instruct \
+  --model meta-llama/Llama-3.3-70B-Instruct \
   --tensor-parallel-size 4 \
   --max-model-len 8192 \
   --gpu-memory-utilization 0.90 \

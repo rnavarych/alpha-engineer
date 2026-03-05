@@ -42,7 +42,7 @@ Best for: Multi-component applications (frontend + backend).
 
 ### Matrix Builds
 ```
-Build × [Node 18, 20, 22] × [ubuntu, macos, windows]
+Build × [Node 20, 22, 24] × [ubuntu, macos, windows]
 ```
 Best for: Libraries and SDKs that must work across multiple platforms/versions.
 
