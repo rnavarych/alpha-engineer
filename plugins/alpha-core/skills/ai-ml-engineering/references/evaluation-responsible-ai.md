@@ -60,7 +60,7 @@ Load when setting up LLM evaluation frameworks, implementing production monitori
 
 ### Token Cost Management
 
-- **Model routing**: Classify task complexity → route to cheapest capable model. Haiku for classification ($0.25/1M), Sonnet for general ($3/1M), Opus for complex ($15/1M). Saves 10-60x.
+- **Model routing**: Classify task complexity → route to cheapest capable model. Haiku 4.5 for classification (~$0.80/1M input), Sonnet 4.6 for general (~$3/1M), Opus 4.6 for complex (~$15/1M). Saves 10-60x.
 - **Prompt compression**: Remove redundant context, summarize long documents, use retrieval to inject only relevant chunks
 - **Caching**: Anthropic prompt caching (90% input cost reduction), semantic caching (cache similar queries), exact match caching
 - **Batching**: Anthropic Batch API (50% discount, 24hr), OpenAI Batch API (50% discount) — for non-realtime workloads
@@ -106,13 +106,14 @@ Load when setting up LLM evaluation frameworks, implementing production monitori
 - **ONNX Runtime**: Cross-platform model inference, hardware acceleration
 - **TensorFlow Lite / LiteRT**: Mobile and embedded inference
 - **Core ML**: Apple ecosystem, on-device inference
-- **Small Language Models**: Phi-3 (Microsoft), Gemma 2 (Google), Llama 3.2 1B/3B (Meta) — on-device
+- **Small Language Models**: Phi-4 (Microsoft), Gemma 3 (Google), Llama 3.2 1B/3B (Meta) — on-device
 
 ## Emerging Trends
 
-- **Agentic AI**: Autonomous agents with tool use, multi-step planning, computer use, browser automation
-- **Multimodal everything**: Native vision+audio+text models, real-time voice (GPT-4o Realtime API)
-- **Reasoning models**: o1/o3 (OpenAI), Claude with extended thinking — step-by-step, math, coding
-- **Synthetic data**: Generate training data from larger models, distillation, curriculum learning
-- **Model Context Protocol (MCP)**: Anthropic's open standard for connecting AI to external tools and data sources
-- **AI infrastructure commoditization**: Inference costs dropping ~10x/year, open models approaching proprietary quality
+- **Agentic AI**: Autonomous agents with tool use, multi-step planning, computer use, browser automation becoming production standard
+- **Multimodal everything**: Native vision+audio+text models, real-time voice (GPT-4o Realtime API), video understanding
+- **Reasoning models**: o3/o4-mini (OpenAI), Claude with extended thinking, Gemini 2.5 thinking — step-by-step, math, coding
+- **Synthetic data**: Generate training data from larger models, distillation, curriculum learning at scale
+- **Model Context Protocol (MCP)**: Widely adopted open standard for connecting AI agents to external tools and data sources
+- **AI infrastructure commoditization**: Inference costs dropping ~10x/year, open models matching proprietary quality on many benchmarks
+- **Test-time compute**: Scaling inference compute (reasoning tokens) proving more efficient than scaling parameters

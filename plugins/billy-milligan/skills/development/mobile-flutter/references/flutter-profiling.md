@@ -99,40 +99,42 @@ Widget build(BuildContext context) {
 }
 ```
 
-## Impeller Rendering Engine
+## Impeller Rendering Engine (Default Since Flutter 3.22+)
 
 ```
-Impeller (default in Flutter 3.16+):
-  - Pre-compiled shaders — no first-frame jank
-  - Consistent 60/120fps — no shader compilation stutter
-  - Better performance on iOS (Metal) and Android (Vulkan/OpenGL)
+Impeller status in 2025-2026:
+  - Default on iOS since Flutter 3.19 (Metal backend)
+  - Default on Android since Flutter 3.22 (Vulkan backend)
+  - Scribe: Impeller-based text rendering engine (Flutter 3.27+)
+  - No SkSL shader pre-warming needed — ever
 
-Old Skia engine issues:
-  - First-time shader compilation caused jank (200-500ms stutters)
-  - Had to warm shader cache manually
-  - Inconsistent frame times
+Key advantages over legacy Skia:
+  - Pre-compiled shaders at build time — zero first-frame jank
+  - Consistent 60/120fps — no mid-session compilation stutters
+  - Metal (iOS) and Vulkan (Android) for modern GPU utilization
+  - Better memory efficiency for complex scenes
 
-Verify Impeller is active:
-  flutter run --enable-impeller  # Explicit enable (usually default)
+Verify/control Impeller:
+  flutter run                          # Impeller active by default
+  flutter run --no-enable-impeller     # Disable for debugging only
 
-Disable if needed (debugging):
-  flutter run --no-enable-impeller
+Impeller debugging:
+  flutter run --profile --enable-impeller
+  # In DevTools > Performance: look for "Raster" thread spikes
+  # Raster jank with Impeller: usually custom painters or save layers
 ```
 
-## Shader Compilation Jank (Legacy / Skia)
+## Shader Compilation Jank (Legacy / Skia Only)
 
 ```dart
-// For Skia engine — warm shader cache at startup
-// Not needed with Impeller, but useful for older Flutter versions
+// SkSL pre-warming — ONLY needed if targeting Flutter < 3.19 (iOS) or < 3.22 (Android)
+// Modern Flutter + Impeller: skip this entirely
 
-// 1. Capture shaders during testing
+// Legacy SkSL warm-up:
 // flutter run --profile --cache-sksl --purge-persistent-cache
-
-// 2. Bundle in app
 // flutter build apk --bundle-sksl-path flutter_01.sksl.json
 
-// With Impeller: this is no longer needed
-// Impeller pre-compiles all shaders at build time
+// With Impeller (current default): not needed — shaders are pre-compiled at build time
 ```
 
 ## Platform Channels — Performance Cost

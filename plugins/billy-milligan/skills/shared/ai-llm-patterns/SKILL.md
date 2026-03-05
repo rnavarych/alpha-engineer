@@ -1,10 +1,6 @@
 ---
 name: ai-llm-patterns
-description: |
-  AI/LLM integration patterns: Anthropic SDK streaming with TypeScript, RAG architecture
-  (chunking, embedding, vector search with pgvector), tool use / function calling,
-  model selection guide (Haiku vs Sonnet vs Opus), prompt caching, structured output with
-  Zod, token cost management. Use when building AI features, RAG pipelines, AI agents.
+description: "AI/LLM integration patterns: Anthropic SDK streaming with TypeScript, RAG architecture (chunking, embedding, vector search with pgvector), tool use / function calling, model selection guide (Haiku 4.5 vs Sonnet 4.6 vs Opus 4.6), prompt caching, structured output with Zod, token cost management. Use when building AI features, RAG pipelines, AI agents."
 allowed-tools: Read, Grep, Glob
 ---
 

@@ -7,26 +7,28 @@ Load when selecting an AI provider or cloud AI platform, comparing foundation mo
 
 | Provider | Top Models | Input/Output $/1M tokens | Context | Best For |
 |----------|-----------|--------------------------|---------|----------|
-| **OpenAI** | GPT-4o, o1/o3, GPT-4o-mini | $0.15-$15 / $0.60-$60 | 128K | General-purpose, multimodal, function calling, real-time voice |
-| **Anthropic** | Claude Opus 4, Sonnet 4, Haiku 3.5 | $0.25-$15 / $1.25-$75 | 200K | Long context, safety, coding, tool use, agentic workflows |
-| **Google** | Gemini 2.0 Flash, 1.5 Pro | $0.075-$1.25 / $0.30-$5 | 1-2M | Multimodal, extremely long context, cost-effective |
-| **Meta** | Llama 3.1/3.2 (8B-405B) | Free weights | 128K | Self-hosted, fine-tuning, data sovereignty |
-| **Mistral** | Large 2, Small, Codestral | $0.10-$2 / $0.30-$6 | 128K | EU compliance, coding, cost-effective |
+| **OpenAI** | GPT-4.5, GPT-4o, o3/o4-mini, GPT-4o-mini | $0.15-$75 / $0.60-$300 | 128K | General-purpose, multimodal, function calling, real-time voice |
+| **Anthropic** | Claude Opus 4.6, Sonnet 4.6, Haiku 4.5 | $0.80-$15 / $4-$75 | 200K | Long context, safety, coding, tool use, agentic workflows |
+| **Google** | Gemini 2.5 Pro, 2.0 Flash, Flash Lite | $0.075-$1.25 / $0.30-$10 | 1-2M | Multimodal, extremely long context, cost-effective |
+| **Meta** | Llama 3.3/3.2/3.1 (1B-405B) | Free weights | 128K | Self-hosted, fine-tuning, data sovereignty |
+| **Mistral** | Large 2, Small 3, Codestral | $0.10-$2 / $0.30-$6 | 128K | EU compliance, coding, cost-effective |
 | **Cohere** | Command R+, Embed v3, Rerank 3 | Varies | 128K | Enterprise RAG, multilingual, embeddings + reranking |
 
 ### Provider Detail: Anthropic
 
-- **Prompt caching**: 90% input cost reduction for repeated context (5-min TTL)
-- **Extended thinking**: Chain-of-thought for complex reasoning
+- **Model IDs**: `claude-opus-4-6`, `claude-sonnet-4-6`, `claude-haiku-4-5-20251001`
+- **Prompt caching**: 90% input cost reduction for repeated context (5-min TTL); extended 1hr TTL available
+- **Extended thinking**: Chain-of-thought for complex reasoning (Sonnet, Opus)
 - **Computer use**: GUI interaction capability
 - **Batch API**: 50% discount, 24hr turnaround — for non-realtime workloads
-- **MCP (Model Context Protocol)**: Open standard for connecting AI to external tools
+- **MCP (Model Context Protocol)**: Open standard for connecting AI to external tools and data sources
 - Enterprise: SOC 2 Type II, HIPAA BAA, AWS Bedrock and GCP Vertex AI integration
 
 ### Provider Detail: Google Gemini
 
-- **Context window**: Up to 2M tokens (Gemini 1.5 Pro) — largest available
+- **Context window**: Up to 2M tokens (Gemini 2.5 Pro / 2.0 series) — largest available
 - **Multimodal**: Text, image, video up to 1hr, audio, code natively
+- **Thinking**: Gemini 2.5 Pro has native chain-of-thought reasoning mode
 - **Grounding**: With Google Search, function calling, code execution sandbox
 - **Access**: Google AI Studio (direct API, free tier), Vertex AI (enterprise)
 
@@ -50,7 +52,7 @@ Load when selecting an AI provider or cloud AI platform, comparing foundation mo
 
 ### Azure OpenAI Service
 
-- **Exclusive access**: GPT-4o, o1, GPT-4 Turbo, DALL-E 3 with enterprise wrapping
+- **Exclusive access**: GPT-4.5, GPT-4o, o3, o4-mini, DALL-E 3 with enterprise wrapping
 - **Managed features**: On Your Data (managed RAG), Content Safety, Prompt Shields (jailbreak detection)
 - **Enterprise integration**: Entra ID auth, VNET integration, private endpoints, Key Vault
 - **Compliance**: Highest count — FedRAMP High, IL5 (DoD), HIPAA, SOC 1/2/3, PCI DSS, ISO 27001/27018
@@ -83,7 +85,7 @@ Load when selecting an AI provider or cloud AI platform, comparing foundation mo
 | **Highest compliance (gov/regulated)** | Azure OpenAI | FedRAMP High, IL5, most certifications |
 | **Multi-model flexibility** | AWS Bedrock | Claude + Llama + Mistral + Cohere in one API |
 | **Best cost/performance** | Google Vertex AI (Flash) | Gemini Flash at $0.075/1M input |
-| **Longest context window** | Google Vertex AI | Gemini 1.5 Pro supports 1-2M tokens |
+| **Longest context window** | Google Vertex AI | Gemini 2.5 Pro supports up to 2M tokens |
 | **Best coding quality** | Anthropic Claude Sonnet | Top coding benchmarks, tool use |
 | **Lowest latency** | Groq | LPU hardware, <100ms TTFT |
 | **Self-hosted / data sovereignty** | Meta Llama + vLLM | Free weights, full control |
