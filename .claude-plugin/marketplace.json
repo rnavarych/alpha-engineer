@@ -1,10 +1,12 @@
 {
   "name": "alpha-engineer",
-  "version": "1.0.0",
-  "description": "A comprehensive Claude Code plugin marketplace providing specialized skills, agents, and commands for 4 industry domains and 8 developer roles, informed by the Software Engineer by RN competency matrix.",
   "owner": {
     "name": "Raman Navarych",
     "email": "raman@navarych.com"
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "description": "A comprehensive Claude Code plugin marketplace providing specialized skills, agents, and commands for 4 industry domains and 8 developer roles, informed by the Software Engineer by RN competency matrix."
   },
   "plugins": [
     {
